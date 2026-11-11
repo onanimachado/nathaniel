@@ -1,0 +1,120 @@
+/* Design system da Muito Bala, a partir do Manual de Identidade Visual (2026). */
+:root {
+  /* Paleta oficial (MIV p. 9) */
+  --blue: #89d1e0;   /* Azul Turquesa · Pantone 3105 C */
+  --pink: #e972cb;   /* Rosa Vibrante · Pantone 231 CP */
+  --yellow: #e1cb57; /* Amarelo Retrô · Pantone 458 CP */
+  --black: #000000;
+  --beige: #dfd1b7;
+  --white: #fbfcf3;
+
+  /* Fontes: variáveis definidas em app/fonts.ts */
+  --f-title: var(--font-title), "Rocky Condensed", Georgia, serif;
+  --f-text: var(--font-text), "ITC Avant Garde Gothic", "Century Gothic", Arial, sans-serif;
+  --f-sub: var(--font-sub), "ITC Avant Garde Gothic", "Century Gothic", Arial, sans-serif;
+  --f-script: var(--font-script), "Brush Script MT", cursive;
+  --f-vhs: var(--font-vhs), ui-monospace, monospace;
+
+  /* Escala */
+  --t-label: 13px;
+  --t-body: clamp(16px, 1.2vw, 19px);
+  --t-title: clamp(48px, 7vw, 120px);
+  --pad-block: clamp(72px, 8vw, 140px);
+  --gap: clamp(16px, 1.8vw, 28px);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--f-text);
+  font-size: var(--t-body);
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+a { color: inherit; }
+img { max-width: 100%; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--black); outline-offset: 3px; }
+
+.wrap {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Primitivos do manual */
+.serif { font-family: var(--f-title); font-weight: 400; letter-spacing: -0.01em; line-height: 0.95; }
+.sub { font-family: var(--f-sub); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.script {
+  font-family: var(--f-script);
+  font-weight: 400;
+  color: var(--pink);
+  -webkit-text-stroke: 2px var(--black);
+  paint-order: stroke fill;
+  text-shadow: 3px 3px 0 var(--black), 4px 4px 0 var(--black);
+  line-height: 1;
+}
+.script--blue { color: var(--blue); }
+.script--yellow { color: var(--yellow); }
+.tag {
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1.5px solid var(--black);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+/* Botões: cor complementar ao fundo (MIV p. 10) */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-family: var(--f-text);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--black);
+  background: var(--pink);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+  transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
+}
+.pill:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--black); }
+.pill--blue { background: var(--blue); }
+.pill--yellow { background: var(--yellow); }
+.pill--white { background: var(--white); }
+.todo {
+  font-family: var(--f-vhs);
+  font-size: 16px;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 1px 7px;
+  border-radius: 5px;
+}
+.head2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  margin-bottom: clamp(28px, 4vw, 56px);
+}
+.head2 h2 { font-size: var(--t-title); }
+.head2 p { max-width: 40ch; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}

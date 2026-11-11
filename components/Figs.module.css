@@ -1,0 +1,9 @@
+.figs { background: var(--white); padding-block: var(--pad-block); }
+.fig { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 5vw, 90px); align-items: center; padding-block: clamp(28px, 4vw, 56px); border-top: 1.5px solid var(--black); }
+.fig:nth-of-type(even) .media { order: 2; }
+.media { position: relative; border-radius: 22px; overflow: hidden; border: 1.5px solid var(--black); aspect-ratio: 16 / 10; }
+.media img { object-fit: cover; }
+.cap { position: absolute; left: 14px; bottom: 10px; font-family: var(--f-vhs); font-size: 20px; color: #fff; text-shadow: 1px 1px 0 #000; }
+.body { display: grid; gap: 16px; max-width: 50ch; justify-items: start; }
+.body h3 { font-family: var(--f-title); font-size: clamp(40px, 4.4vw, 72px); line-height: 0.95; }
+@media (max-width: 820px) { .fig { grid-template-columns: 1fr; } .fig:nth-of-type(even) .media { order: 0; } }

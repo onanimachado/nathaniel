@@ -1,0 +1,8 @@
+.ticker { background: var(--black); color: var(--beige); overflow: hidden; white-space: nowrap; }
+.track { display: inline-flex; gap: 2.4em; padding-block: 9px; animation: tick 42s linear infinite; }
+.track span { font-family: var(--f-sub); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
+.track b { font-family: var(--f-script); font-weight: 400; font-size: 22px; letter-spacing: 0; text-transform: none; }
+.pink { color: var(--pink); }
+.yellow { color: var(--yellow); }
+.blue { color: var(--blue); }
+@keyframes tick { to { transform: translateX(-50%); } }

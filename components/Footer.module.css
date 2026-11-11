@@ -1,0 +1,11 @@
+.footer { background: var(--blue); padding-block: clamp(56px, 7vw, 110px) 26px; }
+.top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
+.top img { width: 100%; max-width: 420px; height: auto; display: block; }
+.top h2 { font-family: var(--f-title); font-size: clamp(48px, 6vw, 104px); line-height: 0.92; }
+.top h2 :global(.script) { display: block; font-size: 0.9em; margin-top: 0.1em; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--gap); margin-top: clamp(40px, 5vw, 80px); padding-top: 26px; border-top: 1.5px solid var(--black); }
+.grid h3 { font-family: var(--f-sub); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+.grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.grid a { text-decoration: none; }
+.bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 44px; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; }
+@media (max-width: 700px) { .top { grid-template-columns: 1fr; } }

@@ -1,0 +1,7 @@
+.guide { background: var(--pink); padding-block: var(--pad-block); }
+.list { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--black); }
+.row { display: grid; grid-template-columns: 110px minmax(0, 1fr) auto; gap: var(--gap); align-items: center; padding-block: 20px; border-bottom: 1.5px solid var(--black); }
+.row time { font-family: var(--f-vhs); font-size: 28px; }
+.row h3 { font-family: var(--f-title); font-size: clamp(28px, 2.6vw, 42px); line-height: 1; }
+.row p { font-size: 15px; }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 6px; } .row .pill { justify-self: start; } }

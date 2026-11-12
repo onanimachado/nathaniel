@@ -12,46 +12,50 @@ export const tickerPhrases = [
   { before: "Nada é tão quente quanto uma marca que faz o mercado", script: "subir a régua", color: "blue" },
 ] as const;
 
-export type Unit = {
-  slug: string;
-  name: string;
+/*
+ * O que a gente faz. O título fala do serviço; quem está à frente
+ * aparece só no texto (pedido do Nani, nov/2026).
+ */
+export type Service = {
+  id: string;
+  title: string;
   tag: string;
   description: string;
   cta: string;
   card: "blue" | "pink" | "yellow" | "white";
 };
 
-export const units: Unit[] = [
+export const services: Service[] = [
   {
-    slug: "mona",
-    name: "mona",
-    tag: "Estúdio · design",
-    description: "Identidade, direção de arte e tudo que precisa ficar bonito antes de rodar. Foi quem desenhou esta marca.",
+    id: "design",
+    title: "Estúdio de design",
+    tag: "Identidade · arte",
+    description: "Identidade, direção de arte e tudo que precisa ficar bonito antes de rodar. Por aqui, quem desenha é Monique Borba.",
     cta: "Ver trabalhos",
     card: "blue",
   },
   {
-    slug: "cleitinho-records",
-    name: "cleitinho records",
-    tag: "Música · trilha",
-    description: "Estúdio de gravação e trilha sonora original. O som que faz a imagem respirar.",
+    id: "musica",
+    title: "Produção musical",
+    tag: "Gravação · trilha",
+    description: "Estúdio de gravação e trilha sonora original, o som que faz a imagem respirar. Nos fones, Leonardo Cassiano.",
     cta: "Ouvir",
     card: "pink",
   },
   {
-    slug: "nani-artclub",
-    name: "nani artclub",
-    tag: "Filme",
-    description: "Direção de cena, roteiro e filme do set até a sala de edição.",
+    id: "video",
+    title: "Produção de vídeo",
+    tag: "Direção · filme",
+    description: "Direção de cena, roteiro e filme, do set até a sala de edição. Atrás da câmera, Nani ArtClub.",
     cta: "Assistir",
     card: "yellow",
   },
   {
-    slug: "myer",
-    name: "myer",
-    tag: "Foto",
-    description: "Fotografia de pele reluzente, luz difusa e cromado de época, com um pouco de humor.",
-    cta: "Ver fotos",
+    id: "foto",
+    title: "Fotografia",
+    tag: "Ensaio · still",
+    description: "Pele reluzente, luz difusa e cromado de época, com um pouco de humor. Do ensaio de marca ao still de produto.",
+    cta: "Pedir orçamento",
     card: "white",
   },
 ];
@@ -94,10 +98,10 @@ export const posts = [
 
 /* EXEMPLOS DE LAYOUT: substituir pelos cases reais. */
 export const works = [
-  { time: "20:00", title: "Nome do projeto", meta: "Cliente · filme de campanha · 2026", unit: "nani artclub", pill: "yellow" },
-  { time: "20:30", title: "Nome do projeto", meta: "Cliente · trilha original · 2026", unit: "cleitinho records", pill: "blue" },
-  { time: "21:00", title: "Nome do projeto", meta: "Cliente · identidade visual · 2026", unit: "mona", pill: "blue" },
-  { time: "21:30", title: "Nome do projeto", meta: "Cliente · ensaio fotográfico · 2026", unit: "myer", pill: "white" },
+  { time: "20:00", title: "Nome do projeto", meta: "Cliente · filme de campanha · 2026", service: "Produção de vídeo", pill: "yellow" },
+  { time: "20:30", title: "Nome do projeto", meta: "Cliente · trilha original · 2026", service: "Produção musical", pill: "blue" },
+  { time: "21:00", title: "Nome do projeto", meta: "Cliente · identidade visual · 2026", service: "Estúdio de design", pill: "blue" },
+  { time: "21:30", title: "Nome do projeto", meta: "Cliente · ensaio fotográfico · 2026", service: "Fotografia", pill: "white" },
 ] as const;
 
 export const contact = {

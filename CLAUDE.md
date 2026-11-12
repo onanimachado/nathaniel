@@ -1,6 +1,8 @@
 # Muito Bala · site
 
-Site institucional da Muito Bala, produtora audiovisual de Porto Alegre com quatro unidades: **mona** (design), **cleitinho records** (música e trilha), **nani artclub** (filme) e **myer** (foto).
+Site institucional da Muito Bala, produtora audiovisual de Porto Alegre. O que a Muito Bala faz: **estúdio de design**, **produção musical**, **produção de vídeo** e **fotografia**.
+
+**[nov/2026] Serviços, não unidades.** Os títulos falam do serviço, sem nome de pessoa ou marca. Quem está à frente aparece só no texto: design com Monique Borba, produção musical com Leonardo Cassiano, produção de vídeo com Nani ArtClub. Fotografia ainda sem responsável, então o texto não cita ninguém. Os nomes antigos de unidade (mona, cleitinho records, myer) não são mais usados no site.
 
 ## Comandos
 
@@ -34,7 +36,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - Preservar literalmente frases que o Nani especificar.
 - Slogans: "bem-vindo ao nosso clima" (abertura), "nossa vibe é o produto" (fechamento). Assinatura: "Muito Bala. O seu paraíso audiovisual."
 - Tese comercial: "Não entregamos audiência. Entregamos a audiência certa, pré-filtrada pela própria exigência do conteúdo."
-- Na comunicação pública a Muito Bala segue o próprio rumo: não atrelar à Nani ArtClub nem contar histórias internas sem pedido explícito.
+- Na comunicação pública a Muito Bala segue o próprio rumo: não contar histórias internas. A única menção à Nani ArtClub é como responsável pela produção de vídeo, no texto do card (pedido do Nani, nov/2026).
 
 ## Pendências
 

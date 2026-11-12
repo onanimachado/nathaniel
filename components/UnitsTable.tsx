@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { units, type Unit } from "@/content/site";
+import { services, type Service } from "@/content/site";
 import s from "./UnitsTable.module.css";
 
 /* Posição inicial de cada card na mesa (desktop). */
@@ -13,7 +13,7 @@ const layout = [
 ];
 
 /* Combinações de cor do MIV p. 10: script e botão contrastando com o fundo do card. */
-const style: Record<Unit["card"], { script: string; pill: string }> = {
+const style: Record<Service["card"], { script: string; pill: string }> = {
   blue: { script: "", pill: "" },
   pink: { script: "script--blue", pill: "pill--blue" },
   yellow: { script: "", pill: "" },
@@ -53,25 +53,25 @@ export default function UnitsTable() {
   }
 
   return (
-    <section className={s.units} id="unidades" aria-labelledby="units-title">
+    <section className={s.units} id="servicos" aria-labelledby="units-title">
       <div className="wrap">
         <div className="head2">
-          <h2 className="serif" id="units-title">Quatro unidades,<br />uma vibe só.</h2>
+          <h2 className="serif" id="units-title">Tudo isso,<br />uma vibe só.</h2>
           <p>
-            Cada unidade tem nome, cara e jeito próprio. Juntas entregam o projeto inteiro, do primeiro rabisco ao último
-            corte. Pegue um card e arraste pela mesa.
+            Design, música, vídeo e foto debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao
+            último corte. Pegue um card e arraste pela mesa.
           </p>
         </div>
         <div className={s.table} ref={table}>
-          {units.map((u, i) => (
+          {services.map((u, i) => (
             <article
-              key={u.slug}
+              key={u.id}
               className={`${s.card} ${s[u.card]}`}
               style={{ left: layout[i].left, top: layout[i].top, transform: `rotate(${layout[i].rot}deg)` }}
               onPointerDown={onPointerDown}
             >
               <span className="tag">{u.tag}</span>
-              <h3 className={`script ${style[u.card].script}`}>{u.name}</h3>
+              <h3 className={`script ${style[u.card].script}`}>{u.title}</h3>
               <p>{u.description}</p>
               <div className={s.foot}>
                 <span className={s.fig}>FIG. {i + 1}</span>

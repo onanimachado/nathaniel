@@ -15,7 +15,7 @@ export default function Contact() {
           <div className={s.intro}>
             <h3 id="contact-title">Vamos fazer algo muito bala?</h3>
             <p>
-              Conta o que você tem em mente e quais unidades fazem sentido. A gente responde com uma proposta clara, sem
+              Conta o que você tem em mente e do que precisa. A gente responde com uma proposta clara, sem
               enrolação e com o clima de sempre.
             </p>
             <p className="sub" style={{ fontSize: 12 }}>Porto Alegre · atendimento em todo o Brasil</p>

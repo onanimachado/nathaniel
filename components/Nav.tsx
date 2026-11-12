@@ -23,7 +23,7 @@ export default function Nav() {
           <span>Produtora audiovisual</span>
         </div>
         <ul>
-          <li className={s.link}><a href="#unidades"><Roll>Unidades</Roll></a></li>
+          <li className={s.link}><a href="#servicos"><Roll>O que a gente faz</Roll></a></li>
           <li className={s.link}><a href="#programacao"><Roll>Trabalhos</Roll></a></li>
           <li><a className="pill" href="#contato">Fazer orçamento</a></li>
         </ul>

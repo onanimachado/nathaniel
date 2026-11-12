@@ -67,7 +67,7 @@ export default function Hero() {
               <span className={`${s.osd} ${s.br}`} suppressHydrationWarning>{today}</span>
             </div>
             <div className={s.actions}>
-              <a className="pill pill--blue" href="#unidades">Conhecer as unidades</a>
+              <a className="pill pill--blue" href="#servicos">Ver o que a gente faz</a>
               <a className="pill pill--white" href="#contato">Bora fazer um projeto</a>
             </div>
           </div>

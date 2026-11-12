@@ -8,7 +8,7 @@ export default function Guide() {
         <div className="head2">
           <h2 className="serif" id="guide-title">Grade de programação</h2>
           <p>
-            Os trabalhos entram como numa grade de TV: horário, título e qual unidade assinou.{" "}
+            Os trabalhos entram como numa grade de TV: horário, título e o que a gente fez.{" "}
             <span className="todo">EXEMPLOS DE LAYOUT</span>
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function Guide() {
                 <h3>{w.title}</h3>
                 <p>{w.meta}</p>
               </div>
-              <span className={`pill pill--${w.pill}`}>{w.unit}</span>
+              <span className={`pill pill--${w.pill}`}>{w.service}</span>
             </li>
           ))}
         </ol>

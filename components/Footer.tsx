@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { units, contact } from "@/content/site";
+import { services, contact } from "@/content/site";
 import s from "./Footer.module.css";
 
 export default function Footer() {
@@ -14,13 +14,13 @@ export default function Footer() {
         </div>
         <div className={s.grid}>
           <div>
-            <h3>Unidades</h3>
-            <ul>{units.map((u) => <li key={u.slug}>{u.name}</li>)}</ul>
+            <h3>O que a gente faz</h3>
+            <ul>{services.map((sv) => <li key={sv.id}>{sv.title}</li>)}</ul>
           </div>
           <div>
             <h3>Navegar</h3>
             <ul>
-              <li><a href="#unidades">Unidades</a></li>
+              <li><a href="#servicos">O que a gente faz</a></li>
               <li><a href="#programacao">Trabalhos</a></li>
               <li><a href="#contato">Orçamento</a></li>
             </ul>

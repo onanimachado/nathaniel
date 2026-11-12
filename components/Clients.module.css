@@ -1,0 +1,13 @@
+.clients { background: var(--beige); padding-block: 26px 30px; border-block: 1.5px solid var(--black); overflow: hidden; }
+.label { text-align: center; font-family: var(--f-sub); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
+.viewport { display: flex; width: max-content; }
+.viewport:hover .track { animation-play-state: paused; }
+.track { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: clamp(48px, 6vw, 110px); padding-right: clamp(48px, 6vw, 110px); animation: marquee 48s linear infinite; }
+.item { white-space: nowrap; font-family: var(--f-title); font-size: clamp(26px, 2.4vw, 38px); line-height: 1; }
+.logo { display: block; height: clamp(28px, 2.6vw, 42px); width: auto; filter: grayscale(1) brightness(0); }
+@keyframes marquee { to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) {
+  .viewport { width: auto; flex-wrap: wrap; justify-content: center; }
+  .track { flex-wrap: wrap; justify-content: center; padding-inline: 16px; row-gap: 18px; }
+  .track[aria-hidden="true"] { display: none; }
+}

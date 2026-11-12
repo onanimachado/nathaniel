@@ -104,6 +104,28 @@ export const works = [
   { time: "21:30", title: "Nome do projeto", meta: "Cliente · ensaio fotográfico · 2026", service: "Fotografia", pill: "white" },
 ] as const;
 
+/*
+ * Faixa de marcas com quem a Muito Bala já trabalhou.
+ * Sem "logo", a faixa mostra o nome escrito. Para usar o logo, salve o arquivo
+ * em public/clientes/ (SVG de preferência, em uma cor só) e preencha "logo".
+ */
+export type Client = { name: string; logo?: string };
+
+export const clients: Client[] = [
+  { name: "Grupo RBS" },
+  { name: "Planeta Atlântida" },
+  { name: "Espartano Skatepark" },
+  { name: "JBL" },
+  { name: "Agência HOC" },
+  { name: "Gauchão" },
+  { name: "Maia Entretenimento" },
+  { name: "happn" },
+  { name: "Zero Hora" },
+  { name: "Perky" },
+  { name: "STU" },
+  { name: "Unimed" },
+];
+
 export const contact = {
   email: null as string | null, // a definir
   instagram: null as string | null, // a definir

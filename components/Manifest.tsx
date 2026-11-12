@@ -4,7 +4,7 @@ export default function Manifest() {
   return (
     <section className={s.manifest} aria-labelledby="clima-title">
       <div className="wrap">
-        <h2 className={`serif ${s.big}`} id="clima-title">O clima</h2>
+        <h2 className={`serif ${s.big}`} id="clima-title" data-drift="60">O clima</h2>
         <hr className={s.rule} />
         <div className={s.grid}>
           <p className={`serif ${s.h}`}>

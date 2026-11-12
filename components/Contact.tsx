@@ -9,7 +9,7 @@ export default function Contact() {
         <div className={s.dont} aria-hidden="true">
           <span className={s.l1}>Don’t TALK To Us</span>
           <span className={s.l2}>UNLESS <span className="script">You</span> ARE</span>
-          <span className={s.l3}>“Muito Bala”</span>
+          <span className={s.l3} data-drift="70">“Muito Bala”</span>
         </div>
         <div className={s.grid}>
           <div className={s.intro}>

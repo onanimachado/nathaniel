@@ -14,8 +14,10 @@ export default function Posts() {
           </p>
         </div>
         <div className={s.row}>
-          {posts.map((p) => (
-            <Image key={p.image} src={p.image} alt={p.alt} width={486} height={595} sizes="(max-width: 700px) 50vw, 33vw" />
+          {posts.map((p, i) => (
+            <div key={p.image} data-parallax={[40, -30, 70][i % 3]}>
+              <Image src={p.image} alt={p.alt} width={486} height={595} sizes="(max-width: 700px) 50vw, 33vw" />
+            </div>
           ))}
         </div>
       </div>

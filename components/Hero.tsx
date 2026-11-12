@@ -41,9 +41,11 @@ export default function Hero() {
           <span>Porto Alegre · 2026</span>
         </div>
         <div className={s.grid}>
+          <div data-parallax="60">
           <div className={s.logo} ref={logo}>
             <h1 id="hero-title" className="sr-only">Muito Bala</h1>
             <Image src="/brand/logo-sombra-azul.svg" alt="Muito Bala" width={566} height={541} priority />
+          </div>
           </div>
           <div className={s.side}>
             <p className="serif" style={{ fontSize: "clamp(40px, 4.6vw, 78px)" }}>Bem-vindo ao</p>
@@ -51,7 +53,7 @@ export default function Hero() {
             <p className={s.lead}>
               Design, música, filme e foto com cara de verão em Miami dos anos 90 e calma de quem ainda presta atenção.
             </p>
-            <div className={s.tv}>
+            <div className={s.tv} data-parallax="-40">
               <Image
                 src="/miv/neon.jpg"
                 alt="Fachada noturna com o letreiro Muito Bala em neon rosa"

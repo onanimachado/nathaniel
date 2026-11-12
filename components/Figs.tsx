@@ -12,7 +12,7 @@ export default function Figs() {
         </div>
         {figs.map((f) => (
           <div className={s.fig} key={f.fig}>
-            <div className={s.media}>
+            <div className={s.media} data-parallax-img>
               <Image src={f.image} alt={f.alt} fill sizes="(max-width: 820px) 100vw, 50vw" />
               <span className={s.cap}>FIG. {f.fig} · {f.caption}</span>
             </div>

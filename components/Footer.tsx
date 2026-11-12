@@ -7,7 +7,9 @@ export default function Footer() {
     <footer className={s.footer}>
       <div className="wrap">
         <div className={s.top}>
-          <Image src="/brand/logo-sombra-rosa.svg" alt="Muito Bala" width={566} height={541} />
+          <div data-parallax="40">
+            <Image src="/brand/logo-sombra-rosa.svg" alt="Muito Bala" width={566} height={541} />
+          </div>
           <h2>Nossa vibe <span className="script">é o produto.</span></h2>
         </div>
         <div className={s.grid}>

@@ -4,7 +4,7 @@ export default function Thesis() {
   return (
     <section className={s.thesis} aria-label="Nossa tese">
       <div className="wrap">
-        <h2 className={`serif ${s.h}`}>
+        <h2 className={`serif ${s.h}`} data-parallax="-50">
           Não Entregamos Audiência. Entregamos <span className="script">a audiência certa</span> Pré-Filtrada Pelo
           Próprio Conteúdo.
         </h2>

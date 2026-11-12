@@ -1,4 +1,4 @@
-.manifest { background: var(--beige); padding-block: var(--pad-block); }
+.manifest { background: var(--beige); padding-block: var(--pad-block); overflow-x: clip; }
 .big { font-size: var(--t-title); margin-bottom: clamp(28px, 4vw, 56px); }
 .rule { border: 0; border-top: 1.5px solid var(--black); margin: 0; }
 .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 120px); padding-top: clamp(28px, 4vw, 56px); }

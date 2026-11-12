@@ -1,4 +1,5 @@
-.hero { background: linear-gradient(180deg, var(--pink) 0%, var(--pink) 55%, var(--beige) 100%); overflow: hidden; }
+/* Degradê da capa do MIV: rosa até 59%, depois funde no bege */
+.hero { background: linear-gradient(180deg, var(--pink) 59%, var(--beige) 100%); overflow: hidden; }
 .runhead { display: flex; justify-content: space-between; font-size: var(--t-label); letter-spacing: 0.05em; text-transform: uppercase; padding-block: 18px; }
 .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; padding-block: clamp(8px, 2vw, 24px) clamp(56px, 7vw, 110px); }
 .logo { transition: transform 0.6s var(--ease); }

@@ -44,7 +44,7 @@ export default function Hero() {
           <div data-parallax="60">
           <div className={s.logo} ref={logo}>
             <h1 id="hero-title" className="sr-only">Muito Bala</h1>
-            <Image src="/brand/logo-sombra-azul.svg" alt="Muito Bala" width={566} height={541} priority />
+            <Image src="/brand/logo-azul.svg" alt="Muito Bala" width={1256} height={1226} priority />
           </div>
           </div>
           <div className={s.side}>

@@ -18,6 +18,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - `components/` uma seção da home por arquivo, cada uma com o seu `.module.css`.
 - `content/site.ts` todos os textos e listas da home. Edite o conteúdo aqui, não nos componentes.
 - `public/brand/` logos em SVG extraídos do MIV. `public/miv/` imagens de mockup do MIV, provisórias.
+- `public/clientes/` logos das marcas da faixa de clientes, vetorizados em preto a partir de imagens enviadas pelo Nani. A altura de cada um (`clients` em `content/site.ts`) foi ajustada à mão para o mesmo peso visual. A faixa copia o comportamento da faixa de imprensa do Vacation (Embla + AutoScroll).
 
 ## Identidade visual (MIV 2026, Estúdio Mona)
 

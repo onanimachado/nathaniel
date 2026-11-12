@@ -109,20 +109,21 @@ export const works = [
  * Sem "logo", a faixa mostra o nome escrito. Para usar o logo, salve o arquivo
  * em public/clientes/ (SVG de preferência, em uma cor só) e preencha "logo".
  */
-export type Client = { name: string; logo?: string };
+/* "height" é a altura do logo na faixa (px, no desktop), ajustada à mão para que todos tenham o mesmo peso visual. */
+export type Client = { name: string; logo?: { src: string; ratio: number; height: number } };
 
 export const clients: Client[] = [
-  { name: "Grupo RBS" },
+  { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 34 } },
   { name: "Planeta Atlântida" },
-  { name: "Espartano Skatepark" },
-  { name: "JBL" },
-  { name: "Agência HOC" },
+  { name: "Espartano Skatepark", logo: { src: "/clientes/espartano.svg", ratio: 2320 / 703, height: 54 } },
+  { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 44 } },
+  { name: "Agência HOC", logo: { src: "/clientes/hoc.svg", ratio: 1655 / 457, height: 30 } },
   { name: "Gauchão" },
   { name: "Maia Entretenimento" },
   { name: "happn" },
   { name: "Zero Hora" },
   { name: "Perky" },
-  { name: "STU" },
+  { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 40 } },
   { name: "Unimed" },
 ];
 

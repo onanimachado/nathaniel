@@ -6,7 +6,18 @@ import s from "./Clients.module.css";
 export default function Clients() {
   const row = clients.map((c) => (
     <li key={c.name} className={s.item}>
-      {c.logo ? <Image src={c.logo} alt={c.name} width={160} height={48} className={s.logo} /> : <span>{c.name}</span>}
+      {c.logo ? (
+        <Image
+          src={c.logo.src}
+          alt={c.name}
+          width={Math.round(c.logo.height * c.logo.ratio)}
+          height={c.logo.height}
+          className={s.logo}
+          style={{ "--h": `${c.logo.height}px` } as React.CSSProperties}
+        />
+      ) : (
+        <span>{c.name}</span>
+      )}
     </li>
   ));
 

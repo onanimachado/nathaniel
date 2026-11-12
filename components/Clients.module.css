@@ -1,15 +1,15 @@
-.clients { background: var(--beige); padding-block: 26px 30px; border-block: 1.5px solid var(--black); overflow: hidden; }
-.label { text-align: center; font-family: var(--f-sub); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px; }
-.viewport { display: flex; width: max-content; }
-.viewport:hover .track { animation-play-state: paused; }
-.track { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: clamp(48px, 6vw, 110px); padding-right: clamp(48px, 6vw, 110px); animation: marquee 48s linear infinite; }
-.item { white-space: nowrap; font-family: var(--f-title); font-size: clamp(26px, 2.4vw, 38px); line-height: 1; }
-/* Logos vetorizados em preto (public/clientes). Altura vem de content/site.ts. */
-.logo { display: block; width: auto; height: var(--h); }
-@media (max-width: 700px) { .logo { height: calc(var(--h) * 0.72); } }
-@keyframes marquee { to { transform: translateX(-100%); } }
-@media (prefers-reduced-motion: reduce) {
-  .viewport { width: auto; flex-wrap: wrap; justify-content: center; }
-  .track { flex-wrap: wrap; justify-content: center; padding-inline: 16px; row-gap: 18px; }
-  .track[aria-hidden="true"] { display: none; }
+/* Medidas tiradas da faixa de imprensa do Vacation: células de 15,4% da largura
+   (28,6% no celular), 30px entre elas, logos com até 40px de altura e respiro
+   de 80px acima e abaixo. */
+.clients { background: var(--beige); padding-block: clamp(40px, 5.5vw, 80px); }
+.viewport { overflow: hidden; cursor: grab; }
+.viewport:active { cursor: grabbing; }
+.viewport:focus-visible { outline: 3px solid var(--black); outline-offset: -3px; }
+.container { list-style: none; margin: 0 0 0 -30px; padding: 0; display: flex; align-items: center; touch-action: pan-y pinch-zoom; }
+.slide { flex: 0 0 15.385%; min-width: 0; padding-left: 30px; display: flex; justify-content: center; user-select: none; }
+.logo { display: block; width: auto; max-width: 100%; height: var(--h); object-fit: contain; pointer-events: none; }
+.name { font-family: var(--f-title); font-size: 28px; line-height: 1; white-space: nowrap; }
+@media (max-width: 599px) {
+  .slide { flex-basis: 28.571%; }
+  .logo { height: calc(var(--h) * 0.72); }
 }

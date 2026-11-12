@@ -114,17 +114,17 @@ export type Client = { name: string; logo?: { src: string; ratio: number; height
 
 export const clients: Client[] = [
   { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 34 } },
-  { name: "Planeta Atlântida" },
+  { name: "Planeta Atlântida", logo: { src: "/clientes/planeta-atlantida.svg", ratio: 2351 / 2179, height: 56 } },
   { name: "Espartano Skatepark", logo: { src: "/clientes/espartano.svg", ratio: 2320 / 703, height: 54 } },
   { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 44 } },
   { name: "Agência HOC", logo: { src: "/clientes/hoc.svg", ratio: 1655 / 457, height: 30 } },
   { name: "Gauchão" },
   { name: "Maia Entretenimento" },
-  { name: "happn" },
-  { name: "Zero Hora" },
-  { name: "Perky" },
+  { name: "happn", logo: { src: "/clientes/happn.svg", ratio: 3820 / 1250, height: 36 } },
+  { name: "Zero Hora", logo: { src: "/clientes/zero-hora.svg", ratio: 2335 / 1195, height: 44 } },
+  { name: "Perky", logo: { src: "/clientes/perky.svg", ratio: 2485 / 521, height: 30 } },
   { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 40 } },
-  { name: "Unimed" },
+  { name: "Unimed", logo: { src: "/clientes/unimed.svg", ratio: 2765 / 551, height: 30 } },
 ];
 
 export const contact = {

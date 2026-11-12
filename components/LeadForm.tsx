@@ -6,7 +6,7 @@ import s from "./Contact.module.css";
 const services = [
   { id: "design", label: "Design" },
   { id: "musica", label: "Música" },
-  { id: "video", label: "Vídeo" },
+  { id: "cinema", label: "Cinema" },
   { id: "foto", label: "Foto" },
 ];
 

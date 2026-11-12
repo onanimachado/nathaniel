@@ -4,11 +4,20 @@
  * texto corrido, sem travessão.
  */
 
+/*
+ * Vídeo da abertura. Coloque o MP4 em public/video/ e preencha "video" (ex.: "/video/abertura.mp4").
+ * "poster" é a imagem que aparece enquanto o vídeo carrega.
+ */
+export const hero = {
+  video: null as string | null,
+  poster: null as string | null,
+};
+
 export const tickerPhrases = [
   { before: "Num mundo meia boca, seja", script: "Muito Bala!", color: "pink" },
   { before: "Bem-vindo ao nosso clima" },
   { before: "A gente vê", script: "a limonada", after: "onde todos enxergam limão", color: "yellow" },
-  { before: "Design · Música · Filme · Foto" },
+  { before: "Design · Música · Cinema · Foto" },
   { before: "Nada é tão quente quanto uma marca que faz o mercado", script: "subir a régua", color: "blue" },
 ] as const;
 
@@ -28,7 +37,7 @@ export type Service = {
 export const services: Service[] = [
   {
     id: "design",
-    title: "Estúdio de design",
+    title: "Design.",
     tag: "Identidade · arte",
     description: "Identidade, direção de arte e tudo que precisa ficar bonito antes de rodar. Por aqui, quem desenha é Monique Borba.",
     cta: "Ver trabalhos",
@@ -36,7 +45,7 @@ export const services: Service[] = [
   },
   {
     id: "musica",
-    title: "Produção musical",
+    title: "Produção Musical.",
     tag: "Gravação · trilha",
     description: "Estúdio de gravação e trilha sonora original, o som que faz a imagem respirar. Nos fones, Leonardo Cassiano.",
     cta: "Ouvir",
@@ -44,7 +53,7 @@ export const services: Service[] = [
   },
   {
     id: "video",
-    title: "Produção de vídeo",
+    title: "Produção Cinematográfica.",
     tag: "Direção · filme",
     description: "Direção de cena, roteiro e filme, do set até a sala de edição. Atrás da câmera, Nani ArtClub.",
     cta: "Assistir",
@@ -52,7 +61,7 @@ export const services: Service[] = [
   },
   {
     id: "foto",
-    title: "Fotografia",
+    title: "Fotografia.",
     tag: "Ensaio · still",
     description: "Pele reluzente, luz difusa e cromado de época, com um pouco de humor. Do ensaio de marca ao still de produto.",
     cta: "Pedir orçamento",
@@ -90,17 +99,11 @@ export const figs = [
   },
 ];
 
-export const posts = [
-  { image: "/miv/post1.jpg", alt: "Post: Num mundo meia boca, seja Muito Bala!" },
-  { image: "/miv/post2.jpg", alt: "Post: Nada é tão quente quanto uma marca que faz o mercado subir a régua" },
-  { image: "/miv/post3.jpg", alt: "Post: A gente vê a limonada onde todos enxergam limão" },
-];
-
 /* EXEMPLOS DE LAYOUT: substituir pelos cases reais. */
 export const works = [
-  { time: "20:00", title: "Nome do projeto", meta: "Cliente · filme de campanha · 2026", service: "Produção de vídeo", pill: "yellow" },
-  { time: "20:30", title: "Nome do projeto", meta: "Cliente · trilha original · 2026", service: "Produção musical", pill: "blue" },
-  { time: "21:00", title: "Nome do projeto", meta: "Cliente · identidade visual · 2026", service: "Estúdio de design", pill: "blue" },
+  { time: "20:00", title: "Nome do projeto", meta: "Cliente · filme de campanha · 2026", service: "Produção Cinematográfica", pill: "yellow" },
+  { time: "20:30", title: "Nome do projeto", meta: "Cliente · trilha original · 2026", service: "Produção Musical", pill: "blue" },
+  { time: "21:00", title: "Nome do projeto", meta: "Cliente · identidade visual · 2026", service: "Design", pill: "blue" },
   { time: "21:30", title: "Nome do projeto", meta: "Cliente · ensaio fotográfico · 2026", service: "Fotografia", pill: "white" },
 ] as const;
 
@@ -113,8 +116,11 @@ export const works = [
 export type Client = { name: string; logo?: { src: string; ratio: number; height: number } };
 
 export const clients: Client[] = [
-  { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 34 } },
-  { name: "Planeta Atlântida", logo: { src: "/clientes/planeta-atlantida.svg", ratio: 2351 / 2179, height: 56 } },
+  // Destaque: Planeta Atlântida e STU maiores, seguidos de Grupo RBS e Unimed (pedido do Nani)
+  { name: "Planeta Atlântida", logo: { src: "/clientes/planeta-atlantida.svg", ratio: 2351 / 2179, height: 78 } },
+  { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 58 } },
+  { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 42 } },
+  { name: "Unimed", logo: { src: "/clientes/unimed.svg", ratio: 2765 / 551, height: 38 } },
   { name: "Espartano Skatepark", logo: { src: "/clientes/espartano.svg", ratio: 2320 / 703, height: 54 } },
   { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 44 } },
   { name: "Agência HOC", logo: { src: "/clientes/hoc.svg", ratio: 1655 / 457, height: 30 } },
@@ -123,8 +129,6 @@ export const clients: Client[] = [
   { name: "happn", logo: { src: "/clientes/happn.svg", ratio: 3820 / 1250, height: 36 } },
   { name: "Zero Hora", logo: { src: "/clientes/zero-hora.svg", ratio: 2335 / 1195, height: 44 } },
   { name: "Perky", logo: { src: "/clientes/perky.svg", ratio: 2485 / 521, height: 30 } },
-  { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 40 } },
-  { name: "Unimed", logo: { src: "/clientes/unimed.svg", ratio: 2765 / 551, height: 30 } },
 ];
 
 export const contact = {

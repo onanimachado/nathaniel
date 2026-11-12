@@ -15,7 +15,7 @@ export default function Footer() {
         <div className={s.grid}>
           <div>
             <h3>O que a gente faz</h3>
-            <ul>{services.map((sv) => <li key={sv.id}>{sv.title}</li>)}</ul>
+            <ul>{services.map((sv) => <li key={sv.id}>{sv.title.replace(/\.$/, "")}</li>)}</ul>
           </div>
           <div>
             <h3>Navegar</h3>

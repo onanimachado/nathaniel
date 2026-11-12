@@ -1,12 +1,13 @@
 /* Design system da Muito Bala, a partir do Manual de Identidade Visual (2026). */
 :root {
-  /* Paleta oficial (MIV p. 9) */
-  --blue: #89d1e0;   /* Azul Turquesa · Pantone 3105 C */
-  --pink: #e972cb;   /* Rosa Vibrante · Pantone 231 CP */
-  --yellow: #e1cb57; /* Amarelo Retrô · Pantone 458 CP */
-  --black: #000000;
-  --beige: #dfd1b7;
-  --white: #fbfcf3;
+  /* Paleta do MIV em versão fosca para tela (pedido do Nani, nov/2026):
+     ~30% menos saturação, levemente mais quente. Originais do manual ao lado. */
+  --blue: #8ec5d1;   /* Azul Turquesa · MIV #89D1E0 */
+  --pink: #d67bbf;   /* Rosa Vibrante · MIV #E972CB */
+  --yellow: #cbba63; /* Amarelo Retrô · MIV #E1CB57 */
+  --black: #1c1a17;  /* Preto · MIV #000000 (preto de tinta) */
+  --beige: #dfd1b7;  /* Bege · MIV #DFD1B7 */
+  --white: #f4f0e4;  /* Branco · MIV #FBFCF3 (papel envelhecido) */
 
   /* Fontes: variáveis definidas em app/fonts.ts */
   --f-title: var(--font-title), "Rocky Condensed", Georgia, serif;
@@ -52,6 +53,29 @@ p { margin: 0; }
   padding-left: max(16px, env(safe-area-inset-left, 0px));
   padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
+/* Grão de filme por cima de tudo, para o clima vintage */
+body::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.08  0 0 0 1.6 -0.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); }
+  60% { transform: translate(-2%, -1%); }
+  80% { transform: translate(3%, 3%); }
+  100% { transform: translate(0, 0); }
+}
+/* Fotos e vídeos com cara de filme revelado: um pouco menos de saturação e contraste */
+main img:not([src*="/clientes/"]):not([src*="/brand/"]), main video { filter: saturate(0.82) contrast(0.94) sepia(0.08); }
+
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 /* Primitivos do manual */

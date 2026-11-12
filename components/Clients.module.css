@@ -1,15 +1,13 @@
-/* Medidas tiradas da faixa de imprensa do Vacation: células de 15,4% da largura
-   (28,6% no celular), 30px entre elas, logos com até 40px de altura e respiro
-   de 80px acima e abaixo. */
+/* Células de mesma largura e respiro generoso, como na faixa de imprensa do Vacation. */
 .clients { background: var(--beige); padding-block: clamp(40px, 5.5vw, 80px); }
-.viewport { overflow: hidden; cursor: grab; }
+.viewport { overflow: hidden; cursor: grab; touch-action: pan-y; user-select: none; }
 .viewport:active { cursor: grabbing; }
-.viewport:focus-visible { outline: 3px solid var(--black); outline-offset: -3px; }
-.container { list-style: none; margin: 0 0 0 -30px; padding: 0; display: flex; align-items: center; touch-action: pan-y pinch-zoom; }
-.slide { flex: 0 0 15.385%; min-width: 0; padding-left: 30px; display: flex; justify-content: center; user-select: none; }
+.track { display: flex; width: max-content; will-change: transform; }
+.list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
+.slide { flex: 0 0 auto; width: clamp(150px, 14vw, 220px); padding-inline: 15px; display: flex; justify-content: center; align-items: center; height: 96px; }
 .logo { display: block; width: auto; max-width: 100%; height: var(--h); object-fit: contain; pointer-events: none; }
 .name { font-family: var(--f-title); font-size: 28px; line-height: 1; white-space: nowrap; }
 @media (max-width: 599px) {
-  .slide { flex-basis: 28.571%; }
+  .slide { width: 38vw; height: 72px; }
   .logo { height: calc(var(--h) * 0.72); }
 }

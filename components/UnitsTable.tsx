@@ -58,7 +58,7 @@ export default function UnitsTable() {
         <div className="head2">
           <h2 className="serif" id="units-title">Tudo isso,<br />uma vibe só.</h2>
           <p>
-            Design, música, vídeo e foto debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao
+            Design, música, cinema e foto debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao
             último corte. Pegue um card e arraste pela mesa.
           </p>
         </div>

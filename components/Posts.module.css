@@ -1,5 +1,0 @@
-.posts { background: var(--yellow); padding-block: var(--pad-block); }
-.row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 3vw, 56px); }
-.row img { width: 100%; height: auto; display: block; border-radius: 18px; transition: transform 0.3s var(--ease); }
-.row img:hover { transform: rotate(-2deg) scale(1.02); }
-@media (max-width: 700px) { .row { grid-template-columns: 1fr 1fr; } .row > div:last-child { display: none; } }

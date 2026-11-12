@@ -6,7 +6,6 @@ import Manifest from "@/components/Manifest";
 import UnitsTable from "@/components/UnitsTable";
 import Thesis from "@/components/Thesis";
 import Figs from "@/components/Figs";
-import Posts from "@/components/Posts";
 import Guide from "@/components/Guide";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -24,7 +23,6 @@ export default function Home() {
         <UnitsTable />
         <Thesis />
         <Figs />
-        <Posts />
         <Guide />
         <Contact />
       </main>

@@ -173,5 +173,12 @@
     "toDefine": "a definir",
     "atToDefine": "@ a definir",
     "sign": "Muito Bala. O seu paraíso audiovisual."
+  },
+  "playlist": {
+    "kicker": "Lado A",
+    "title": "Trilha do clima",
+    "text": "O que toca no estúdio, no set e no carro voltando do festival. Aperte o play e entre no nosso clima.",
+    "open": "Ouvir no Spotify",
+    "previewNote": "Na prévia o player não carrega. No site, a playlist toca aqui."
   }
 }

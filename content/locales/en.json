@@ -173,5 +173,12 @@
     "toDefine": "TBD",
     "atToDefine": "@ TBD",
     "sign": "Muito Bala. Your audiovisual paradise."
+  },
+  "playlist": {
+    "kicker": "Side A",
+    "title": "The vibe's soundtrack",
+    "text": "What plays in the studio, on set and in the car on the way back from the festival. Hit play and step into our vibe.",
+    "open": "Listen on Spotify",
+    "previewNote": "The player does not load in the preview. On the site, the playlist plays right here."
   }
 }

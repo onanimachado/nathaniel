@@ -1,0 +1,9 @@
+.playlist { background: var(--pink); padding-block: clamp(56px, 6vw, 110px); }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 90px); align-items: center; }
+.text { display: grid; gap: 18px; justify-items: start; max-width: 44ch; }
+.text h2 { font-size: clamp(40px, 5vw, 84px); }
+.kicker { font-family: var(--f-vhs); font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
+/* moldura de toca-fitas em volta do player */
+.deck { background: var(--black); border-radius: 22px; padding: 14px; box-shadow: 8px 8px 0 color-mix(in srgb, var(--black) 35%, transparent); }
+.deck iframe { display: block; border: 0; border-radius: 12px; }
+@media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }

@@ -68,6 +68,12 @@ export const clients: Client[] = [
   { name: "Perky", logo: { src: "/clientes/perky.svg", ratio: 2485 / 521, height: 30 } },
 ];
 
+/* Playlist do Spotify da Muito Bala (seção "Trilha do clima"). */
+export const playlist = {
+  id: "1pgBP7kPflzDkkuXH5YSWu",
+  url: "https://open.spotify.com/playlist/1pgBP7kPflzDkkuXH5YSWu",
+};
+
 export const contact = {
   email: null as string | null, // a definir
   instagram: null as string | null, // a definir

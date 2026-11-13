@@ -173,5 +173,12 @@
     "toDefine": "por definir",
     "atToDefine": "@ por definir",
     "sign": "Muito Bala. Tu paraíso audiovisual."
+  },
+  "playlist": {
+    "kicker": "Lado A",
+    "title": "La banda sonora del clima",
+    "text": "Lo que suena en el estudio, en el set y en el auto volviendo del festival. Dale play y entra a nuestro clima.",
+    "open": "Escuchar en Spotify",
+    "previewNote": "En la vista previa el reproductor no carga. En el sitio, la playlist suena aquí."
   }
 }

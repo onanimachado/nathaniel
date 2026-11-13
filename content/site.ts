@@ -63,7 +63,7 @@ export const clients: Client[] = [
   { name: "Gauchão", logo: { src: "/clientes/gauchao.svg", ratio: 2751 / 1383, height: 56 } },
   { name: "Maia Entretenimento", logo: { src: "/clientes/maia.svg", ratio: 2117 / 864, height: 38 } },
   { name: "happn", logo: { src: "/clientes/happn.svg", ratio: 3820 / 1250, height: 36 } },
-  { name: "Zero Hora", logo: { src: "/clientes/zero-hora.svg", ratio: 2335 / 1195, height: 44 } },
+  { name: "Zero Hora", logo: { src: "/clientes/zero-hora.svg", ratio: 2106 / 269, height: 22 } },
   { name: "Perky", logo: { src: "/clientes/perky.svg", ratio: 2485 / 521, height: 30 } },
 ];
 

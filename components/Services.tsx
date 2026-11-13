@@ -17,9 +17,14 @@ export default function Services({ t }: { t: Dict }) {
   return (
     <section className={s.services} data-bg="white" id="servicos" aria-labelledby="units-title">
       <div className="wrap">
-        <div className={`head2 ${s.head}`}>
-          <h2 className="serif" id="units-title">{t.services.titleLine1}<br />{t.services.titleLine2}</h2>
-          <p>{t.services.intro}</p>
+        {/* Frase em destaque, centralizada, no estilo da abertura do Vacation */}
+        <div className={s.head}>
+          <h2 className={s.quote} id="units-title">
+            “{t.services.titleLine1}
+            <br />
+            {t.services.titleLine2}”
+          </h2>
+          <a className={s.shop} href="#contato">{t.nav.cta}</a>
         </div>
         <div className={s.sheet}>
           <span className={s.scissors} aria-hidden="true">✂</span>

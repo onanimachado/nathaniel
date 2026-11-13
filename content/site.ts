@@ -50,18 +50,19 @@ export const works = [
  * em public/clientes/ (SVG de preferência, em uma cor só) e preencha "logo".
  */
 /* "height" é a altura do logo na faixa (px, no desktop), ajustada à mão para que todos tenham o mesmo peso visual. */
-export type Client = { name: string; logo?: { src: string; ratio: number; height: number } };
+export type Client = { name: string; logo?: { src: string; ratio: number; height: number }; focus?: boolean };
 
 export const clients: Client[] = [
-  // Destaque: Planeta Atlântida e STU maiores, seguidos de Grupo RBS e Unimed (pedido do Nani)
+  // Em destaque no centro quando a faixa chega ao meio da tela: Planeta Atlântida, JBL e Gauchão
+  // (focus marca a marca do meio). Depois STU, Grupo RBS e Unimed (pedido do Nani).
   { name: "Planeta Atlântida", logo: { src: "/clientes/planeta-atlantida.svg", ratio: 2351 / 2179, height: 78 } },
+  { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 62 }, focus: true },
+  { name: "Gauchão", logo: { src: "/clientes/gauchao.svg", ratio: 2751 / 1383, height: 72 } },
   { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 58 } },
   { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 42 } },
   { name: "Unimed", logo: { src: "/clientes/unimed.svg", ratio: 2765 / 551, height: 38 } },
   { name: "Espartano Skatepark", logo: { src: "/clientes/espartano.svg", ratio: 2320 / 703, height: 54 } },
-  { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 44 } },
   { name: "Agência HOC", logo: { src: "/clientes/hoc.svg", ratio: 1655 / 457, height: 30 } },
-  { name: "Gauchão", logo: { src: "/clientes/gauchao.svg", ratio: 2751 / 1383, height: 56 } },
   { name: "Maia Entretenimento", logo: { src: "/clientes/maia.svg", ratio: 2117 / 864, height: 38 } },
   { name: "happn", logo: { src: "/clientes/happn.svg", ratio: 3820 / 1250, height: 36 } },
   { name: "Zero Hora", logo: { src: "/clientes/zero-hora.svg", ratio: 2106 / 269, height: 22 } },

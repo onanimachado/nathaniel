@@ -33,6 +33,7 @@ export default function Clients({ t }: { t: Dict }) {
     let dragStartX = 0;
     let dragStartOffset = 0;
     let raf = 0;
+    const focusEl = el.querySelector<HTMLElement>("[data-focus]");
 
     const frame = (now: number) => {
       const dt = Math.min(64, now - last);
@@ -40,11 +41,20 @@ export default function Clients({ t }: { t: Dict }) {
       const y = window.scrollY;
       const dy = y - lastY;
       lastY = y;
-      if (!dragging && !reduce) {
+      const half = el.scrollWidth / 2;
+      /* Quando a faixa está no meio da tela, as marcas em destaque deslizam até o centro e ficam ali. */
+      const r = vp.getBoundingClientRect();
+      const inFocus = Math.abs(r.top + r.height / 2 - window.innerHeight / 2) < window.innerHeight * 0.22;
+      if (!dragging && inFocus && focusEl && half > 0) {
+        let tx = vp.clientWidth / 2 - (focusEl.offsetLeft + focusEl.offsetWidth / 2);
+        tx = (((tx % half) + half) % half) - half;
+        if (Math.abs(tx + half - x) < Math.abs(tx - x)) tx += half;
+        if (Math.abs(tx - half - x) < Math.abs(tx - x)) tx -= half;
+        x += (tx - x) * Math.min(1, dt / 220);
+      } else if (!dragging && !reduce) {
         if (!hover) x -= (BASE_SPEED * dt) / 1000;
         x -= dy * SCROLL_BOOST;
       }
-      const half = el.scrollWidth / 2;
       if (half > 0) x = (((x % half) + half) % half) - half;
       el.style.transform = `translate3d(${x}px, 0, 0)`;
       raf = requestAnimationFrame(frame);
@@ -84,7 +94,7 @@ export default function Clients({ t }: { t: Dict }) {
   const list = (hidden: boolean) => (
     <ul className={s.list} aria-hidden={hidden || undefined}>
       {clients.map((c) => (
-        <li className={s.slide} key={c.name}>
+        <li className={s.slide} key={c.name} data-focus={c.focus && !hidden ? "" : undefined}>
           {c.logo ? (
             <Image
               src={c.logo.src}

@@ -1,4 +1,4 @@
-import { Instrument_Serif, Questrial, Poppins, Yellowtail, VT323 } from "next/font/google";
+import { Instrument_Serif, Questrial, Poppins, Yellowtail, VT323, Montserrat_Alternates } from "next/font/google";
 
 /*
  * Substitutos livres das fontes do MIV:
@@ -13,4 +13,7 @@ export const sub = Poppins({ weight: ["600", "700"], subsets: ["latin"], variabl
 export const script = Yellowtail({ weight: "400", subsets: ["latin"], variable: "--font-script", display: "swap" });
 export const vhs = VT323({ weight: "400", subsets: ["latin"], variable: "--font-vhs", display: "swap" });
 
-export const fontVariables = [title, text, sub, script, vhs].map((f) => f.variable).join(" ");
+/* Avant Garde com pegada retrô (letras apertadas): Montserrat Alternates é a alternativa livre mais próxima. */
+export const retro = Montserrat_Alternates({ weight: ["500", "600"], subsets: ["latin"], variable: "--font-retro", display: "swap" });
+
+export const fontVariables = [title, text, sub, script, vhs, retro].map((f) => f.variable).join(" ");

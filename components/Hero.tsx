@@ -23,12 +23,16 @@ export default function Hero({ t }: { t: Dict }) {
 
   return (
     <section className={s.hero} onPointerMove={onMove} aria-labelledby="hero-title">
-      {hero.video && (
-        <video className={s.video} autoPlay muted loop playsInline preload="auto" poster={hero.poster ?? undefined} aria-hidden="true">
-          <source src={hero.video} type="video/mp4" />
-        </video>
-      )}
-      {hero.video && <div className={s.tint} aria-hidden="true" />}
+      {/* Fundo, vídeo e banho de cor somem em transparência embaixo, revelando o degradê da página */}
+      <div className={s.media} aria-hidden="true">
+        <div className={s.paint} />
+        {hero.video && (
+          <video className={s.video} autoPlay muted loop playsInline preload="auto" poster={hero.poster ?? undefined}>
+            <source src={hero.video} type="video/mp4" />
+          </video>
+        )}
+        {hero.video && <div className={s.tint} />}
+      </div>
       <h1 id="hero-title" className="sr-only">{t.hero.title}</h1>
       <div className={s.center} data-parallax="40">
         <div className={s.logo} ref={logo}>

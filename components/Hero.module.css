@@ -1,7 +1,8 @@
 /* Degradê da capa do MIV: rosa até 59%, depois funde no bege */
 .hero {
   position: relative;
-  min-height: max(520px, calc(100svh - 104px));
+  flex: 1;
+  min-height: 0;
   display: grid;
   place-items: center;
   overflow: hidden;
@@ -11,7 +12,7 @@
 .video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 /* Banho de rosa e azul por cima do vídeo, para o logo colorido continuar dentro da paleta */
 .tint { position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, var(--pink), var(--blue)); mix-blend-mode: color; opacity: 0.55; }
-.center { width: min(62vw, 560px, 62svh); padding-block: clamp(32px, 6vh, 64px); }
+.center { width: min(52vw, 520px, 48svh); }
 .logo { transition: transform 0.6s var(--ease); }
 .logo img { display: block; width: 100%; height: auto; }
-@media (max-width: 700px) { .center { width: min(80vw, 420px); } }
+@media (max-width: 700px) { .center { width: min(74vw, 400px, 46svh); } }

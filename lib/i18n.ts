@@ -29,3 +29,11 @@ export function getDict(locale: Locale): Dict {
 export function pathFor(locale: Locale): string {
   return locale === "pt" ? "/" : `/${locale}`;
 }
+
+export type Page = "" | "sobre" | "trabalhos";
+
+/* Endereço de uma página no idioma: hrefFor("en", "sobre") -> "/en/sobre"; hrefFor("pt", "") -> "/". */
+export function hrefFor(locale: Locale, page: Page = ""): string {
+  const base = locale === "pt" ? "" : `/${locale}`;
+  return page ? `${base}/${page}` : base || "/";
+}

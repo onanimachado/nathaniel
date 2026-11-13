@@ -9,3 +9,5 @@
 .grid a { text-decoration: none; }
 .bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 44px; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; }
 @media (max-width: 700px) { .top { grid-template-columns: 1fr; } }
+.footer { position: relative; z-index: 1; }
+.linkBtn { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }

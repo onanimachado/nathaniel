@@ -1,5 +1,5 @@
 /* Células de mesma largura e respiro generoso, como na faixa de imprensa do Vacation. */
-.clients { background: var(--beige); padding-block: clamp(40px, 5.5vw, 80px); }
+.clients { background: var(--beige); padding-block: clamp(14px, 2vw, 26px); border-top: 1.5px solid var(--black); }
 .viewport { overflow: hidden; cursor: grab; touch-action: pan-y; user-select: none; }
 .viewport:active { cursor: grabbing; }
 .track { display: flex; width: max-content; will-change: transform; }

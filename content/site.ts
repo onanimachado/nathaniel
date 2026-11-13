@@ -69,6 +69,8 @@ export const clients: Client[] = [
 ];
 
 export const contact = {
+  // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). Enquanto for null, o painel avisa que falta.
+  whatsapp: null as string | null,
   email: null as string | null, // a definir
   instagram: null as string | null, // a definir
   city: "Porto Alegre, RS",

@@ -6,9 +6,8 @@ import { clients } from "@/content/site";
 import type { Dict } from "@/lib/i18n";
 import s from "./Clients.module.css";
 
-/* Velocidade base (px por segundo) e quanto a rolagem da página empurra a faixa. */
-const BASE_SPEED = 55;
-const SCROLL_BOOST = 1.3;
+/* Quantos px a faixa anda para cada px que ela sobe ou desce na tela. */
+const SCROLL_FACTOR = 1.1;
 
 /*
  * Faixa de marcas no espírito da faixa de imprensa do Vacation: anda sozinha em loop,
@@ -24,70 +23,35 @@ export default function Clients({ t }: { t: Dict }) {
     const el = track.current;
     if (!vp || !el) return;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    let x = 0;
-    let last = performance.now();
-    let lastY = window.scrollY;
-    let hover = false;
-    let dragging = false;
-    let dragStartX = 0;
-    let dragStartOffset = 0;
+    const focus = Array.from(el.querySelectorAll<HTMLElement>("[data-focus]"));
     let raf = 0;
-    const focusEl = el.querySelector<HTMLElement>("[data-focus]");
 
-    const frame = (now: number) => {
-      const dt = Math.min(64, now - last);
-      last = now;
-      const y = window.scrollY;
-      const dy = y - lastY;
-      lastY = y;
+    /*
+     * A faixa anda só com a rolagem: a posição é função direta de onde a faixa está na tela.
+     * Quando ela passa pelo meio da tela, as marcas em destaque (Planeta Atlântida e JBL)
+     * ficam exatamente no centro. Rolando para baixo, os logos correm para a esquerda.
+     */
+    const place = () => {
+      raf = 0;
       const half = el.scrollWidth / 2;
-      /* Quando a faixa está no meio da tela, as marcas em destaque deslizam até o centro e ficam ali. */
+      if (!half || !focus.length) return;
+      const first = focus[0];
+      const last = focus[focus.length - 1];
+      const focusCenter = (first.offsetLeft + last.offsetLeft + last.offsetWidth) / 2;
       const r = vp.getBoundingClientRect();
-      const inFocus = Math.abs(r.top + r.height / 2 - window.innerHeight / 2) < window.innerHeight * 0.22;
-      if (!dragging && inFocus && focusEl && half > 0) {
-        let tx = vp.clientWidth / 2 - (focusEl.offsetLeft + focusEl.offsetWidth / 2);
-        tx = (((tx % half) + half) % half) - half;
-        if (Math.abs(tx + half - x) < Math.abs(tx - x)) tx += half;
-        if (Math.abs(tx - half - x) < Math.abs(tx - x)) tx -= half;
-        x += (tx - x) * Math.min(1, dt / 220);
-      } else if (!dragging && !reduce) {
-        if (!hover) x -= (BASE_SPEED * dt) / 1000;
-        x -= dy * SCROLL_BOOST;
-      }
-      if (half > 0) x = (((x % half) + half) % half) - half;
+      const offset = reduce ? 0 : (r.top + r.height / 2 - window.innerHeight / 2) * SCROLL_FACTOR;
+      let x = vp.clientWidth / 2 - focusCenter + offset;
+      x = (((x % half) + half) % half) - half;
       el.style.transform = `translate3d(${x}px, 0, 0)`;
-      raf = requestAnimationFrame(frame);
     };
-    raf = requestAnimationFrame(frame);
-
-    const enter = () => (hover = true);
-    const leave = () => (hover = false);
-    const down = (e: PointerEvent) => {
-      dragging = true;
-      dragStartX = e.clientX;
-      dragStartOffset = x;
-      vp.setPointerCapture(e.pointerId);
-    };
-    const move = (e: PointerEvent) => {
-      if (dragging) x = dragStartOffset + (e.clientX - dragStartX);
-    };
-    const up = () => (dragging = false);
-
-    vp.addEventListener("pointerenter", enter);
-    vp.addEventListener("pointerleave", leave);
-    vp.addEventListener("pointerdown", down);
-    vp.addEventListener("pointermove", move);
-    vp.addEventListener("pointerup", up);
-    vp.addEventListener("pointercancel", up);
+    const request = () => { if (!raf) raf = requestAnimationFrame(place); };
+    place();
+    window.addEventListener("scroll", request, { passive: true });
+    window.addEventListener("resize", request);
     return () => {
       cancelAnimationFrame(raf);
-      vp.removeEventListener("pointerenter", enter);
-      vp.removeEventListener("pointerleave", leave);
-      vp.removeEventListener("pointerdown", down);
-      vp.removeEventListener("pointermove", move);
-      vp.removeEventListener("pointerup", up);
-      vp.removeEventListener("pointercancel", up);
+      window.removeEventListener("scroll", request);
+      window.removeEventListener("resize", request);
     };
   }, []);
 

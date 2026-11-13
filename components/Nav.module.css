@@ -9,3 +9,13 @@
 .roll span { display: block; transition: transform 0.32s var(--ease); }
 .roll:hover span, a:focus-visible .roll span { transform: translateY(-100%); }
 @media (max-width: 820px) { .mid, .link { display: none; } }
+/* Seletor de idioma: PT · EN · ES */
+.langs { display: flex; align-items: center; gap: 2px; font-family: var(--f-sub); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; }
+.langs a { text-decoration: none; padding: 6px 7px; border-radius: 999px; opacity: 0.55; transition: opacity 0.18s var(--ease), background 0.18s var(--ease); }
+.langs a:hover { opacity: 1; }
+.langs .langActive { opacity: 1; background: var(--black); color: var(--yellow); }
+@media (max-width: 820px) {
+  .inner { grid-template-columns: auto 1fr; }
+  .inner ul { gap: 8px; justify-self: end; }
+  .inner :global(.pill) { font-size: 12px; padding: 0.55em 0.9em; }
+}

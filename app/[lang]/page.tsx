@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation";
+import { getDict, isLocale } from "@/lib/i18n";
 import Ticker from "@/components/Ticker";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
@@ -11,22 +13,25 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Motion from "@/components/Motion";
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  if (!isLocale(lang)) notFound();
+  const t = getDict(lang);
   return (
     <>
-      <Ticker />
-      <Nav />
+      <Ticker t={t} />
+      <Nav t={t} locale={lang} />
       <main id="topo">
-        <Hero />
-        <Clients />
-        <Manifest />
-        <UnitsTable />
-        <Thesis />
-        <Figs />
-        <Guide />
-        <Contact />
+        <Hero t={t} />
+        <Clients t={t} />
+        <Manifest t={t} />
+        <UnitsTable t={t} />
+        <Thesis t={t} />
+        <Figs t={t} />
+        <Guide t={t} />
+        <Contact t={t} />
       </main>
-      <Footer />
+      <Footer t={t} />
       <Motion />
     </>
   );

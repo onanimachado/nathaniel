@@ -116,6 +116,7 @@ main img:not([src*="/clientes/"]):not([src*="/brand/"]), main video { filter: sa
   border: 0;
   border-radius: 999px;
   padding: 0.6em 1.2em;
+  white-space: nowrap;
   cursor: pointer;
   transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
 }

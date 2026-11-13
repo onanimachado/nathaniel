@@ -1,53 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import type { Dict } from "@/lib/i18n";
 import s from "./Contact.module.css";
 
-const services = [
-  { id: "design", label: "Design" },
-  { id: "musica", label: "Música" },
-  { id: "cinema", label: "Cinema" },
-  { id: "foto", label: "Foto" },
-];
+const serviceIds = ["design", "musica", "cinema", "foto"] as const;
 
-export default function LeadForm() {
+export default function LeadForm({ t }: { t: Dict["contact"]["form"] }) {
   const [msg, setMsg] = useState("");
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const email = String(new FormData(e.currentTarget).get("email") ?? "").trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      setMsg("▶ Falta um e-mail válido para a gente responder.");
+      setMsg(t.errorEmail);
       return;
     }
     // TODO: enviar para o e-mail da Muito Bala (ex.: Route Handler + Resend) quando o e-mail for definido.
-    setMsg("▶ Envio ainda não configurado: falta definir o e-mail que recebe as propostas.");
+    setMsg(t.notConfigured);
   }
 
   return (
     <form className={s.form} onSubmit={onSubmit} noValidate>
       <div className={s.field}>
-        <label htmlFor="f-nome">Seu nome</label>
-        <input id="f-nome" name="nome" autoComplete="name" placeholder="Como a gente te chama" />
+        <label htmlFor="f-nome">{t.name}</label>
+        <input id="f-nome" name="nome" autoComplete="name" placeholder={t.namePlaceholder} />
       </div>
       <div className={s.field}>
-        <label htmlFor="f-email">E-mail</label>
-        <input id="f-email" name="email" type="email" autoComplete="email" placeholder="voce@marca.com.br" />
+        <label htmlFor="f-email">{t.email}</label>
+        <input id="f-email" name="email" type="email" autoComplete="email" placeholder={t.emailPlaceholder} />
       </div>
       <fieldset className={s.checks}>
-        <legend>O que você precisa</legend>
-        {services.map((sv) => (
-          <label key={sv.id}>
-            <input type="checkbox" name="servicos" value={sv.id} id={`f-${sv.id}`} /> {sv.label}
+        <legend>{t.needs}</legend>
+        {serviceIds.map((id) => (
+          <label key={id}>
+            <input type="checkbox" name="servicos" value={id} id={`f-${id}`} /> {t.options[id]}
           </label>
         ))}
       </fieldset>
       <div className={s.field}>
-        <label htmlFor="f-msg">Sobre o projeto</label>
-        <textarea id="f-msg" name="mensagem" placeholder="Prazo, ideia, referência, o que vier" />
+        <label htmlFor="f-msg">{t.about}</label>
+        <textarea id="f-msg" name="mensagem" placeholder={t.aboutPlaceholder} />
       </div>
       <div>
-        <button className="pill" type="submit">Enviar proposta</button>
+        <button className="pill" type="submit">{t.submit}</button>
       </div>
       <p className={s.msg} role="status">{msg}</p>
     </form>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { clients } from "@/content/site";
+import type { Dict } from "@/lib/i18n";
 import s from "./Clients.module.css";
 
 /* Velocidade base (px por segundo) e quanto a rolagem da página empurra a faixa. */
@@ -14,7 +15,7 @@ const SCROLL_BOOST = 1.3;
  * para com o mouse em cima e pode ser arrastada. Além disso, acelera junto com a
  * rolagem da página, para que numa rolagem só todas as marcas passem pela tela.
  */
-export default function Clients() {
+export default function Clients({ t }: { t: Dict }) {
   const viewport = useRef<HTMLDivElement>(null);
   const track = useRef<HTMLDivElement>(null);
 
@@ -104,7 +105,7 @@ export default function Clients() {
 
   return (
     <section className={s.clients} aria-labelledby="clients-title">
-      <h2 className="sr-only" id="clients-title">Marcas com quem a Muito Bala já trabalhou</h2>
+      <h2 className="sr-only" id="clients-title">{t.clients.title}</h2>
       <div className={s.viewport} ref={viewport}>
         <div className={s.track} ref={track}>
           {list(false)}

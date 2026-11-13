@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { useRef } from "react";
 import { hero } from "@/content/site";
+import type { Dict } from "@/lib/i18n";
 import s from "./Hero.module.css";
 
 /*
  * Abertura: só o logo, no centro. Atrás roda o vídeo (hero.video em content/site.ts),
  * como na abertura do Vacation. Sem vídeo, fica o degradê da capa do MIV.
  */
-export default function Hero() {
+export default function Hero({ t }: { t: Dict }) {
   const logo = useRef<HTMLDivElement>(null);
 
   function onMove(e: React.PointerEvent<HTMLElement>) {
@@ -28,10 +29,10 @@ export default function Hero() {
         </video>
       )}
       {hero.video && <div className={s.tint} aria-hidden="true" />}
-      <h1 id="hero-title" className="sr-only">Muito Bala</h1>
+      <h1 id="hero-title" className="sr-only">{t.hero.title}</h1>
       <div className={s.center} data-parallax="40">
         <div className={s.logo} ref={logo}>
-          <Image src="/brand/logo-azul.svg" alt="Muito Bala" width={1256} height={1226} priority />
+          <Image src="/brand/logo-azul.svg" alt={t.hero.title} width={1256} height={1226} priority />
         </div>
       </div>
     </section>

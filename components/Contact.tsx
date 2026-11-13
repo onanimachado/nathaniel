@@ -1,7 +1,8 @@
+import type { Dict } from "@/lib/i18n";
 import LeadForm from "./LeadForm";
 import s from "./Contact.module.css";
 
-export default function Contact() {
+export default function Contact({ t }: { t: Dict }) {
   return (
     <section className={s.contact} id="contato" aria-labelledby="contact-title">
       <div className="wrap">
@@ -13,12 +14,9 @@ export default function Contact() {
         </div>
         <div className={s.grid}>
           <div className={s.intro}>
-            <h3 id="contact-title">Vamos fazer algo muito bala?</h3>
-            <p>
-              Conta o que você tem em mente e do que precisa. A gente responde com uma proposta clara, sem
-              enrolação e com o clima de sempre.
-            </p>
-            <p className="sub" style={{ fontSize: 12 }}>Porto Alegre · atendimento em todo o Brasil</p>
+            <h3 id="contact-title">{t.contact.title}</h3>
+            <p>{t.contact.intro}</p>
+            <p className="sub" style={{ fontSize: 12 }}>{t.contact.area}</p>
             <div className={s.swatches} aria-hidden="true">
               <i style={{ background: "var(--blue)" }} />
               <i style={{ background: "var(--black)" }} />
@@ -26,7 +24,7 @@ export default function Contact() {
               <i style={{ background: "var(--yellow)" }} />
             </div>
           </div>
-          <LeadForm />
+          <LeadForm t={t.contact.form} />
         </div>
       </div>
     </section>

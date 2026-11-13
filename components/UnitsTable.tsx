@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { services, type Service } from "@/content/site";
+import type { Dict } from "@/lib/i18n";
 import s from "./UnitsTable.module.css";
 
 /* Posição inicial de cada card na mesa (desktop). */
@@ -20,7 +21,7 @@ const style: Record<Service["card"], { script: string; pill: string }> = {
   white: { script: "", pill: "pill--blue" },
 };
 
-export default function UnitsTable() {
+export default function UnitsTable({ t }: { t: Dict }) {
   const table = useRef<HTMLDivElement>(null);
   const z = useRef(10);
 
@@ -56,30 +57,30 @@ export default function UnitsTable() {
     <section className={s.units} id="servicos" aria-labelledby="units-title">
       <div className="wrap">
         <div className="head2">
-          <h2 className="serif" id="units-title">Tudo isso,<br />uma vibe só.</h2>
-          <p>
-            Design, música, cinema e foto debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao
-            último corte. Pegue um card e arraste pela mesa.
-          </p>
+          <h2 className="serif" id="units-title">{t.services.titleLine1}<br />{t.services.titleLine2}</h2>
+          <p>{t.services.intro}</p>
         </div>
         <div className={s.table} ref={table}>
-          {services.map((u, i) => (
+          {services.map((u, i) => {
+            const tx = t.services.items[u.id];
+            return (
             <article
               key={u.id}
               className={`${s.card} ${s[u.card]}`}
               style={{ left: layout[i].left, top: layout[i].top, transform: `rotate(${layout[i].rot}deg)` }}
               onPointerDown={onPointerDown}
             >
-              <span className="tag">{u.tag}</span>
-              <h3 className={`script ${style[u.card].script}`}>{u.title}</h3>
-              <p>{u.description}</p>
+              <span className="tag">{tx.tag}</span>
+              <h3 className={`script ${style[u.card].script}`}>{tx.title}</h3>
+              <p>{tx.description}</p>
               <div className={s.foot}>
                 <span className={s.fig}>FIG. {i + 1}</span>
-                <span className={`pill ${style[u.card].pill}`}>{u.cta}</span>
+                <span className={`pill ${style[u.card].pill}`}>{tx.cta}</span>
               </div>
             </article>
-          ))}
-          <p className={s.hint}>↔ arraste os cards pela mesa</p>
+            );
+          })}
+          <p className={s.hint}>{t.services.hint}</p>
         </div>
       </div>
     </section>

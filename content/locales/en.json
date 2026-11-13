@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Muito Bala · Your audiovisual paradise",
+    "description": "Audiovisual production house from Porto Alegre, Brazil. Design, music, film and photo with the look of a 90s Miami summer. Welcome to our vibe.",
+    "ogDescription": "Design, music, film and photo. Welcome to our vibe."
+  },
+  "nav": {
+    "homeLabel": "Muito Bala, home",
+    "brand": "Muito Bala",
+    "tagline": "Audiovisual production house",
+    "services": "What we do",
+    "works": "Work",
+    "cta": "Get a quote",
+    "language": "Language"
+  },
+  "ticker": [
+    { "before": "In a so-so world, be", "script": "Muito Bala!", "color": "pink" },
+    { "before": "Welcome to our vibe" },
+    { "before": "We see", "script": "the lemonade", "after": "where everyone else sees lemons", "color": "yellow" },
+    { "before": "Design · Music · Film · Photo" },
+    { "before": "Nothing is as hot as a brand that makes the market", "script": "raise the bar", "color": "blue" }
+  ],
+  "hero": { "title": "Muito Bala" },
+  "clients": { "title": "Brands Muito Bala has worked with" },
+  "manifest": {
+    "title": "The vibe",
+    "headBefore": "Good things ask for",
+    "headScript": "a little more.",
+    "p1": "The internet taught everyone to swipe in three seconds. We shoot on a Handycam, record to tape and develop slowly, because what is truly good rewards the ones who stay.",
+    "p2": "Whoever stays until the end is exactly who your brand was hoping to find. Serious work, easy feeling, and here anything goes."
+  },
+  "services": {
+    "titleLine1": "All of it,",
+    "titleLine2": "one single vibe.",
+    "intro": "Design, music, film and photo under one roof. We deliver the whole project, from the first sketch to the final cut. Grab a card and drag it across the table.",
+    "hint": "↔ drag the cards across the table",
+    "items": {
+      "design": { "title": "Design.", "tag": "Identity · art", "description": "Identity, art direction and everything that has to look good before the camera rolls. Around here, Monique Borba does the drawing.", "cta": "See work" },
+      "musica": { "title": "Music Production.", "tag": "Recording · score", "description": "Recording studio and original soundtracks, the sound that lets the image breathe. On headphones, Leonardo Cassiano.", "cta": "Listen" },
+      "video": { "title": "Film Production.", "tag": "Directing · film", "description": "Directing, script and film, from the set to the edit suite. Behind the camera, Nani ArtClub.", "cta": "Watch" },
+      "foto": { "title": "Photography.", "tag": "Shoot · still", "description": "Glowing skin, soft light and period chrome, with a touch of humor. From brand shoots to product stills.", "cta": "Get a quote" }
+    }
+  },
+  "thesis": {
+    "before": "We Don't Deliver Audiences. We Deliver",
+    "script": "the right audience",
+    "after": "Pre-Filtered By The Content Itself.",
+    "sign": "Muito Bala. Your audiovisual paradise."
+  },
+  "figs": {
+    "title": "The vibe's instruction manual",
+    "intro": "Three things that come standard with every Muito Bala project.",
+    "items": [
+      { "pillar": "Bold", "title": "No fear of looking silly", "text": "Muito bala is its own yardstick. We take the risk of doing things differently, embrace the goofy and the comic, and turn it into images nobody forgets.", "alt": "Tanned back with the Muito Bala logo drawn by the sun, by the pool", "caption": "tan line" },
+      { "pillar": "Intense", "title": "Truly analog", "text": "Handycam, Cybershot, vinyl and cassette. It is not nostalgia. It is proof that you can still make someone stop and look calmly, and that it still works very well.", "alt": "Vinyl record with a blue sleeve and the Muito Bala logo in pink", "caption": "side A" },
+      { "pillar": "Young", "title": "Serious work, easy feeling", "text": "Our strong suit is the experience. A calm set, honest conversation and delivery on time. You walk out of the project with the material ready and wanting to come back.", "alt": "Gardener in a light suit trimming a hedge sculpture shaped like the MB monogram", "caption": "happy client, natural habitat" }
+    ]
+  },
+  "guide": {
+    "title": "TV guide",
+    "intro": "Our work shows up like a TV listing: time slot, title and what we did.",
+    "todo": "LAYOUT EXAMPLES",
+    "items": [
+      { "title": "Project name", "meta": "Client · campaign film · 2026", "service": "Film Production" },
+      { "title": "Project name", "meta": "Client · original score · 2026", "service": "Music Production" },
+      { "title": "Project name", "meta": "Client · visual identity · 2026", "service": "Design" },
+      { "title": "Project name", "meta": "Client · photo shoot · 2026", "service": "Photography" }
+    ]
+  },
+  "contact": {
+    "title": "Shall we make something muito bala?",
+    "intro": "Tell us what you have in mind and what you need. We will reply with a clear proposal, no fluff, and the usual vibe.",
+    "area": "Porto Alegre · working across Brazil",
+    "form": {
+      "name": "Your name",
+      "namePlaceholder": "What should we call you",
+      "email": "Email",
+      "emailPlaceholder": "you@brand.com",
+      "needs": "What you need",
+      "options": { "design": "Design", "musica": "Music", "cinema": "Film", "foto": "Photo" },
+      "about": "About the project",
+      "aboutPlaceholder": "Deadline, idea, references, whatever comes",
+      "submit": "Send proposal",
+      "errorEmail": "▶ We need a valid email to reply.",
+      "notConfigured": "▶ Sending is not set up yet: the inbox for proposals has not been defined."
+    }
+  },
+  "footer": {
+    "titleBefore": "Our vibe",
+    "titleScript": "is the product.",
+    "services": "What we do",
+    "navigate": "Navigate",
+    "social": "Social",
+    "talk": "Talk to the house",
+    "quote": "Get a quote",
+    "email": "Email",
+    "toDefine": "TBD",
+    "atToDefine": "@ TBD",
+    "sign": "Muito Bala. Your audiovisual paradise."
+  }
+}

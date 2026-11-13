@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Muito Bala · Tu paraíso audiovisual",
+    "description": "Productora audiovisual de Porto Alegre, Brasil. Diseño, música, cine y foto con cara de verano en Miami de los 90. Bienvenidos a nuestro clima.",
+    "ogDescription": "Diseño, música, cine y foto. Bienvenidos a nuestro clima."
+  },
+  "nav": {
+    "homeLabel": "Muito Bala, inicio",
+    "brand": "Muito Bala",
+    "tagline": "Productora audiovisual",
+    "services": "Lo que hacemos",
+    "works": "Trabajos",
+    "cta": "Pedir presupuesto",
+    "language": "Idioma"
+  },
+  "ticker": [
+    { "before": "¡En un mundo mediocre, sé", "script": "Muito Bala!", "color": "pink" },
+    { "before": "Bienvenidos a nuestro clima" },
+    { "before": "Nosotros vemos", "script": "la limonada", "after": "donde todos ven limones", "color": "yellow" },
+    { "before": "Diseño · Música · Cine · Foto" },
+    { "before": "Nada es tan caliente como una marca que hace al mercado", "script": "subir la vara", "color": "blue" }
+  ],
+  "hero": { "title": "Muito Bala" },
+  "clients": { "title": "Marcas con las que Muito Bala ya trabajó" },
+  "manifest": {
+    "title": "El clima",
+    "headBefore": "Lo bueno pide",
+    "headScript": "un poco más.",
+    "p1": "Internet le enseñó a todo el mundo a deslizar el dedo en tres segundos. Nosotros filmamos en Handycam, grabamos en cinta y revelamos con calma, porque lo que es bueno de verdad recompensa a quien se queda.",
+    "p2": "Quien se queda hasta el final es exactamente a quien tu marca quería encontrar. Trabajo serio, sensación liviana, y aquí todo es posible."
+  },
+  "services": {
+    "titleLine1": "Todo esto,",
+    "titleLine2": "una sola vibra.",
+    "intro": "Diseño, música, cine y foto bajo el mismo techo. Entregamos el proyecto entero, del primer boceto al último corte. Toma una tarjeta y arrástrala por la mesa.",
+    "hint": "↔ arrastra las tarjetas por la mesa",
+    "items": {
+      "design": { "title": "Diseño.", "tag": "Identidad · arte", "description": "Identidad, dirección de arte y todo lo que tiene que verse bien antes de rodar. Aquí, quien dibuja es Monique Borba.", "cta": "Ver trabajos" },
+      "musica": { "title": "Producción Musical.", "tag": "Grabación · sonido", "description": "Estudio de grabación y banda sonora original, el sonido que hace respirar a la imagen. En los auriculares, Leonardo Cassiano.", "cta": "Escuchar" },
+      "video": { "title": "Producción Cinematográfica.", "tag": "Dirección · cine", "description": "Dirección de escena, guion y cine, del set a la sala de edición. Detrás de cámara, Nani ArtClub.", "cta": "Ver" },
+      "foto": { "title": "Fotografía.", "tag": "Sesión · still", "description": "Piel brillante, luz difusa y cromado de época, con un poco de humor. De la sesión de marca al still de producto.", "cta": "Pedir presupuesto" }
+    }
+  },
+  "thesis": {
+    "before": "No Entregamos Audiencia. Entregamos",
+    "script": "la audiencia correcta",
+    "after": "Prefiltrada Por El Propio Contenido.",
+    "sign": "Muito Bala. Tu paraíso audiovisual."
+  },
+  "figs": {
+    "title": "Manual de instrucciones del clima",
+    "intro": "Tres cosas que vienen de fábrica en todo proyecto Muito Bala.",
+    "items": [
+      { "pillar": "Osada", "title": "Sin miedo al ridículo", "text": "Muito bala es su propia vara. Nos arriesgamos a hacer las cosas distinto, abrazamos lo tonto y lo cómico, y lo convertimos en imágenes que nadie olvida.", "alt": "Espalda bronceada con la marca Muito Bala dibujada por el sol, junto a la piscina", "caption": "marca de sol" },
+      { "pillar": "Intensa", "title": "Analógico de verdad", "text": "Handycam, Cybershot, vinilo y casete. No es nostalgia. Es la prueba de que se puede hacer que alguien se detenga y mire con calma, y de que eso sigue funcionando muy bien.", "alt": "Disco de vinilo con funda azul y el logo Muito Bala en rosa", "caption": "lado A" },
+      { "pillar": "Joven", "title": "Trabajo serio, sensación liviana", "text": "Nuestro fuerte es la experiencia. Set tranquilo, conversación franca y entrega a tiempo. Sales del proyecto con el material listo y con ganas de volver.", "alt": "Jardinero de traje claro podando una escultura de arbusto con la forma del monograma MB", "caption": "cliente satisfecho, hábitat natural" }
+    ]
+  },
+  "guide": {
+    "title": "Programación",
+    "intro": "Los trabajos aparecen como en una grilla de TV: horario, título y lo que hicimos.",
+    "todo": "EJEMPLOS DE MAQUETA",
+    "items": [
+      { "title": "Nombre del proyecto", "meta": "Cliente · película de campaña · 2026", "service": "Producción Cinematográfica" },
+      { "title": "Nombre del proyecto", "meta": "Cliente · banda sonora original · 2026", "service": "Producción Musical" },
+      { "title": "Nombre del proyecto", "meta": "Cliente · identidad visual · 2026", "service": "Diseño" },
+      { "title": "Nombre del proyecto", "meta": "Cliente · sesión de fotos · 2026", "service": "Fotografía" }
+    ]
+  },
+  "contact": {
+    "title": "¿Hacemos algo muito bala?",
+    "intro": "Cuéntanos qué tienes en mente y qué necesitas. Te respondemos con una propuesta clara, sin vueltas y con el clima de siempre.",
+    "area": "Porto Alegre · trabajamos en todo Brasil",
+    "form": {
+      "name": "Tu nombre",
+      "namePlaceholder": "¿Cómo te llamamos?",
+      "email": "Correo",
+      "emailPlaceholder": "tu@marca.com",
+      "needs": "Qué necesitas",
+      "options": { "design": "Diseño", "musica": "Música", "cinema": "Cine", "foto": "Foto" },
+      "about": "Sobre el proyecto",
+      "aboutPlaceholder": "Plazo, idea, referencias, lo que sea",
+      "submit": "Enviar propuesta",
+      "errorEmail": "▶ Falta un correo válido para responderte.",
+      "notConfigured": "▶ El envío aún no está configurado: falta definir el correo que recibe las propuestas."
+    }
+  },
+  "footer": {
+    "titleBefore": "Nuestra vibra",
+    "titleScript": "es el producto.",
+    "services": "Lo que hacemos",
+    "navigate": "Navegar",
+    "social": "Redes",
+    "talk": "Habla con la casa",
+    "quote": "Presupuesto",
+    "email": "Correo",
+    "toDefine": "por definir",
+    "atToDefine": "@ por definir",
+    "sign": "Muito Bala. Tu paraíso audiovisual."
+  }
+}

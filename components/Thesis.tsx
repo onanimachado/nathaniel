@@ -1,14 +1,15 @@
+import type { Dict } from "@/lib/i18n";
 import s from "./Thesis.module.css";
 
-export default function Thesis() {
+export default function Thesis({ t }: { t: Dict }) {
+  const th = t.thesis;
   return (
-    <section className={s.thesis} aria-label="Nossa tese">
+    <section className={s.thesis} aria-labelledby="thesis-title">
       <div className="wrap">
-        <h2 className={`serif ${s.h}`} data-parallax="-50">
-          Não Entregamos Audiência. Entregamos <span className="script">a audiência certa</span> Pré-Filtrada Pelo
-          Próprio Conteúdo.
+        <h2 className={`serif ${s.h}`} id="thesis-title" data-parallax="-50">
+          {th.before} <span className="script">{th.script}</span> {th.after}
         </h2>
-        <p className={s.sign}>Muito Bala. O seu paraíso audiovisual.</p>
+        <p className={s.sign}>{th.sign}</p>
       </div>
     </section>
   );

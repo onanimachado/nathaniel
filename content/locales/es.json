@@ -58,47 +58,23 @@
     "items": {
       "design": {
         "title": "Diseño.",
-        "cta": "Ver trabajos",
-        "ad": {
-          "tagline": "La nueva línea de identidad y dirección de arte para marcas que quieren ser recordadas.",
-          "featuring": "Con Monique Borba en el trazo: logotipo, manual de marca y todo lo que tiene que verse bien antes de rodar.",
-          "note": "Espera de 2 a 5 cafés para el primer boceto."
-        }
+        "line": "Identidad y dirección de arte.",
+        "cta": "Ver trabajos"
       },
       "musica": {
         "title": "Producción Musical.",
-        "cta": "Escuchar",
-        "ad": {
-          "headline": "Maximiza Tu Clima",
-          "badge": "GRABA CON MUITO BALA",
-          "steps": [
-            "Trae la idea, la letra o solo el estribillo.",
-            "Entra al estudio y aprieta REC.",
-            "Leonardo Cassiano se encarga del resto en los auriculares.",
-            "Sal con una banda sonora original lista para la imagen.",
-            "Disfruta tu clima maximizado."
-          ]
-        }
+        "line": "Grabación y banda sonora original.",
+        "cta": "Escuchar"
       },
       "video": {
         "title": "Producción Cinematográfica.",
-        "cta": "Ver",
-        "ad": {
-          "kicker": "Dirección · guion · cine",
-          "big": "24 FPS",
-          "headline": "Del set a la sala de edición",
-          "fine": "Detrás de cámara, Nani ArtClub. Sujeto a disponibilidad de atardecer. Claqueta incluida."
-        }
+        "line": "Del set a la sala de edición.",
+        "cta": "Ver"
       },
       "foto": {
         "title": "Fotografía.",
-        "cta": "Pedir presupuesto",
-        "ad": {
-          "big": "36",
-          "unit": "TOMAS",
-          "headline": "POR ROLLO, EN TODA SESIÓN DE FOTOS",
-          "fine": "Oferta válida mientras haya luz. Piel brillante, luz difusa y cromado de época incluidos, de la sesión de marca al still de producto. Muito Bala no se responsabiliza por elogios recurrentes, invitaciones a cenar ni exceso de likes después de publicar las fotos. Para más letra chica, háblanos después del happy hour."
-        }
+        "line": "Sesiones de marca y still de producto.",
+        "cta": "Pedir presupuesto"
       }
     }
   },

@@ -58,47 +58,23 @@
     "items": {
       "design": {
         "title": "Design.",
-        "cta": "Ver trabalhos",
-        "ad": {
-          "tagline": "A nova linha de identidade e direção de arte para marcas que querem ser lembradas.",
-          "featuring": "Com Monique Borba no traço: logotipo, manual de marca e tudo que precisa ficar bonito antes de rodar.",
-          "note": "Aguarde de 2 a 5 cafés para o primeiro rascunho."
-        }
+        "line": "Identidade e direção de arte.",
+        "cta": "Ver trabalhos"
       },
       "musica": {
         "title": "Produção Musical.",
-        "cta": "Ouvir",
-        "ad": {
-          "headline": "Maximize o Seu Clima",
-          "badge": "GRAVE COM A MUITO BALA",
-          "steps": [
-            "Traga a ideia, a letra ou só o refrão.",
-            "Entre no estúdio e aperte o REC.",
-            "Leonardo Cassiano cuida do resto nos fones.",
-            "Saia com trilha original pronta para a imagem.",
-            "Aproveite o seu clima maximizado."
-          ]
-        }
+        "line": "Gravação e trilha original.",
+        "cta": "Ouvir"
       },
       "video": {
         "title": "Produção Cinematográfica.",
-        "cta": "Assistir",
-        "ad": {
-          "kicker": "Direção de cena · roteiro · filme",
-          "big": "24 FPS",
-          "headline": "Do set à sala de edição",
-          "fine": "Atrás da câmera, Nani ArtClub. Sujeito a disponibilidade de pôr do sol. Claquete inclusa."
-        }
+        "line": "Do set à sala de edição.",
+        "cta": "Assistir"
       },
       "foto": {
         "title": "Fotografia.",
-        "cta": "Pedir orçamento",
-        "ad": {
-          "big": "36",
-          "unit": "POSES",
-          "headline": "POR ROLO, EM TODA SESSÃO DE FOTOGRAFIA",
-          "fine": "Oferta válida enquanto houver luz. Pele reluzente, luz difusa e cromado de época inclusos, do ensaio de marca ao still de produto. A Muito Bala não se responsabiliza por elogios recorrentes, convites para jantar ou excesso de curtidas após a publicação das fotos. Para mais letras miúdas, fale com a gente depois do happy hour."
-        }
+        "line": "Ensaio de marca e still de produto.",
+        "cta": "Pedir orçamento"
       }
     }
   },

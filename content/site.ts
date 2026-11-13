@@ -21,21 +21,13 @@ export const hero = {
 export type Service = { id: "design" | "musica" | "video" | "foto"; card: "blue" | "pink" | "yellow" | "white"; image: string };
 
 // Ordem pedida pelo Nani (nov/2026): cinema, foto, música, design.
-// Cada serviço vira um "cupom de revista" (components/Services.tsx). Imagens provisórias do MIV.
+// Cada serviço é um cupom: foto, nome do serviço, uma linha e botão (components/Services.tsx). Imagens provisórias do MIV.
 export const services: Service[] = [
   { id: "video", card: "yellow", image: "/miv/neon.jpg" },
   { id: "foto", card: "white", image: "/miv/sol.jpg" },
   { id: "musica", card: "pink", image: "/miv/disco.jpg" },
   { id: "design", card: "blue", image: "/miv/jardim.jpg" },
 ];
-
-/* Detalhes de "anúncio impresso" dos cupons, iguais em todos os idiomas. */
-export const coupon = {
-  timecode: "00:00:24:00",
-  formats: ["4K", "35MM", "VHS", "S16"],
-  code: "MB-1990",
-  barcode: "7 891990 202604",
-};
 
 /* Figuras do "manual de instruções do clima". Textos em figs.items, na mesma ordem. */
 export const figs = [

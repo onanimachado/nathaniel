@@ -58,47 +58,23 @@
     "items": {
       "design": {
         "title": "Design.",
-        "cta": "See work",
-        "ad": {
-          "tagline": "The new line of identity and art direction for brands that want to be remembered.",
-          "featuring": "With Monique Borba on the pen: logo, brand guidelines and everything that has to look good before the camera rolls.",
-          "note": "Allow 2 to 5 coffees for the first draft."
-        }
+        "line": "Identity and art direction.",
+        "cta": "See work"
       },
       "musica": {
         "title": "Music Production.",
-        "cta": "Listen",
-        "ad": {
-          "headline": "Maximize Your Vibe",
-          "badge": "RECORD WITH MUITO BALA",
-          "steps": [
-            "Bring the idea, the lyrics or just the hook.",
-            "Walk into the studio and hit REC.",
-            "Leonardo Cassiano handles the rest on headphones.",
-            "Walk out with an original score ready for picture.",
-            "Enjoy your maximized vibe."
-          ]
-        }
+        "line": "Recording and original scores.",
+        "cta": "Listen"
       },
       "video": {
         "title": "Film Production.",
-        "cta": "Watch",
-        "ad": {
-          "kicker": "Directing · script · film",
-          "big": "24 FPS",
-          "headline": "From the set to the edit suite",
-          "fine": "Behind the camera, Nani ArtClub. Subject to sunset availability. Clapperboard included."
-        }
+        "line": "From the set to the edit suite.",
+        "cta": "Watch"
       },
       "foto": {
         "title": "Photography.",
-        "cta": "Get a quote",
-        "ad": {
-          "big": "36",
-          "unit": "SHOTS",
-          "headline": "PER ROLL, ON EVERY PHOTO SHOOT",
-          "fine": "Offer valid while the light lasts. Glowing skin, soft light and period chrome included, from brand shoots to product stills. Muito Bala is not liable for recurring compliments, dinner invitations or excessive likes after the photos go up. For more fine print, talk to us after happy hour."
-        }
+        "line": "Brand shoots and product stills.",
+        "cta": "Get a quote"
       }
     }
   },

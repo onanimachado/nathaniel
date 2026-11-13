@@ -1,25 +1,20 @@
 import type { Dict } from "@/lib/i18n";
 import s from "./Manifest.module.css";
 
-/* Manifesto da marca. Texto do Nani, preservado literalmente em português (content/locales). */
+/*
+ * Seção que antes trazia o manifesto: agora só "beach of vibe production", em duas linhas,
+ * na letra script da marca (pedido do Nani). O texto completo do manifesto continua
+ * guardado em manifest.stanzas nos arquivos de idioma, caso volte a ser usado.
+ */
 export default function Manifest({ t }: { t: Dict }) {
-  const m = t.manifest;
+  const [l1, l2] = t.manifest.beach;
   return (
-    <section className={s.manifest} data-bg="beige" id="manifesto" aria-labelledby="manifest-title">
-      <div className={`wrap ${s.grid}`}>
-        <div className={s.side}>
-          <p className={s.kicker}>{m.kicker}</p>
-          <h2 id="manifest-title" className={`serif ${s.title}`}>{m.title}</h2>
-        </div>
-        <div className={s.body}>
-          {m.stanzas.map((stanza, i) => (
-            <div className={`${s.stanza} ${i === 0 ? s.lead : ""}`} key={i}>
-              {stanza.map((line, j) => <p key={j}>{line}</p>)}
-            </div>
-          ))}
-          <p className={`script ${s.welcome}`}>{m.welcome}</p>
-          <p className={s.sign}>{m.sign}</p>
-        </div>
+    <section className={s.manifest} id="manifesto" data-bg="beige" aria-label={`${l1} ${l2}`}>
+      <div className="wrap">
+        <p className={`script ${s.beach}`}>
+          <span>{l1}</span>
+          <span>{l2}</span>
+        </p>
       </div>
     </section>
   );

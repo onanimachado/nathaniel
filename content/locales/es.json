@@ -7,7 +7,7 @@
   "nav": {
     "homeLabel": "Muito Bala, inicio",
     "brand": "Muito Bala",
-    "tagline": "Productora audiovisual",
+    "tagline": "Muito Bala LTDA.",
     "services": "Lo que hacemos",
     "works": "Trabajos",
     "cta": "Pedir presupuesto",
@@ -38,7 +38,8 @@
     }
   ],
   "hero": {
-    "title": "Muito Bala"
+    "title": "Muito Bala",
+    "place": "Porto Alegre, BRA."
   },
   "clients": {
     "title": "Marcas con las que Muito Bala ya trabajó"
@@ -68,7 +69,11 @@
       ]
     ],
     "welcome": "Bienvenidos a nuestro mundo.",
-    "sign": "Muito Bala."
+    "sign": "Muito Bala.",
+    "beach": [
+      "beach of vibe",
+      "production"
+    ]
   },
   "services": {
     "titleLine1": "Todo esto,",

@@ -17,3 +17,6 @@
 @media (max-width: 700px) { .center { width: min(80vw, 420px); } }
 /* O vídeo se dissolve no bege da faixa de marcas, sem borda seca (fica acima do vídeo, abaixo do logo) */
 .hero::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--beige) 55%, transparent) 55%, var(--beige)); }
+/* Porto Alegre, BRA.: logo abaixo do logo, subindo em arco para a direita */
+.place { display: block; width: 80%; margin: -13% 0 0 22%; overflow: visible; filter: drop-shadow(0 2px 6px rgba(28, 26, 23, 0.45)); }
+.place text { font-family: var(--f-place); font-size: 70px; letter-spacing: 0.01em; fill: var(--white); stroke: var(--white); stroke-width: 1.8px; paint-order: stroke; }

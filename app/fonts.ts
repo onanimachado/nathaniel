@@ -1,4 +1,4 @@
-import { Instrument_Serif, Questrial, Poppins, Yellowtail, VT323 } from "next/font/google";
+import { Instrument_Serif, Questrial, Poppins, Yellowtail, VT323, Belleza } from "next/font/google";
 
 /*
  * Substitutos livres das fontes do MIV:
@@ -13,4 +13,7 @@ export const sub = Poppins({ weight: ["600", "700"], subsets: ["latin"], variabl
 export const script = Yellowtail({ weight: "400", subsets: ["latin"], variable: "--font-script", display: "swap" });
 export const vhs = VT323({ weight: "400", subsets: ["latin"], variable: "--font-vhs", display: "swap" });
 
-export const fontVariables = [title, text, sub, script, vhs].map((f) => f.variable).join(" ");
+/* Estilo Optima, como o "Miami, U.S.A." do Vacation (usado em "Porto Alegre, BRA.") */
+export const place = Belleza({ weight: "400", subsets: ["latin"], variable: "--font-place", display: "swap" });
+
+export const fontVariables = [title, text, sub, script, vhs, place].map((f) => f.variable).join(" ");

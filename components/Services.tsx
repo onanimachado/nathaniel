@@ -4,8 +4,9 @@ import type { Dict } from "@/lib/i18n";
 import s from "./Services.module.css";
 
 /*
- * O que a gente faz, em forma de cupons de revista recortáveis, no espírito dos
- * anúncios impressos do Vacation. Cada serviço tem um layout próprio.
+ * O que a gente faz: uma fila de cupons de revista, no espírito dos anúncios impressos
+ * do Vacation. O título de cada cupom é o próprio serviço, sempre em destaque e no mesmo
+ * lugar; os detalhes de anúncio (24 FPS, 36 POSES, passo a passo, letra miúda) vêm depois.
  */
 
 /* Botão com a cor complementar ao fundo do cupom (MIV p. 10). */
@@ -29,92 +30,89 @@ function Barcode({ digits }: { digits: string }) {
   );
 }
 
-function Cta({ card, label }: { card: Service["card"]; label: string }) {
-  return <a className={`pill ${pillFor[card]} ${s.cta}`} href="#contato">{label}</a>;
-}
-
 export default function Services({ t }: { t: Dict }) {
-  const items = t.services.items;
-  const byId = Object.fromEntries(services.map((sv) => [sv.id, sv])) as Record<Service["id"], Service>;
+  const it = t.services.items;
 
-  const ads: Record<Service["id"], React.ReactNode> = {
-    video: (
-      <article className={`${s.coupon} ${s.video}`} aria-labelledby="ad-video">
-        <div className={s.videoPhoto}>
-          <Image src={byId.video.image} alt="" fill sizes="(max-width: 860px) 90vw, 360px" />
-        </div>
-        <div className={s.videoSide}>
-          <p className={s.videoBig}>{items.video.ad.big}</p>
+  /* Cabeçalho do anúncio, foto com selo e detalhes de cada serviço. */
+  const parts: Record<Service["id"], { sub: string; stamp?: React.ReactNode; extra: React.ReactNode }> = {
+    video: {
+      sub: it.video.ad.headline,
+      stamp: <span className={`${s.stamp} ${s.stampPink}`}>{it.video.ad.big}</span>,
+      extra: (
+        <>
           <ul className={s.formats} aria-hidden="true">{coupon.formats.map((f) => <li key={f}>{f}</li>)}</ul>
-          <h3 id="ad-video" className={s.videoTitle}>{items.video.title}</h3>
-          <p className={s.kicker}>{items.video.ad.kicker}</p>
-        </div>
-        <p className={s.timecode} aria-hidden="true">{coupon.timecode}</p>
-        <div className={s.footRow}>
-          <p className={s.fine}>{items.video.ad.headline}. {items.video.ad.fine}</p>
-          <Cta card="yellow" label={items.video.cta} />
-        </div>
-      </article>
-    ),
-    foto: (
-      <article className={`${s.coupon} ${s.foto}`} aria-labelledby="ad-foto">
-        <div className={s.fotoText}>
-          <p className={s.fotoBig}>{items.foto.ad.big}<span className={s.unit}>{items.foto.ad.unit}</span></p>
-          <h3 id="ad-foto" className={s.fotoHead}>{items.foto.ad.headline}</h3>
-          <p className={s.legal}>{items.foto.ad.fine}</p>
-        </div>
-        <div className={s.fotoSide}>
-          <p className={s.code} aria-hidden="true">{coupon.code}</p>
-          <div className={s.fotoPhoto}>
-            <Image src={byId.foto.image} alt="" fill sizes="(max-width: 860px) 60vw, 240px" />
+          <p className={s.timecode} aria-hidden="true">{coupon.timecode}</p>
+          <p className={s.fine}>{it.video.ad.fine}</p>
+        </>
+      ),
+    },
+    foto: {
+      sub: it.foto.ad.headline,
+      stamp: (
+        <span className={`${s.stamp} ${s.stampBlue}`}>
+          {it.foto.ad.big}
+          <small>{it.foto.ad.unit}</small>
+        </span>
+      ),
+      extra: (
+        <>
+          <p className={s.fine}>{it.foto.ad.fine}</p>
+          <div className={s.barRow} aria-hidden="true">
+            <Barcode digits={coupon.barcode} />
+            <span>{coupon.code}</span>
           </div>
-          <Barcode digits={coupon.barcode} />
-          <p className={s.barDigits} aria-hidden="true">{coupon.barcode}</p>
-          <Cta card="white" label={items.foto.cta} />
-        </div>
-        <p className="sr-only">{items.foto.title}</p>
-      </article>
-    ),
-    musica: (
-      <article className={`${s.coupon} ${s.musica}`} aria-labelledby="ad-musica">
-        <div className={s.musicaText}>
-          <h3 id="ad-musica" className={s.musicaHead}>{items.musica.ad.headline}</h3>
-          <p className={s.badge}>{items.musica.ad.badge}</p>
-          <ol className={s.steps}>{items.musica.ad.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
-          <Cta card="pink" label={items.musica.cta} />
-        </div>
-        <div className={s.musicaPhoto}>
-          <Image src={byId.musica.image} alt="" fill sizes="(max-width: 860px) 70vw, 260px" />
-        </div>
-        <p className="sr-only">{items.musica.title}</p>
-      </article>
-    ),
-    design: (
-      <article className={`${s.coupon} ${s.design}`} aria-labelledby="ad-design">
-        <div className={s.designPhoto}>
-          <Image src={byId.design.image} alt="" fill sizes="(max-width: 860px) 90vw, 320px" />
-        </div>
-        <div className={s.designText}>
-          <h3 id="ad-design" className={s.designWord}>{items.design.ad.word}</h3>
-          <p className={s.designTag}>{items.design.ad.tagline}</p>
-          <p className={s.designFeat}>{items.design.ad.featuring}</p>
-          <Cta card="blue" label={items.design.cta} />
-        </div>
-        <p className={s.note}>{items.design.ad.note}</p>
-      </article>
-    ),
+        </>
+      ),
+    },
+    musica: {
+      sub: it.musica.ad.headline,
+      extra: (
+        <>
+          <p className={s.badge}>{it.musica.ad.badge}</p>
+          <ol className={s.steps}>{it.musica.ad.steps.map((st, i) => <li key={i}>{st}</li>)}</ol>
+        </>
+      ),
+    },
+    design: {
+      sub: it.design.ad.tagline,
+      extra: (
+        <>
+          <p className={s.feat}>{it.design.ad.featuring}</p>
+          <p className={s.fine}>{it.design.ad.note}</p>
+        </>
+      ),
+    },
   };
 
   return (
     <section className={s.services} id="servicos" aria-labelledby="units-title">
       <div className="wrap">
-        <div className="head2">
+        <div className={`head2 ${s.head}`}>
           <h2 className="serif" id="units-title">{t.services.titleLine1}<br />{t.services.titleLine2}</h2>
           <p>{t.services.intro}</p>
         </div>
         <div className={s.sheet}>
           <span className={s.scissors} aria-hidden="true">✂</span>
-          {services.map((sv) => <div className={s.cell} key={sv.id}>{ads[sv.id]}</div>)}
+          <ul className={s.row}>
+            {services.map((sv, i) => {
+              const p = parts[sv.id];
+              return (
+                <li className={s.cell} key={sv.id}>
+                  <article className={`${s.coupon} ${s[sv.card]}`} aria-labelledby={`ad-${sv.id}`}>
+                    <p className={s.fig} aria-hidden="true">FIG. {i + 1}</p>
+                    <h3 id={`ad-${sv.id}`} className={s.title}>{it[sv.id].title}</h3>
+                    <p className={s.sub}>{p.sub}</p>
+                    <div className={s.photo}>
+                      <Image src={sv.image} alt="" fill sizes="(max-width: 1100px) 300px, 22vw" />
+                      {p.stamp}
+                    </div>
+                    <div className={s.extra}>{p.extra}</div>
+                    <a className={`pill ${pillFor[sv.card]} ${s.cta}`} href="#contato">{it[sv.id].cta}</a>
+                  </article>
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <p className={s.hint}>{t.services.hint}</p>
       </div>

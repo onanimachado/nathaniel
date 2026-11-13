@@ -6,8 +6,10 @@ import { clients } from "@/content/site";
 import type { Dict } from "@/lib/i18n";
 import s from "./Clients.module.css";
 
-/* Quantos px a faixa anda para cada px que ela sobe ou desce na tela. */
-const SCROLL_FACTOR = 1.1;
+/* Quantos px a faixa anda para cada px que ela sobe ou desce na tela. Sutil, para as 12 marcas
+   continuarem visíveis na fila. Abaixo de GRID_BELOW px a faixa vira uma grade parada. */
+const SCROLL_FACTOR = 0.1;
+const GRID_BELOW = 1000;
 
 /*
  * Faixa de marcas no espírito da faixa de imprensa do Vacation: anda sozinha em loop,
@@ -31,8 +33,15 @@ export default function Clients({ t }: { t: Dict }) {
      * Quando ela passa pelo meio da tela, as marcas em destaque (Planeta Atlântida e JBL)
      * ficam exatamente no centro. Rolando para baixo, os logos correm para a esquerda.
      */
+    const grid = window.matchMedia(`(max-width: ${GRID_BELOW - 1}px)`);
     const place = () => {
       raf = 0;
+      /* a largura da faixa define o tamanho de cada célula: 12 marcas cabem numa fila */
+      vp.style.setProperty("--vpw", `${vp.clientWidth}px`);
+      if (grid.matches) {
+        el.style.transform = "none";
+        return;
+      }
       const half = el.scrollWidth / 2;
       if (!half || !focus.length) return;
       const first = focus[0];
@@ -48,10 +57,12 @@ export default function Clients({ t }: { t: Dict }) {
     place();
     window.addEventListener("scroll", request, { passive: true });
     window.addEventListener("resize", request);
+    grid.addEventListener("change", request);
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("scroll", request);
       window.removeEventListener("resize", request);
+      grid.removeEventListener("change", request);
     };
   }, []);
 

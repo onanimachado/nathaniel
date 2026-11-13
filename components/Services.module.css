@@ -1,0 +1,94 @@
+/*
+ * Cupons de revista. Cada cupom escala como um anúncio impresso: as medidas usam
+ * cqi (porcentagem da largura do cupom), com mínimos em px para o celular.
+ */
+.services { background: var(--white); padding-block: var(--pad-block); }
+.sheet { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1.5px dashed var(--black); background: color-mix(in srgb, var(--blue) 35%, var(--white)); }
+.scissors { position: absolute; top: -0.75em; left: 18px; font-size: 22px; line-height: 1; background: var(--white); padding-inline: 4px; transform: rotate(180deg); }
+.cell { container-type: inline-size; padding: clamp(10px, 1.2vw, 18px); border-right: 1.5px dashed var(--black); border-bottom: 1.5px dashed var(--black); }
+.cell:nth-child(2n + 1) { border-right: 0; }
+.cell:nth-last-child(-n + 2) { border-bottom: 0; }
+.hint { margin-top: 14px; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; text-align: center; }
+
+.coupon {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.42;
+  color: var(--black);
+  font-size: max(12px, 2.1cqi);
+  line-height: 1.25;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+/* retícula de impressão por cima de tudo */
+.coupon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(rgba(28, 26, 23, 0.11) 0.7px, transparent 1px) 0 0 / 3px 3px;
+  mix-blend-mode: multiply;
+}
+.cell:hover .coupon { transform: rotate(-0.6deg) translate(-2px, -2px); box-shadow: 6px 6px 0 var(--black); }
+.coupon img { object-fit: cover; }
+.cta { position: relative; z-index: 2; font-size: max(11px, 1.7cqi); }
+.fine, .legal { font-size: max(10px, 1.45cqi); line-height: 1.3; }
+
+/* ---------- Produção Cinematográfica: foto emoldurada, "24 FPS" e timecode ---------- */
+.video { background: var(--yellow); display: grid; grid-template-columns: 54% 1fr; grid-template-rows: 1fr auto auto; gap: 2.4cqi 3cqi; padding: 3.2cqi; }
+.videoPhoto { position: relative; border: 1.5px solid var(--black); filter: sepia(0.25) saturate(0.8); min-height: 120px; }
+.videoSide { display: grid; align-content: start; gap: 1.6cqi; min-width: 0; }
+.videoBig { font-family: var(--f-title); font-size: max(40px, 14cqi); line-height: 0.85; color: var(--pink); -webkit-text-stroke: 1.5px var(--black); paint-order: stroke fill; text-shadow: 0.05em 0.05em 0 var(--black); letter-spacing: -0.02em; }
+.formats { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1cqi; }
+.formats li { font-family: var(--f-sub); font-weight: 700; font-size: max(9px, 1.4cqi); letter-spacing: 0.06em; background: var(--white); border: 1px solid var(--black); border-radius: 4px; padding: 0.3em 0.6em; }
+.videoTitle { font-family: var(--f-title); font-size: max(20px, 4.6cqi); overflow-wrap: anywhere; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.01em; }
+.kicker { font-family: var(--f-sub); font-weight: 600; font-size: max(10px, 1.5cqi); letter-spacing: 0.08em; text-transform: uppercase; }
+.timecode { grid-column: 1 / -1; font-family: var(--f-title); font-size: max(34px, 12.5cqi); line-height: 0.85; color: var(--pink); -webkit-text-stroke: 1.5px var(--black); paint-order: stroke fill; text-shadow: 0.04em 0.04em 0 var(--black); letter-spacing: -0.01em; white-space: nowrap; }
+.footRow { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 3cqi; }
+
+/* ---------- Fotografia: "36 POSES", letra miúda e código de barras ---------- */
+.foto { background: var(--white); display: grid; grid-template-columns: 58% 1fr; gap: 3cqi; padding: 3.2cqi; }
+.fotoText { display: grid; align-content: space-between; gap: 2cqi; min-width: 0; }
+.fotoBig { font-family: var(--f-title); font-size: max(64px, 30cqi); line-height: 0.78; color: var(--blue); -webkit-text-stroke: 2px var(--black); paint-order: stroke fill; text-shadow: 0.03em 0.03em 0 var(--black); letter-spacing: -0.03em; display: flex; align-items: flex-end; gap: 0.06em; }
+.fotoBig .unit { font-size: 0.32em; line-height: 0.9; padding-bottom: 0.12em; }
+.fotoHead { font-family: var(--f-title); font-size: max(18px, 4.4cqi); line-height: 0.95; letter-spacing: -0.01em; }
+.legal { text-align: justify; hyphens: auto; }
+.fotoSide { display: grid; grid-template-rows: auto 1fr auto auto auto; gap: 1.2cqi; justify-items: stretch; min-width: 0; }
+.code { font-family: var(--f-vhs); font-size: max(14px, 2.6cqi); text-align: right; letter-spacing: 0.08em; }
+.fotoPhoto { position: relative; border: 1.5px solid var(--black); transform: rotate(3deg); filter: sepia(0.25) saturate(0.8); min-height: 110px; }
+.barcode { width: 100%; height: max(30px, 7cqi); color: var(--black); }
+.barDigits { font-family: var(--f-vhs); font-size: max(12px, 2cqi); letter-spacing: 0.18em; text-align: center; }
+.fotoSide .cta { justify-self: end; }
+
+/* ---------- Produção Musical: "Maximize o Seu Clima" com passo a passo ---------- */
+.musica { background: var(--pink); display: grid; grid-template-columns: 60% 1fr; gap: 2cqi; padding: 3.6cqi 0 3.6cqi 3.6cqi; }
+.musicaText { display: grid; align-content: start; justify-items: start; gap: 2.2cqi; position: relative; z-index: 2; }
+.musicaHead { font-family: var(--f-title); font-size: max(30px, 8.6cqi); line-height: 0.9; letter-spacing: -0.02em; }
+.badge { font-family: var(--f-sub); font-weight: 600; font-size: max(11px, 2cqi); letter-spacing: 0.06em; background: var(--white); padding: 0.4em 0.8em; }
+.steps { margin: 0; padding-left: 1.4em; display: grid; gap: 0.5cqi; font-family: var(--f-title); font-size: max(14px, 2.5cqi); line-height: 1.15; }
+.musicaPhoto { position: relative; align-self: end; height: 82%; margin-right: -6%; border: 1.5px solid var(--black); border-radius: 3cqi; transform: rotate(-8deg) translateY(4%); overflow: hidden; filter: sepia(0.25) saturate(0.8); box-shadow: 1.2cqi 1.2cqi 0 var(--black); }
+
+/* ---------- Design: "DESIGN" gigante, como o anúncio FACE ---------- */
+.design { background: var(--blue); display: grid; grid-template-columns: 44% 1fr; }
+.designPhoto { position: relative; -webkit-mask-image: linear-gradient(90deg, #000 70%, transparent); mask-image: linear-gradient(90deg, #000 70%, transparent); filter: sepia(0.25) saturate(0.8); }
+.designText { display: grid; align-content: center; justify-items: start; gap: 2cqi; padding: 3.6cqi 3.6cqi 6cqi 1cqi; }
+.designWord { font-family: var(--f-text); font-weight: 400; font-size: max(40px, 12.5cqi); line-height: 0.85; letter-spacing: -0.04em; text-transform: uppercase; }
+.designTag { font-family: var(--f-text); font-size: max(11px, 2.1cqi); line-height: 1.2; text-transform: uppercase; letter-spacing: 0.02em; }
+.designFeat { font-style: italic; font-size: max(11px, 1.8cqi); }
+.note { position: absolute; right: 3.6cqi; bottom: 2.4cqi; font-size: max(9px, 1.4cqi); }
+
+/* ---------- celular: um cupom por linha, layouts empilhados ---------- */
+@media (max-width: 860px) {
+  .sheet { grid-template-columns: 1fr; }
+  .cell { border-right: 0 !important; border-bottom: 1.5px dashed var(--black) !important; }
+  .cell:last-child { border-bottom: 0 !important; }
+  .coupon { aspect-ratio: auto; }
+  .video, .foto, .musica, .design { grid-template-columns: 1fr; }
+  .videoPhoto, .fotoPhoto { aspect-ratio: 16 / 10; }
+  .fotoPhoto { transform: rotate(2deg); }
+  .musica { padding-right: 3.6cqi; }
+  .musicaPhoto { height: auto; aspect-ratio: 16 / 10; margin: 2cqi 0 0; transform: rotate(-3deg); }
+  .designPhoto { aspect-ratio: 16 / 10; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+  .designText { padding: 2cqi 3.6cqi 10cqi; }
+  .timecode { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { .cell:hover .coupon { transform: none; } }

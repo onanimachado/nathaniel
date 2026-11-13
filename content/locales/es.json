@@ -53,32 +53,53 @@
   "services": {
     "titleLine1": "Todo esto,",
     "titleLine2": "una sola vibra.",
-    "intro": "Cine, foto, música y diseño bajo el mismo techo. Entregamos el proyecto entero, del primer boceto al último corte. Toma una tarjeta y arrástrala por la mesa.",
-    "hint": "↔ arrastra las tarjetas por la mesa",
+    "intro": "Cine, foto, música y diseño bajo el mismo techo. Entregamos el proyecto entero, del primer boceto al último corte. Elige tu cupón.",
+    "hint": "✂ recorta y guarda",
     "items": {
       "design": {
         "title": "Diseño.",
-        "tag": "Identidad · arte",
-        "description": "Identidad, dirección de arte y todo lo que tiene que verse bien antes de rodar. Aquí, quien dibuja es Monique Borba.",
-        "cta": "Ver trabajos"
+        "cta": "Ver trabajos",
+        "ad": {
+          "word": "DISEÑO",
+          "tagline": "La nueva línea de identidad y dirección de arte para marcas que quieren ser recordadas.",
+          "featuring": "Con Monique Borba en el trazo: logotipo, manual de marca y todo lo que tiene que verse bien antes de rodar.",
+          "note": "Espera de 2 a 5 cafés para el primer boceto."
+        }
       },
       "musica": {
         "title": "Producción Musical.",
-        "tag": "Grabación · sonido",
-        "description": "Estudio de grabación y banda sonora original, el sonido que hace respirar a la imagen. En los auriculares, Leonardo Cassiano.",
-        "cta": "Escuchar"
+        "cta": "Escuchar",
+        "ad": {
+          "headline": "Maximiza Tu Clima",
+          "badge": "GRABA CON MUITO BALA",
+          "steps": [
+            "Trae la idea, la letra o solo el estribillo.",
+            "Entra al estudio y aprieta REC.",
+            "Leonardo Cassiano se encarga del resto en los auriculares.",
+            "Sal con una banda sonora original lista para la imagen.",
+            "Disfruta tu clima maximizado."
+          ]
+        }
       },
       "video": {
         "title": "Producción Cinematográfica.",
-        "tag": "Dirección · cine",
-        "description": "Dirección de escena, guion y cine, del set a la sala de edición. Detrás de cámara, Nani ArtClub.",
-        "cta": "Ver"
+        "cta": "Ver",
+        "ad": {
+          "kicker": "Dirección · guion · cine",
+          "big": "24 FPS",
+          "headline": "Del set a la sala de edición",
+          "fine": "Detrás de cámara, Nani ArtClub. Sujeto a disponibilidad de atardecer. Claqueta incluida."
+        }
       },
       "foto": {
         "title": "Fotografía.",
-        "tag": "Sesión · still",
-        "description": "Piel brillante, luz difusa y cromado de época, con un poco de humor. De la sesión de marca al still de producto.",
-        "cta": "Pedir presupuesto"
+        "cta": "Pedir presupuesto",
+        "ad": {
+          "big": "36",
+          "unit": "TOMAS",
+          "headline": "POR ROLLO, EN TODA SESIÓN DE FOTOS",
+          "fine": "Oferta válida mientras haya luz. Piel brillante, luz difusa y cromado de época incluidos, de la sesión de marca al still de producto. Muito Bala no se responsabiliza por elogios recurrentes, invitaciones a cenar ni exceso de likes después de publicar las fotos. Para más letra chica, háblanos después del happy hour."
+        }
       }
     }
   },

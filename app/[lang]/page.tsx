@@ -5,7 +5,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Clients from "@/components/Clients";
 import Manifest from "@/components/Manifest";
-import UnitsTable from "@/components/UnitsTable";
+import Services from "@/components/Services";
 import Thesis from "@/components/Thesis";
 import Figs from "@/components/Figs";
 import Guide from "@/components/Guide";
@@ -25,7 +25,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Hero t={t} />
         <Clients t={t} />
         <Manifest t={t} />
-        <UnitsTable t={t} />
+        <Services t={t} />
         <Thesis t={t} />
         <Figs t={t} />
         <Guide t={t} />

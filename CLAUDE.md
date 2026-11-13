@@ -4,7 +4,7 @@ Site institucional da Muito Bala, produtora audiovisual de Porto Alegre. O que a
 
 **Público e posicionamento [nov/2026].** Nicho principal: música (cobertura de festivais, shows e eventos de grande porte). Secundário: vender diretores de cena para o mercado publicitário, com a Muito Bala na curadoria e na produção. Fechar com a Muito Bala é comprar status: o site precisa ser o mais bonito e a marca a mais inteligente que a pessoa já viu, com atenção a mínimos detalhes. Referência de público e estética: Sticky Fingers, Ocean Alley, Mac DeMarco, o universo australiano de surf (grão, cores lavadas de sol, vintage). Ação principal desejada: mandar mensagem no WhatsApp para orçar.
 
-**[nov/2026] Serviços, não unidades.** Os títulos dos cards são minimalistas, com ponto final: "Design.", "Produção Musical.", "Produção Cinematográfica.", "Fotografia." Sem nome de pessoa ou marca no título. Quem está à frente aparece só no texto: design com Monique Borba, produção musical com Leonardo Cassiano, produção cinematográfica com Nani ArtClub. Fotografia ainda sem responsável, então o texto não cita ninguém. Os nomes antigos de unidade (mona, cleitinho records, myer) não são mais usados no site.
+**[nov/2026] Serviços, não unidades.** Os títulos dos cards são minimalistas, com ponto final, e sempre nesta ordem (no site todo): "Produção Cinematográfica.", "Fotografia.", "Produção Musical.", "Design." Sem nome de pessoa ou marca no título. Quem está à frente aparece só no texto: design com Monique Borba, produção musical com Leonardo Cassiano, produção cinematográfica com Nani ArtClub. Fotografia ainda sem responsável, então o texto não cita ninguém. Os nomes antigos de unidade (mona, cleitinho records, myer) não são mais usados no site.
 
 ## Comandos
 

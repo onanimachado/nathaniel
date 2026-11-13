@@ -1,8 +1,8 @@
 {
   "meta": {
     "title": "Muito Bala · O seu paraíso audiovisual",
-    "description": "Produtora audiovisual de Porto Alegre. Design, música, cinema e foto com cara de verão em Miami dos anos 90. Bem-vindo ao nosso clima.",
-    "ogDescription": "Design, música, cinema e foto. Bem-vindo ao nosso clima."
+    "description": "Produtora audiovisual de Porto Alegre. Cinema, foto, música e design com cara de verão em Miami dos anos 90. Bem-vindo ao nosso clima.",
+    "ogDescription": "Cinema, foto, música e design. Bem-vindo ao nosso clima."
   },
   "nav": {
     "homeLabel": "Muito Bala, início",
@@ -14,14 +14,35 @@
     "language": "Idioma"
   },
   "ticker": [
-    { "before": "Num mundo meia boca, seja", "script": "Muito Bala!", "color": "pink" },
-    { "before": "Bem-vindo ao nosso clima" },
-    { "before": "A gente vê", "script": "a limonada", "after": "onde todos enxergam limão", "color": "yellow" },
-    { "before": "Design · Música · Cinema · Foto" },
-    { "before": "Nada é tão quente quanto uma marca que faz o mercado", "script": "subir a régua", "color": "blue" }
+    {
+      "before": "Num mundo meia boca, seja",
+      "script": "Muito Bala!",
+      "color": "pink"
+    },
+    {
+      "before": "Bem-vindo ao nosso clima"
+    },
+    {
+      "before": "A gente vê",
+      "script": "a limonada",
+      "after": "onde todos enxergam limão",
+      "color": "yellow"
+    },
+    {
+      "before": "Cinema · Foto · Música · Design"
+    },
+    {
+      "before": "Nada é tão quente quanto uma marca que faz o mercado",
+      "script": "subir a régua",
+      "color": "blue"
+    }
   ],
-  "hero": { "title": "Muito Bala" },
-  "clients": { "title": "Marcas com quem a Muito Bala já trabalhou" },
+  "hero": {
+    "title": "Muito Bala"
+  },
+  "clients": {
+    "title": "Marcas com quem a Muito Bala já trabalhou"
+  },
   "manifest": {
     "title": "O clima",
     "headBefore": "Coisa boa pede",
@@ -32,13 +53,33 @@
   "services": {
     "titleLine1": "Tudo isso,",
     "titleLine2": "uma vibe só.",
-    "intro": "Design, música, cinema e foto debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao último corte. Pegue um card e arraste pela mesa.",
+    "intro": "Cinema, foto, música e design debaixo do mesmo teto. A gente entrega o projeto inteiro, do primeiro rabisco ao último corte. Pegue um card e arraste pela mesa.",
     "hint": "↔ arraste os cards pela mesa",
     "items": {
-      "design": { "title": "Design.", "tag": "Identidade · arte", "description": "Identidade, direção de arte e tudo que precisa ficar bonito antes de rodar. Por aqui, quem desenha é Monique Borba.", "cta": "Ver trabalhos" },
-      "musica": { "title": "Produção Musical.", "tag": "Gravação · trilha", "description": "Estúdio de gravação e trilha sonora original, o som que faz a imagem respirar. Nos fones, Leonardo Cassiano.", "cta": "Ouvir" },
-      "video": { "title": "Produção Cinematográfica.", "tag": "Direção · filme", "description": "Direção de cena, roteiro e filme, do set até a sala de edição. Atrás da câmera, Nani ArtClub.", "cta": "Assistir" },
-      "foto": { "title": "Fotografia.", "tag": "Ensaio · still", "description": "Pele reluzente, luz difusa e cromado de época, com um pouco de humor. Do ensaio de marca ao still de produto.", "cta": "Pedir orçamento" }
+      "design": {
+        "title": "Design.",
+        "tag": "Identidade · arte",
+        "description": "Identidade, direção de arte e tudo que precisa ficar bonito antes de rodar. Por aqui, quem desenha é Monique Borba.",
+        "cta": "Ver trabalhos"
+      },
+      "musica": {
+        "title": "Produção Musical.",
+        "tag": "Gravação · trilha",
+        "description": "Estúdio de gravação e trilha sonora original, o som que faz a imagem respirar. Nos fones, Leonardo Cassiano.",
+        "cta": "Ouvir"
+      },
+      "video": {
+        "title": "Produção Cinematográfica.",
+        "tag": "Direção · filme",
+        "description": "Direção de cena, roteiro e filme, do set até a sala de edição. Atrás da câmera, Nani ArtClub.",
+        "cta": "Assistir"
+      },
+      "foto": {
+        "title": "Fotografia.",
+        "tag": "Ensaio · still",
+        "description": "Pele reluzente, luz difusa e cromado de época, com um pouco de humor. Do ensaio de marca ao still de produto.",
+        "cta": "Pedir orçamento"
+      }
     }
   },
   "thesis": {
@@ -51,9 +92,27 @@
     "title": "Manual de instruções do clima",
     "intro": "Três coisas que vêm de fábrica em todo projeto Muito Bala.",
     "items": [
-      { "pillar": "Ousada", "title": "Sem medo do ridículo", "text": "Muito bala é a própria régua. A gente se arrisca a fazer diferente, abraça o besta e o cômico, e transforma isso em imagem que ninguém esquece.", "alt": "Costas bronzeadas com a marca Muito Bala desenhada pelo sol, à beira da piscina", "caption": "marca de sol" },
-      { "pillar": "Intensa", "title": "Analógico de verdade", "text": "Handycam, Cybershot, vinil e fita cassete. Não é saudade. É a prova de que dá para fazer alguém parar e olhar com calma, e que isso continua funcionando muito bem.", "alt": "Disco de vinil com capa azul e o logo Muito Bala em rosa", "caption": "lado A" },
-      { "pillar": "Jovem", "title": "Trabalho sério, sensação leve", "text": "O nosso forte é a experiência. Set tranquilo, conversa franca e entrega no prazo. Você sai do projeto com o material pronto e com vontade de voltar.", "alt": "Jardineiro de terno claro podando uma escultura de arbusto no formato do monograma MB", "caption": "cliente satisfeito, ambiente natural" }
+      {
+        "pillar": "Ousada",
+        "title": "Sem medo do ridículo",
+        "text": "Muito bala é a própria régua. A gente se arrisca a fazer diferente, abraça o besta e o cômico, e transforma isso em imagem que ninguém esquece.",
+        "alt": "Costas bronzeadas com a marca Muito Bala desenhada pelo sol, à beira da piscina",
+        "caption": "marca de sol"
+      },
+      {
+        "pillar": "Intensa",
+        "title": "Analógico de verdade",
+        "text": "Handycam, Cybershot, vinil e fita cassete. Não é saudade. É a prova de que dá para fazer alguém parar e olhar com calma, e que isso continua funcionando muito bem.",
+        "alt": "Disco de vinil com capa azul e o logo Muito Bala em rosa",
+        "caption": "lado A"
+      },
+      {
+        "pillar": "Jovem",
+        "title": "Trabalho sério, sensação leve",
+        "text": "O nosso forte é a experiência. Set tranquilo, conversa franca e entrega no prazo. Você sai do projeto com o material pronto e com vontade de voltar.",
+        "alt": "Jardineiro de terno claro podando uma escultura de arbusto no formato do monograma MB",
+        "caption": "cliente satisfeito, ambiente natural"
+      }
     ]
   },
   "guide": {
@@ -61,10 +120,26 @@
     "intro": "Os trabalhos entram como numa grade de TV: horário, título e o que a gente fez.",
     "todo": "EXEMPLOS DE LAYOUT",
     "items": [
-      { "title": "Nome do projeto", "meta": "Cliente · filme de campanha · 2026", "service": "Produção Cinematográfica" },
-      { "title": "Nome do projeto", "meta": "Cliente · trilha original · 2026", "service": "Produção Musical" },
-      { "title": "Nome do projeto", "meta": "Cliente · identidade visual · 2026", "service": "Design" },
-      { "title": "Nome do projeto", "meta": "Cliente · ensaio fotográfico · 2026", "service": "Fotografia" }
+      {
+        "title": "Nome do projeto",
+        "meta": "Cliente · filme de campanha · 2026",
+        "service": "Produção Cinematográfica"
+      },
+      {
+        "title": "Nome do projeto",
+        "meta": "Cliente · ensaio fotográfico · 2026",
+        "service": "Fotografia"
+      },
+      {
+        "title": "Nome do projeto",
+        "meta": "Cliente · trilha original · 2026",
+        "service": "Produção Musical"
+      },
+      {
+        "title": "Nome do projeto",
+        "meta": "Cliente · identidade visual · 2026",
+        "service": "Design"
+      }
     ]
   },
   "contact": {
@@ -77,7 +152,12 @@
       "email": "E-mail",
       "emailPlaceholder": "voce@marca.com.br",
       "needs": "O que você precisa",
-      "options": { "design": "Design", "musica": "Música", "cinema": "Cinema", "foto": "Foto" },
+      "options": {
+        "design": "Design",
+        "musica": "Música",
+        "cinema": "Cinema",
+        "foto": "Foto"
+      },
       "about": "Sobre o projeto",
       "aboutPlaceholder": "Prazo, ideia, referência, o que vier",
       "submit": "Enviar proposta",

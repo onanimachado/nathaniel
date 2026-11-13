@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { Dict } from "@/lib/i18n";
 import s from "./Contact.module.css";
 
-const serviceIds = ["design", "musica", "cinema", "foto"] as const;
+const serviceIds = ["cinema", "foto", "musica", "design"] as const;
 
 export default function LeadForm({ t }: { t: Dict["contact"]["form"] }) {
   const [msg, setMsg] = useState("");

@@ -20,11 +20,12 @@ export const hero = {
  */
 export type Service = { id: "design" | "musica" | "video" | "foto"; card: "blue" | "pink" | "yellow" | "white" };
 
+// Ordem pedida pelo Nani (nov/2026): cinema, foto, música, design.
 export const services: Service[] = [
-  { id: "design", card: "blue" },
-  { id: "musica", card: "pink" },
   { id: "video", card: "yellow" },
   { id: "foto", card: "white" },
+  { id: "musica", card: "pink" },
+  { id: "design", card: "blue" },
 ];
 
 /* Figuras do "manual de instruções do clima". Textos em figs.items, na mesma ordem. */
@@ -37,9 +38,9 @@ export const figs = [
 /* EXEMPLOS DE LAYOUT: substituir pelos cases reais. Textos em guide.items, na mesma ordem. */
 export const works = [
   { time: "20:00", pill: "yellow" },
-  { time: "20:30", pill: "blue" },
+  { time: "20:30", pill: "white" },
   { time: "21:00", pill: "blue" },
-  { time: "21:30", pill: "white" },
+  { time: "21:30", pill: "blue" },
 ] as const;
 
 /*

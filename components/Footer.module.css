@@ -2,7 +2,9 @@
  * Rodapé no formato do Vacation: uma "tabela" com bordas finas. Títulos em maiúsculas
  * espaçadas, texto corrido na serifa condensada e links grandes e leves.
  */
-.footer { background: var(--blue); padding-block: clamp(28px, 3vw, 48px) 28px; }
+.footer { position: relative; isolation: isolate; background: var(--blue); padding-block: clamp(28px, 3vw, 48px) 28px; }
+/* Degradê do próprio rodapé, como o do Vacation: emenda claro em cima e escurece até um azul profundo embaixo */
+.footer::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent 0%, color-mix(in oklch, var(--blue) 62%, var(--white)) 16%, transparent 52%, color-mix(in oklch, var(--blue) 60%, #0b3550) 100%); }
 .board { border: 1.5px solid var(--black); }
 .cell { margin: 0; padding: 18px clamp(16px, 1.6vw, 26px); }
 .head { font-family: var(--f-sub); font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1.5px solid var(--black); display: flex; align-items: center; height: 66px; }

@@ -11,11 +11,7 @@
     "services": "O que a gente faz",
     "works": "Trabalhos",
     "cta": "Fazer orçamento",
-    "language": "Idioma",
-    "about": "Sobre",
-    "chapters": "Capítulos",
-    "opening": "Abertura",
-    "contactChapter": "Contato"
+    "language": "Idioma"
   },
   "ticker": [
     {
@@ -163,8 +159,7 @@
       "submit": "Enviar proposta",
       "errorEmail": "▶ Falta um e-mail válido para a gente responder.",
       "notConfigured": "▶ Envio ainda não configurado: falta definir o e-mail que recebe as propostas."
-    },
-    "cta": "Fazer orçamento"
+    }
   },
   "footer": {
     "titleBefore": "Nossa vibe",
@@ -178,24 +173,5 @@
     "toDefine": "a definir",
     "atToDefine": "@ a definir",
     "sign": "Muito Bala. O seu paraíso audiovisual."
-  },
-  "panel": {
-    "kicker": "Orçamento",
-    "title": "Conta o que você tem em mente.",
-    "intro": "Escolha o que precisa e mande uma mensagem. A gente responde rápido, com uma proposta clara e o clima de sempre.",
-    "needs": "Do que você precisa",
-    "message": "Mensagem",
-    "messagePlaceholder": "Evento, data, cidade, ideia, o que vier",
-    "whatsapp": "Mandar no WhatsApp",
-    "whatsappMissing": "▶ O número do WhatsApp ainda não foi definido.",
-    "prefill": "Oi, Muito Bala. Vi o site até o fim e quero orçar um projeto.",
-    "prefillServices": "Preciso de:",
-    "close": "Fechar"
-  },
-  "about": {
-    "metaTitle": "Sobre · Muito Bala"
-  },
-  "works": {
-    "metaTitle": "Trabalhos · Muito Bala"
   }
 }

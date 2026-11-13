@@ -11,11 +11,7 @@
     "services": "What we do",
     "works": "Work",
     "cta": "Get a quote",
-    "language": "Language",
-    "about": "About",
-    "chapters": "Chapters",
-    "opening": "Opening",
-    "contactChapter": "Contact"
+    "language": "Language"
   },
   "ticker": [
     {
@@ -163,8 +159,7 @@
       "submit": "Send proposal",
       "errorEmail": "▶ We need a valid email to reply.",
       "notConfigured": "▶ Sending is not set up yet: the inbox for proposals has not been defined."
-    },
-    "cta": "Get a quote"
+    }
   },
   "footer": {
     "titleBefore": "Our vibe",
@@ -178,24 +173,5 @@
     "toDefine": "TBD",
     "atToDefine": "@ TBD",
     "sign": "Muito Bala. Your audiovisual paradise."
-  },
-  "panel": {
-    "kicker": "Get a quote",
-    "title": "Tell us what you have in mind.",
-    "intro": "Pick what you need and send a message. We reply fast, with a clear proposal and the usual vibe.",
-    "needs": "What you need",
-    "message": "Message",
-    "messagePlaceholder": "Event, date, city, idea, whatever comes",
-    "whatsapp": "Send on WhatsApp",
-    "whatsappMissing": "▶ The WhatsApp number has not been set yet.",
-    "prefill": "Hi, Muito Bala. I watched the whole site and I want a quote for a project.",
-    "prefillServices": "I need:",
-    "close": "Close"
-  },
-  "about": {
-    "metaTitle": "About · Muito Bala"
-  },
-  "works": {
-    "metaTitle": "Work · Muito Bala"
   }
 }

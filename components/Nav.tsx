@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { hrefFor, localeInfo, locales, type Dict, type Locale, type Page } from "@/lib/i18n";
+import { localeInfo, locales, pathFor, type Dict, type Locale } from "@/lib/i18n";
 import s from "./Nav.module.css";
 
 function Roll({ children }: { children: string }) {
@@ -11,12 +11,11 @@ function Roll({ children }: { children: string }) {
   );
 }
 
-export default function Nav({ t, locale, page }: { t: Dict; locale: Locale; page: Page }) {
-  const home = hrefFor(locale);
+export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <header className={s.nav}>
       <div className={`wrap ${s.inner}`}>
-        <a href={home} aria-label={t.nav.homeLabel}>
+        <a href="#topo" aria-label={t.nav.homeLabel}>
           <Image src="/brand/monograma-sombra-rosa.svg" alt="" width={38} height={43} priority />
         </a>
         <div className={s.mid}>
@@ -25,15 +24,14 @@ export default function Nav({ t, locale, page }: { t: Dict; locale: Locale; page
           <span>{t.nav.tagline}</span>
         </div>
         <ul>
-          <li className={s.link}><a href={`${home === "/" ? "" : home}/#servicos`}><Roll>{t.nav.services}</Roll></a></li>
-          <li className={s.link}><a href={hrefFor(locale, "trabalhos")} aria-current={page === "trabalhos" ? "page" : undefined}><Roll>{t.nav.works}</Roll></a></li>
-          <li className={s.link}><a href={hrefFor(locale, "sobre")} aria-current={page === "sobre" ? "page" : undefined}><Roll>{t.nav.about}</Roll></a></li>
+          <li className={s.link}><a href="#servicos"><Roll>{t.nav.services}</Roll></a></li>
+          <li className={s.link}><a href="#programacao"><Roll>{t.nav.works}</Roll></a></li>
           <li>
             <nav className={s.langs} aria-label={t.nav.language}>
               {locales.map((l) => (
                 <a
                   key={l}
-                  href={hrefFor(l, page)}
+                  href={pathFor(l)}
                   hrefLang={localeInfo[l].htmlLang}
                   lang={localeInfo[l].htmlLang}
                   aria-label={localeInfo[l].name}
@@ -45,7 +43,7 @@ export default function Nav({ t, locale, page }: { t: Dict; locale: Locale; page
               ))}
             </nav>
           </li>
-          <li><button type="button" className="pill" data-panel-open>{t.nav.cta}</button></li>
+          <li><a className="pill" href="#contato">{t.nav.cta}</a></li>
         </ul>
       </div>
     </header>

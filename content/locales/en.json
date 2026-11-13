@@ -44,11 +44,31 @@
     "title": "Brands Muito Bala has worked with"
   },
   "manifest": {
-    "title": "The vibe",
-    "headBefore": "Good things ask for",
-    "headScript": "a little more.",
-    "p1": "The internet taught everyone to swipe in three seconds. We shoot on a Handycam, record to tape and develop slowly, because what is truly good rewards the ones who stay.",
-    "p2": "Whoever stays until the end is exactly who your brand was hoping to find. Serious work, easy feeling, and here anything goes."
+    "kicker": "Muito Bala",
+    "title": "Manifesto.",
+    "stanzas": [
+      [
+        "Long before it was a brand, muito bala was a seal of quality.",
+        "The one we use when \"good\" doesn't cut it.",
+        "When something breaks the curve, moves you, stays in your memory."
+      ],
+      [
+        "“Muito Bala” isn't a name we picked to sound cool.",
+        "It's the standard we set out to reach on every project."
+      ],
+      [
+        "It's not just top-of-the-line gear and metamodern editing.",
+        "It's creative execution from start to finish: the reference nobody dared to suggest, the color that bursts outside the grid, the score that changes the whole film."
+      ],
+      [
+        "It's where retro meets the future. Where a standout result can be reached by an easy path, where serious is no obstacle to fun. And where playing with aesthetics doesn't mean giving up what they stand for."
+      ],
+      [
+        "We believe paradise isn't about perfection. It's about a place that's tended, protected from chaos, where a good idea can grow without fear of being too big."
+      ]
+    ],
+    "welcome": "Welcome to our world.",
+    "sign": "Muito Bala."
   },
   "services": {
     "titleLine1": "All of it,",

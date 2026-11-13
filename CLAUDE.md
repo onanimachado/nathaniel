@@ -46,6 +46,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - **Não usar travessão (em-dash) em textos da marca.**
 - Preservar literalmente frases que o Nani especificar.
 - Slogans: "bem-vindo ao nosso clima" (abertura), "nossa vibe é o produto" (fechamento). Assinatura: "Muito Bala. O seu paraíso audiovisual."
+- **Manifesto [nov/2026]:** texto do Nani, publicado literalmente na seção Manifesto da home (`manifest.stanzas` em `content/locales/pt.json`). Não reescrever nem "melhorar" o português; as versões em inglês e espanhol são traduções e podem ser ajustadas. Fecha com "Bem-vindo ao nosso mundo." e "Muito Bala."
 - Tese comercial: "Não entregamos audiência. Entregamos a audiência certa, pré-filtrada pela própria exigência do conteúdo."
 - Na comunicação pública a Muito Bala segue o próprio rumo: não contar histórias internas. A única menção à Nani ArtClub é como responsável pela produção cinematográfica, no texto do card (pedido do Nani, nov/2026).
 

@@ -44,11 +44,31 @@
     "title": "Marcas con las que Muito Bala ya trabajó"
   },
   "manifest": {
-    "title": "El clima",
-    "headBefore": "Lo bueno pide",
-    "headScript": "un poco más.",
-    "p1": "Internet le enseñó a todo el mundo a deslizar el dedo en tres segundos. Nosotros filmamos en Handycam, grabamos en cinta y revelamos con calma, porque lo que es bueno de verdad recompensa a quien se queda.",
-    "p2": "Quien se queda hasta el final es exactamente a quien tu marca quería encontrar. Trabajo serio, sensación liviana, y aquí todo es posible."
+    "kicker": "Muito Bala",
+    "title": "Manifiesto.",
+    "stanzas": [
+      [
+        "Mucho antes de ser marca, muito bala era un sello de calidad.",
+        "El que usamos cuando \"bueno\" no alcanza.",
+        "Cuando algo se sale de la curva, emociona, se queda en la memoria."
+      ],
+      [
+        "“Muito Bala” no es un nombre que elegimos para sonar bien.",
+        "Es el estándar que nos proponemos alcanzar en cada proyecto."
+      ],
+      [
+        "No es solo equipo de punta y edición metamoderna.",
+        "Es ejecución creativa de principio a fin: la referencia que nadie se atrevió a sugerir, el color que estalla fuera de la grilla, la banda sonora que cambia toda la película."
+      ],
+      [
+        "Es donde lo retro se encuentra con el futuro. Donde un resultado diferenciado puede lograrse por un camino liviano, en el que lo serio no es obstáculo para la diversión. Y donde jugar con la estética no es renunciar a lo que significa."
+      ],
+      [
+        "Creemos que el paraíso no se trata de perfección. Se trata de un lugar cultivado, protegido del caos, donde una buena idea puede crecer sin miedo a ser demasiado grande."
+      ]
+    ],
+    "welcome": "Bienvenidos a nuestro mundo.",
+    "sign": "Muito Bala."
   },
   "services": {
     "titleLine1": "Todo esto,",

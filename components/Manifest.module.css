@@ -1,8 +1,15 @@
-.manifest { background: var(--beige); padding-block: var(--pad-block); overflow-x: clip; }
-.big { font-size: var(--t-title); margin-bottom: clamp(28px, 4vw, 56px); }
-.rule { border: 0; border-top: 1.5px solid var(--black); margin: 0; }
-.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 120px); padding-top: clamp(28px, 4vw, 56px); }
-.h { font-size: clamp(38px, 4.6vw, 76px); }
-.h :global(.script) { display: inline-block; margin-top: 0.1em; }
-.text { display: grid; gap: 1em; font-size: clamp(18px, 1.4vw, 22px); max-width: 44ch; }
-@media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+.manifest { background: var(--beige); padding-block: var(--pad-block); }
+.grid { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(28px, 6vw, 120px); align-items: start; }
+/* título fica parado enquanto o texto rola ao lado */
+.side { position: sticky; top: calc(var(--nav-h, 64px) + 32px); display: grid; gap: 14px; }
+.kicker { font-family: var(--f-vhs); font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
+.title { font-size: clamp(56px, 7vw, 120px); }
+.body { display: grid; gap: clamp(26px, 3vw, 44px); max-width: 34em; }
+.stanza { display: grid; gap: 0.35em; font-family: var(--f-title); font-size: clamp(22px, 1.9vw, 30px); line-height: 1.22; }
+.lead { font-size: clamp(28px, 2.6vw, 42px); line-height: 1.1; }
+.welcome { font-size: clamp(44px, 4.4vw, 72px); margin-top: 8px; }
+.sign { font-family: var(--f-sub); font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}

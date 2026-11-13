@@ -15,3 +15,5 @@
 .logo { transition: transform 0.6s var(--ease); }
 .logo img { display: block; width: 100%; height: auto; }
 @media (max-width: 700px) { .center { width: min(80vw, 420px); } }
+/* O vídeo se dissolve no bege da faixa de marcas, sem borda seca (fica acima do vídeo, abaixo do logo) */
+.hero::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--beige) 55%, transparent) 55%, var(--beige)); }

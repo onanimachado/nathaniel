@@ -1,4 +1,4 @@
-.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--white); border-bottom: 1.5px solid var(--black); }
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--yellow); border-bottom: 1.5px solid var(--black); }
 .inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--gap); padding-block: 10px; }
 .inner img { display: block; }
 .mid { display: flex; align-items: center; gap: 14px; font-size: var(--t-label); letter-spacing: 0.05em; text-transform: uppercase; }

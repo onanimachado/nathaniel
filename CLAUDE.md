@@ -52,7 +52,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - Preservar literalmente frases que o Nani especificar.
 - Slogans: "bem-vindo ao nosso clima" (abertura), "nossa vibe é o produto" (fechamento). Assinatura: "Muito Bala. O seu paraíso audiovisual."
 - **Manifesto [nov/2026]:** a seção onde ficava o manifesto agora mostra só "Welcome To the Groovy Beach.", em duas linhas ("Welcome To the" / "Groovy Beach."), na fonte dos títulos (Rocky), sem mais nada (pedido do Nani; texto literal, igual nos três idiomas, `manifest.beach`). Antes foi "beach of vibe production" em script. O texto completo do manifesto continua guardado em `manifest.stanzas`, sem uso, caso volte; se voltar, não reescrever o português.
-- **Menu:** "MUITO BALA ——— LTDA." (o traço desenhado entre o nome e o LTDA., pedido do Nani). "Porto Alegre, BRA." abaixo do logo foi testado e removido a pedido do Nani.
+- **Menu:** "MUITO BALA ——— LTDA." (o traço desenhado entre o nome e o LTDA., pedido do Nani). "Porto Alegre, BRA." abaixo do logo foi testado e removido a pedido do Nani. Um conceito de menu com a borda em onda/mar que desce com a rolagem foi mostrado à parte e **não aprovado**; o menu fica reto.
 - Tese comercial: "Não entregamos audiência. Entregamos a audiência certa, pré-filtrada pela própria exigência do conteúdo."
 - Na comunicação pública a Muito Bala segue o próprio rumo: não contar histórias internas. A única menção à Nani ArtClub é como responsável pela produção cinematográfica, no texto do card (pedido do Nani, nov/2026).
 

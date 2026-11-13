@@ -6,7 +6,7 @@ import s from "./Playlist.module.css";
 export default function Playlist({ t }: { t: Dict }) {
   const p = t.playlist;
   return (
-    <section className={s.playlist} data-bg="pink" aria-labelledby="playlist-title">
+    <section className={s.playlist} id="playlist" data-bg="pink" aria-labelledby="playlist-title">
       <div className={`wrap ${s.grid}`}>
         <div className={s.text}>
           <p className={s.kicker}>{p.kicker}</p>

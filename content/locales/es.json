@@ -186,16 +186,30 @@
     }
   },
   "footer": {
-    "titleBefore": "Nuestra vibra",
-    "titleScript": "es el producto.",
+    "info": "Para más información, habla con nuestro equipo siempre simpático en {email}. Tu satisfacción es nuestra prioridad número uno.",
+    "jobs": "¿Quieres trabajar con nosotros? Manda tu portafolio a {email} y cuéntanos por qué eres muito bala.",
     "services": "Lo que hacemos",
-    "navigate": "Navegar",
-    "social": "Redes",
-    "talk": "Habla con la casa",
-    "quote": "Presupuesto",
-    "email": "Correo",
-    "toDefine": "por definir",
-    "atToDefine": "@ por definir",
+    "company": "Empresa",
+    "links": {
+      "works": "Trabajos",
+      "playlist": "Playlist",
+      "quote": "Presupuesto"
+    },
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "tu@lancha.com",
+    "submit": "Enviar",
+    "newsletterMissing": "▶ La newsletter todavía no está configurada.",
+    "newsletterInvalid": "▶ Falta un correo válido.",
+    "fine": "Al dejar tu correo, aceptas recibir nuestra newsletter y otras comunicaciones con el clima de siempre. Puedes salir cuando quieras, desde el enlace al final de cualquier correo.",
+    "social": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "whatsapp": "WhatsApp",
+      "work": "Trabaja con nosotros"
+    },
+    "toDefine": "correo por definir",
+    "address": "Muito Bala LTDA. · Porto Alegre, RS, Brasil",
     "sign": "Muito Bala. Tu paraíso audiovisual."
   },
   "playlist": {

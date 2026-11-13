@@ -186,16 +186,30 @@
     }
   },
   "footer": {
-    "titleBefore": "Our vibe",
-    "titleScript": "is the product.",
+    "info": "For more information, please consult our ever-friendly staff at {email}. Your satisfaction is our number one priority.",
+    "jobs": "Want to work with us? Send your portfolio to {email} and tell us why you are muito bala.",
     "services": "What we do",
-    "navigate": "Navigate",
-    "social": "Social",
-    "talk": "Talk to the house",
-    "quote": "Get a quote",
-    "email": "Email",
-    "toDefine": "TBD",
-    "atToDefine": "@ TBD",
+    "company": "Company",
+    "links": {
+      "works": "Work",
+      "playlist": "Playlist",
+      "quote": "Get a quote"
+    },
+    "newsletter": "Newsletter sign-up",
+    "emailPlaceholder": "you@speedboat.com",
+    "submit": "Submit",
+    "newsletterMissing": "▶ The newsletter is not set up yet.",
+    "newsletterInvalid": "▶ We need a valid email.",
+    "fine": "By leaving your email, you agree to receive our newsletter and other communications with the usual vibe. You can leave anytime through the link at the end of any email.",
+    "social": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "whatsapp": "WhatsApp",
+      "work": "Work with us"
+    },
+    "toDefine": "email TBD",
+    "address": "Muito Bala LTDA. · Porto Alegre, RS, Brazil",
     "sign": "Muito Bala. Your audiovisual paradise."
   },
   "playlist": {

@@ -186,16 +186,30 @@
     }
   },
   "footer": {
-    "titleBefore": "Nossa vibe",
-    "titleScript": "é o produto.",
+    "info": "Para mais informações, fale com a nossa equipe sempre simpática em {email}. Sua satisfação é a nossa prioridade número um.",
+    "jobs": "Quer trabalhar com a gente? Mande o seu portfólio para {email} e conte por que você é muito bala.",
     "services": "O que a gente faz",
-    "navigate": "Navegar",
-    "social": "Redes",
-    "talk": "Fale com a casa",
-    "quote": "Orçamento",
-    "email": "E-mail",
-    "toDefine": "a definir",
-    "atToDefine": "@ a definir",
+    "company": "Empresa",
+    "links": {
+      "works": "Trabalhos",
+      "playlist": "Playlist",
+      "quote": "Orçamento"
+    },
+    "newsletter": "Newsletter",
+    "emailPlaceholder": "voce@lancha.com.br",
+    "submit": "Enviar",
+    "newsletterMissing": "▶ A newsletter ainda não foi configurada.",
+    "newsletterInvalid": "▶ Falta um e-mail válido.",
+    "fine": "Ao deixar o seu e-mail, você aceita receber a nossa newsletter e outras comunicações com o clima de sempre. Dá para sair quando quiser, pelo link no fim de qualquer e-mail.",
+    "social": {
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "spotify": "Spotify",
+      "whatsapp": "WhatsApp",
+      "work": "Trabalhe conosco"
+    },
+    "toDefine": "e-mail a definir",
+    "address": "Muito Bala LTDA. · Porto Alegre, RS, Brasil",
     "sign": "Muito Bala. O seu paraíso audiovisual."
   },
   "playlist": {

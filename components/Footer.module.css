@@ -1,11 +1,55 @@
-.footer { background: var(--blue); padding-block: clamp(56px, 7vw, 110px) 26px; }
-.top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 80px); align-items: center; }
-.top img { width: 100%; max-width: 420px; height: auto; display: block; }
-.top h2 { font-family: var(--f-title); font-size: clamp(48px, 6vw, 104px); line-height: 0.92; }
-.top h2 :global(.script) { display: block; font-size: 0.9em; margin-top: 0.1em; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--gap); margin-top: clamp(40px, 5vw, 80px); padding-top: 26px; border-top: 1.5px solid var(--black); }
-.grid h3 { font-family: var(--f-sub); font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
-.grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.grid a { text-decoration: none; }
-.bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 44px; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; }
-@media (max-width: 700px) { .top { grid-template-columns: 1fr; } }
+/*
+ * Rodapé no formato do Vacation: uma "tabela" com bordas finas. Títulos em maiúsculas
+ * espaçadas, texto corrido na serifa condensada e links grandes e leves.
+ */
+.footer { background: var(--blue); padding-block: clamp(28px, 3vw, 48px) 28px; }
+.board { border: 1.5px solid var(--black); }
+.cell { margin: 0; padding: 18px clamp(16px, 1.6vw, 26px); }
+.head { font-family: var(--f-sub); font-weight: 600; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; border-bottom: 1.5px solid var(--black); display: flex; align-items: center; height: 66px; }
+
+.top { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); border-bottom: 1.5px solid var(--black); }
+.colWide, .col { display: grid; grid-template-rows: auto 1fr; }
+.colWide { border-right: 1.5px solid var(--black); }
+.col + .col { border-left: 1.5px solid var(--black); }
+
+/* MUITO BALA ——— LTDA., igual ao menu */
+.brand { gap: 14px; }
+.brand i { height: 1px; width: 80px; background: var(--black); }
+.mark { margin-left: auto; display: block; height: 28px; width: auto; }
+
+.info { display: grid; align-content: start; gap: 4px; font-family: var(--f-title); font-size: clamp(17px, 1.3vw, 21px); line-height: 1.4; }
+.info strong { font-weight: 600; }
+.links { list-style: none; display: grid; align-content: start; gap: 10px; font-family: var(--f-text); font-size: clamp(20px, 1.8vw, 28px); }
+.links a { text-decoration: none; }
+.links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* newsletter */
+.newsletter { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr); border-bottom: 1.5px solid var(--black); }
+.newsletter .head { border-bottom: 0; }
+.input { border: 0; border-left: 1.5px solid var(--black); border-right: 1.5px solid var(--black); background: transparent; font: inherit; font-family: var(--f-text); font-size: clamp(18px, 1.6vw, 26px); color: var(--black); min-height: 64px; border-radius: 0; }
+.input::placeholder { color: color-mix(in srgb, var(--black) 45%, transparent); }
+.input:focus-visible { outline: 3px solid var(--black); outline-offset: -3px; }
+.submit { background: none; border: 0; color: inherit; cursor: pointer; text-align: left; }
+.submit:hover { background: color-mix(in srgb, var(--white) 25%, transparent); }
+.msg { grid-column: 1 / -1; margin: 0; padding: 10px clamp(16px, 1.6vw, 26px); border-top: 1.5px solid var(--black); font-family: var(--f-vhs); font-size: 18px; }
+
+.fine { font-family: var(--f-title); font-size: 15px; line-height: 1.4; border-bottom: 1.5px solid var(--black); }
+
+/* links com quadradinhos */
+.social { list-style: none; display: flex; flex-wrap: wrap; gap: 14px 28px; font-family: var(--f-sub); font-weight: 600; font-size: clamp(13px, 1.1vw, 16px); letter-spacing: 0.1em; text-transform: uppercase; }
+.social li { display: flex; align-items: center; gap: 12px; }
+.social a { text-decoration: none; }
+.box { width: 22px; height: 22px; border: 1.5px solid var(--black); flex: none; }
+
+.bottom { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 36px; margin-top: 22px; font-family: var(--f-title); font-size: 15px; }
+.logo { width: 92px; height: auto; display: block; }
+
+@media (max-width: 860px) {
+  .top { grid-template-columns: 1fr 1fr; }
+  .colWide { grid-column: 1 / -1; border-right: 0; border-bottom: 1.5px solid var(--black); }
+  .col + .col { border-left: 1.5px solid var(--black); }
+  .newsletter { grid-template-columns: 1fr; }
+  .newsletter .head { border-bottom: 1.5px solid var(--black); }
+  .input { border: 0; border-bottom: 1.5px solid var(--black); }
+  .brand i { width: 40px; }
+}

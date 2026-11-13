@@ -34,15 +34,6 @@ export default function Hero({ t }: { t: Dict }) {
         <div className={s.logo} ref={logo}>
           <Image src="/brand/logo-azul.svg" alt={t.hero.title} width={1256} height={1226} priority />
         </div>
-        {/* "Porto Alegre, BRA." em leve arco, no estilo do "Miami, U.S.A." do Vacation */}
-        <svg className={s.place} viewBox="0 0 640 150" role="img" aria-label={t.hero.place}>
-          <defs>
-            <path id="place-arc" d="M 30 132 Q 300 60 620 52" />
-          </defs>
-          <text>
-            <textPath href="#place-arc">{t.hero.place}</textPath>
-          </text>
-        </svg>
       </div>
     </section>
   );

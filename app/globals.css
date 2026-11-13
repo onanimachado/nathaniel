@@ -15,7 +15,6 @@
   --f-sub: var(--font-sub), "ITC Avant Garde Gothic", "Century Gothic", Arial, sans-serif;
   --f-script: var(--font-script), "Brush Script MT", cursive;
   --f-vhs: var(--font-vhs), ui-monospace, monospace;
-  --f-place: var(--font-place), Optima, "Segoe UI", sans-serif;
 
   /* Escala */
   --t-label: 13px;

@@ -19,8 +19,6 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
           <Image src="/brand/monograma-sombra-rosa.svg" alt="" width={38} height={43} priority />
         </a>
         <div className={s.mid}>
-          <span>{t.nav.brand}</span>
-          <i />
           <span>{t.nav.tagline}</span>
         </div>
         <ul>

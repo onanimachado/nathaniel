@@ -5,7 +5,7 @@ import s from "./Manifest.module.css";
 export default function Manifest({ t }: { t: Dict }) {
   const m = t.manifest;
   return (
-    <section className={s.manifest} id="manifesto" aria-labelledby="manifest-title">
+    <section className={s.manifest} data-bg="beige" id="manifesto" aria-labelledby="manifest-title">
       <div className={`wrap ${s.grid}`}>
         <div className={s.side}>
           <p className={s.kicker}>{m.kicker}</p>

@@ -42,7 +42,30 @@ export default function Motion() {
         gsap.fromTo(img, { yPercent: -7, scale: 1.16 }, { yPercent: 7, scale: 1.16, ease: "none", scrollTrigger: scrub(frame) });
       });
 
+      /* Fundo em degradê ligado à rolagem: as seções ficam transparentes e a cor do
+         fundo da página passa suavemente de uma seção para a outra. */
+      const root = document.documentElement;
+      const tone = (name: string) => getComputedStyle(root).getPropertyValue(`--${name}`).trim();
+      const bgs = gsap.utils.toArray<HTMLElement>("[data-bg]");
+      if (bgs.length) {
+        root.classList.add("bg-flow");
+        gsap.set(document.body, { backgroundColor: tone(bgs[0].dataset.bg ?? "beige") });
+        bgs.forEach((sec, i) => {
+          if (i === 0) return;
+          const from = tone(bgs[i - 1].dataset.bg ?? "beige");
+          const to = tone(sec.dataset.bg ?? "beige");
+          gsap.fromTo(document.body, { backgroundColor: from }, {
+            backgroundColor: to,
+            ease: "none",
+            immediateRender: false,
+            scrollTrigger: { trigger: sec, start: "top 90%", end: "top 30%", scrub: true },
+          });
+        });
+      }
+
       return () => {
+        root.classList.remove("bg-flow");
+        gsap.set(document.body, { clearProps: "backgroundColor" });
         gsap.ticker.remove(tick);
         lenis.destroy();
       };

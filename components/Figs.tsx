@@ -5,7 +5,7 @@ import s from "./Figs.module.css";
 
 export default function Figs({ t }: { t: Dict }) {
   return (
-    <section className={s.figs} aria-labelledby="figs-title">
+    <section className={s.figs} data-bg="white" aria-labelledby="figs-title">
       <div className="wrap">
         <div className="head2">
           <h2 className="serif" id="figs-title">{t.figs.title}</h2>

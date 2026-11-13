@@ -4,7 +4,7 @@ import s from "./Contact.module.css";
 
 export default function Contact({ t }: { t: Dict }) {
   return (
-    <section className={s.contact} id="contato" aria-labelledby="contact-title">
+    <section className={s.contact} data-bg="beige" id="contato" aria-labelledby="contact-title">
       <div className="wrap">
         {/* Composição tipográfica do MIV p. 18 */}
         <div className={s.dont} aria-hidden="true">

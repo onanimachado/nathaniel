@@ -4,7 +4,7 @@ import s from "./Guide.module.css";
 
 export default function Guide({ t }: { t: Dict }) {
   return (
-    <section className={s.guide} id="programacao" aria-labelledby="guide-title">
+    <section className={s.guide} data-bg="pink" id="programacao" aria-labelledby="guide-title">
       <div className="wrap">
         <div className="head2">
           <h2 className="serif" id="guide-title">{t.guide.title}</h2>

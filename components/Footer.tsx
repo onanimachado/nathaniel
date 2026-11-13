@@ -6,7 +6,7 @@ import s from "./Footer.module.css";
 export default function Footer({ t }: { t: Dict }) {
   const f = t.footer;
   return (
-    <footer className={s.footer}>
+    <footer className={s.footer} data-bg="blue">
       <div className="wrap">
         <div className={s.top}>
           <div data-parallax="40">

@@ -104,7 +104,7 @@ export default function Clients({ t }: { t: Dict }) {
   );
 
   return (
-    <section className={s.clients} aria-labelledby="clients-title">
+    <section className={s.clients} data-bg="beige" aria-labelledby="clients-title">
       <h2 className="sr-only" id="clients-title">{t.clients.title}</h2>
       <div className={s.viewport} ref={viewport}>
         <div className={s.track} ref={track}>

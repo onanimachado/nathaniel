@@ -15,7 +15,7 @@ const pillFor: Record<Service["card"], string> = { yellow: "", white: "pill--blu
 export default function Services({ t }: { t: Dict }) {
   const it = t.services.items;
   return (
-    <section className={s.services} id="servicos" aria-labelledby="units-title">
+    <section className={s.services} data-bg="white" id="servicos" aria-labelledby="units-title">
       <div className="wrap">
         <div className={`head2 ${s.head}`}>
           <h2 className="serif" id="units-title">{t.services.titleLine1}<br />{t.services.titleLine2}</h2>

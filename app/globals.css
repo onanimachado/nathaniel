@@ -147,3 +147,7 @@ main img:not([src*="/clientes/"]):not([src*="/brand/"]), main video { filter: sa
   *, *::before, *::after { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Fundo em degradê com a rolagem (components/Motion.tsx): com a classe bg-flow, as seções
+   marcadas com data-bg ficam transparentes e quem pinta é o fundo da página. */
+html.bg-flow [data-bg] { background: transparent !important; }

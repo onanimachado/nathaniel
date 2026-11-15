@@ -78,7 +78,7 @@ export const playlist = {
 export const contact = {
   // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). A definir.
   whatsapp: null as string | null,
-  email: null as string | null, // a definir
+  email: "nani@muitobala.com" as string | null,
   instagram: null as string | null, // a definir
   city: "Porto Alegre, RS",
 };

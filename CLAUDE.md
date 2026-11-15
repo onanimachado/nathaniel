@@ -58,7 +58,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 
 ## Pendências
 
-- E-mail de contato e @ do Instagram (`content/site.ts`, campo `contact`). O formulário ainda não envia.
+- @ do Instagram e número do WhatsApp (`content/site.ts`, campo `contact`). E-mail de contato: nani@muitobala.com. O formulário e a newsletter ainda não enviam.
 - Cases reais para a grade de programação (`works` em `content/site.ts`).
 - Licenças web das fontes originais.
 - Fotos próprias para substituir os mockups em `public/miv/`.

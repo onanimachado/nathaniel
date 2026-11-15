@@ -10,7 +10,7 @@ export default function Footer({ t }: { t: Dict }) {
   const email = contact.email ?? f.toDefine;
   const fill = (text: string) => {
     const [a, b] = text.split("{email}");
-    return <>{a}<strong>{email}</strong>{b}</>;
+    return <>{a}<strong>{contact.email ? <a href={`mailto:${contact.email}`}>{email}</a> : email}</strong>{b}</>;
   };
   const social: { label: string; href?: string }[] = [
     { label: f.social.instagram, href: contact.instagram ? `https://instagram.com/${contact.instagram.replace("@", "")}` : undefined },

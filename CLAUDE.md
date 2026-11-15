@@ -38,6 +38,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - Domínios: **muitobala.com** (Hostinger) é o principal; **muitobala.com.br** (Registro.br) redireciona para ele. O e-mail nani@muitobala.com usa o mesmo domínio: ao mexer no DNS, nunca tocar em registros MX/TXT.
 - **[nov/2026] No ar na Vercel** (time Muito Bala, projeto `muitobala`, teste do plano Pro de 14 dias; o plano grátis não permite uso comercial). Ligada ao GitHub: `site-base` é a branch de revisão (gera link de prévia); `main` é o que vai ao ar. Só passar para a `main` com aprovação do Nani.
 - DNS do muitobala.com no Hostinger: A `@` → `216.198.79.1` e CNAME `www` → endereço `vercel-dns-017.com` mostrado no painel da Vercel. www redireciona (308) para muitobala.com. Os registros MX e TXT são do e-mail no Google: não mexer. O Hostinger exige TTL entre 60 e 86400.
+- DNS do muitobala.com.br no Registro.br (servidores do próprio Registro.br, modo avançado): A com nome vazio → `216.198.79.1`; na Vercel ele redireciona (308) para muitobala.com. Lá também há MX e TXT do Google: não mexer. www.muitobala.com.br ainda não configurado.
 - A Vercel bloqueia deploy de Next.js com falha de segurança conhecida: manter `next`/`react` atualizados na versão de correção mais recente.
 
 ## Identidade visual (MIV 2026, Estúdio Mona)

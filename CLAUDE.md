@@ -33,6 +33,11 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - Abertura: só o logo no centro, com vídeo atrás (`hero` em `content/site.ts`; arquivo MP4 em `public/video/`).
 - `public/clientes/` logos das marcas da faixa de clientes, vetorizados em preto a partir de imagens enviadas pelo Nani. A altura de cada um (`clients` em `content/site.ts`) foi ajustada à mão para o mesmo peso visual (`components/Clients.tsx`).
 
+## Publicação
+
+- Domínios: **muitobala.com** (Hostinger) é o principal; **muitobala.com.br** (Registro.br) redireciona para ele. O e-mail nani@muitobala.com usa o mesmo domínio: ao mexer no DNS, nunca tocar em registros MX/TXT.
+- Hospedagem prevista: Vercel (plano Pro, uso comercial). `site-base` é a branch de revisão (gera link de prévia); `main` é o que vai ao ar. Só passar para a `main` com aprovação do Nani.
+
 ## Identidade visual (MIV 2026, Estúdio Mona)
 
 - **Cores oficiais:** azul turquesa `#89D1E0`, rosa vibrante `#E972CB`, amarelo retrô `#E1CB57`, preto `#000000`, bege `#DFD1B7`, branco `#FBFCF3`. Não usar cor fora da paleta.

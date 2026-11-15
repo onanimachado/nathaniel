@@ -15,6 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   if (!isLocale(lang)) return {};
   const t = getDict(lang);
   return {
+    metadataBase: new URL("https://muitobala.com"),
     title: t.meta.title,
     description: t.meta.description,
     alternates: {

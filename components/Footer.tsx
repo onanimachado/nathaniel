@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { contact, playlist, services, teamArea } from "@/content/site";
+import { contact, playlist, services } from "@/content/site";
 import type { Dict } from "@/lib/i18n";
 import NewsletterForm from "./NewsletterForm";
 import s from "./Footer.module.css";
@@ -49,7 +49,6 @@ export default function Footer({ t }: { t: Dict }) {
                 <li><a href="#programacao">{f.links.works}</a></li>
                 <li><a href="#playlist">{f.links.playlist}</a></li>
                 <li><a href="#contato">{f.links.quote}</a></li>
-                <li><a href={teamArea} target="_blank" rel="noopener noreferrer">{f.links.team}</a></li>
               </ul>
             </div>
           </div>

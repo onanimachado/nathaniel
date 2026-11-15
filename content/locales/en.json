@@ -193,7 +193,8 @@
     "links": {
       "works": "Work",
       "playlist": "Playlist",
-      "quote": "Get a quote"
+      "quote": "Get a quote",
+      "team": "Team area"
     },
     "newsletter": "Newsletter sign-up",
     "emailPlaceholder": "you@speedboat.com",

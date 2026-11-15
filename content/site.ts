@@ -75,6 +75,10 @@ export const playlist = {
   url: "https://open.spotify.com/playlist/1pgBP7kPflzDkkuXH5YSWu",
 };
 
+// Software de gestão da equipe (login). Link discreto no rodapé, coluna "Empresa".
+// Se ganhar endereço próprio (ex.: sistema.muitobala.com), trocar aqui.
+export const teamArea = "https://muito-bala-860884673572.southamerica-east1.run.app/";
+
 export const contact = {
   // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). A definir.
   whatsapp: null as string | null,

@@ -2,9 +2,10 @@ import type { Dict } from "@/lib/i18n";
 import s from "./Manifest.module.css";
 
 /*
- * Seção que antes trazia o manifesto: agora só "Welcome To the Groovy Beach.", em duas linhas,
- * na fonte dos títulos, Rocky (pedido do Nani). O texto completo do manifesto continua
- * guardado em manifest.stanzas nos arquivos de idioma, caso volte a ser usado.
+ * Seção que antes trazia o manifesto: agora só "O seu paraíso audio & visual.", em duas linhas,
+ * na fonte dos títulos, Rocky (pedido do Nani; o "Welcome To the Groovy Beach." que ficava aqui
+ * foi para o título da seção de serviços). O texto completo do manifesto continua guardado em
+ * manifest.stanzas nos arquivos de idioma, caso volte a ser usado.
  */
 export default function Manifest({ t }: { t: Dict }) {
   const [l1, l2] = t.manifest.beach;

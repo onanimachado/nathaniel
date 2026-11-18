@@ -3,15 +3,6 @@ import { login } from "@/content/site";
 import { localeInfo, locales, pathFor, type Dict, type Locale } from "@/lib/i18n";
 import s from "./Nav.module.css";
 
-function Roll({ children }: { children: string }) {
-  return (
-    <span className={s.roll}>
-      <span>{children}</span>
-      <span aria-hidden="true">{children}</span>
-    </span>
-  );
-}
-
 /* Entrada de login: link quando o endereço existir; enquanto não, botão que avisa "Em breve". */
 function Enter({ href, label, title, soon, className }: { href: string | null; label: string; title: string; soon: string; className: string }) {
   if (href) return <a className={className} href={href} aria-label={title}>{label}</a>;
@@ -36,8 +27,6 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
           <span>{t.nav.tagline}</span>
         </div>
         <ul>
-          <li className={s.link}><a href="#servicos"><Roll>{t.nav.services}</Roll></a></li>
-          <li className={s.link}><a href="#programacao"><Roll>{t.nav.works}</Roll></a></li>
           <li>
             <nav className={s.langs} aria-label={t.nav.language}>
               {locales.map((l) => (

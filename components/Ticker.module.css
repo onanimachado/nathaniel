@@ -1,5 +1,5 @@
 .ticker { background: var(--black); color: var(--yellow); border-bottom: 1.5px solid var(--black); overflow: hidden; white-space: nowrap; }
-.track { display: inline-flex; align-items: center; padding-block: 5px 3px; animation: tick 60s linear infinite; }
+.track { display: inline-flex; align-items: center; padding-block: 5px 3px; animation: tick 75s linear infinite; }
 .track span { font-family: var(--f-title); font-weight: 400; font-size: 21px; line-height: 1.2; letter-spacing: 0.01em; text-transform: uppercase; padding-right: 1.6em; }
 @keyframes tick { to { transform: translateX(-50%); } }
 @media (max-width: 600px) { .track span { font-size: 17px; } }

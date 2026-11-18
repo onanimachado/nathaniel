@@ -20,28 +20,8 @@
     "soon": "Coming soon"
   },
   "ticker": [
-    {
-      "before": "In a so-so world, be",
-      "script": "Muito Bala!",
-      "color": "pink"
-    },
-    {
-      "before": "Welcome to our vibe"
-    },
-    {
-      "before": "We see",
-      "script": "the lemonade",
-      "after": "where everyone else sees lemons",
-      "color": "yellow"
-    },
-    {
-      "before": "Film · Photo · Music · Design"
-    },
-    {
-      "before": "Nothing is as hot as a brand that makes the market",
-      "script": "raise the bar",
-      "color": "blue"
-    }
+    "Welcome to the Groovy Beach.",
+    "Your audio & visual paradise."
   ],
   "hero": {
     "title": "Muito Bala"

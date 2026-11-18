@@ -20,28 +20,8 @@
     "soon": "Próximamente"
   },
   "ticker": [
-    {
-      "before": "¡En un mundo mediocre, sé",
-      "script": "Muito Bala!",
-      "color": "pink"
-    },
-    {
-      "before": "Bienvenidos a nuestro clima"
-    },
-    {
-      "before": "Nosotros vemos",
-      "script": "la limonada",
-      "after": "donde todos ven limones",
-      "color": "yellow"
-    },
-    {
-      "before": "Cine · Foto · Música · Diseño"
-    },
-    {
-      "before": "Nada es tan caliente como una marca que hace al mercado",
-      "script": "subir la vara",
-      "color": "blue"
-    }
+    "Welcome to the Groovy Beach.",
+    "Tu paraíso audio & visual."
   ],
   "hero": {
     "title": "Muito Bala"

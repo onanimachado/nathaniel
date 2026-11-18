@@ -1,8 +1,6 @@
-.ticker { background: var(--black); color: var(--beige); overflow: hidden; white-space: nowrap; }
-.track { display: inline-flex; align-items: center; gap: 2.4em; padding-block: 9px; animation: tick 42s linear infinite; }
-.track span { font-family: var(--f-sub); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; }
-.track b { font-family: var(--f-script); font-weight: 400; font-size: 22px; letter-spacing: 0; text-transform: none; }
-.pink { color: var(--pink); }
-.yellow { color: var(--yellow); }
-.blue { color: var(--blue); }
+.ticker { background: var(--yellow); color: var(--black); border-bottom: 1.5px solid var(--black); overflow: hidden; white-space: nowrap; }
+.track { display: inline-flex; align-items: center; padding-block: 5px 3px; animation: tick 60s linear infinite; }
+.track span { font-family: var(--f-title); font-weight: 400; font-size: 21px; line-height: 1.2; letter-spacing: 0.01em; text-transform: uppercase; padding-right: 1.6em; }
 @keyframes tick { to { transform: translateX(-50%); } }
+@media (max-width: 600px) { .track span { font-size: 17px; } }
+@media (prefers-reduced-motion: reduce) { .track { animation: none; } }

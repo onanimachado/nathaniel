@@ -57,20 +57,19 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
           </li>
           {entries.map((e) => (
             <li key={e.key} className={s.enter}>
-              <Enter className={`pill ${s.ghost}`} href={e.href} label={e.label} title={e.title} soon={n.soon} />
+              <Enter className="pill" href={e.href} label={e.label} title={e.title} soon={n.soon} />
             </li>
           ))}
           <li className={s.enterMenu}>
             <details>
-              <summary className={`pill ${s.ghost}`}>{n.login}</summary>
+              <summary className="pill">{n.login}</summary>
               <div className={s.menu}>
                 {entries.map((e) => (
-                  <Enter key={e.key} className={`pill ${s.ghost}`} href={e.href} label={e.label} title={e.title} soon={n.soon} />
+                  <Enter key={e.key} className="pill" href={e.href} label={e.label} title={e.title} soon={n.soon} />
                 ))}
               </div>
             </details>
           </li>
-          <li><a className="pill" href="#contato">{t.nav.cta}</a></li>
         </ul>
       </div>
     </header>

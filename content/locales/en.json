@@ -21,7 +21,7 @@
   },
   "ticker": [
     "Welcome to the Groovy Beach.",
-    "Your audio & visual paradise.",
+    "Your Audio & Visual Paradise.",
     "Muito Bala™"
   ],
   "hero": {
@@ -57,8 +57,8 @@
     "welcome": "Welcome to our world.",
     "sign": "Muito Bala.",
     "beach": [
-      "Your audio & visual",
-      "paradise."
+      "Your Audio & Visual",
+      "Paradise."
     ]
   },
   "services": {

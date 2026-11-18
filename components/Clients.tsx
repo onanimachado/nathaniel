@@ -6,10 +6,15 @@ import { clients } from "@/content/site";
 import type { Dict } from "@/lib/i18n";
 import s from "./Clients.module.css";
 
-/* Quantos px a faixa anda para cada px que ela sobe ou desce na tela. Sutil, para as 12 marcas
-   continuarem visíveis na fila. Abaixo de GRID_BELOW px a faixa vira uma grade parada. */
+/* Computador: quantos px a faixa anda para cada px que ela sobe ou desce na tela. Sutil, porque
+   as 12 marcas já cabem juntas na fila. */
 const SCROLL_FACTOR = 0.1;
-const GRID_BELOW = 1000;
+/* Abaixo de COMPACT_BELOW px as marcas ficam maiores que 1/12 da tela e não cabem juntas: a fila
+   anda mais rápido, o bastante para que, enquanto a faixa atravessa a tela, passe MOBILE_COVER
+   da fila (0.85 = cerca de 10 das 12 marcas), sempre com as marcas em destaque no centro quando
+   a faixa está no meio da tela. */
+const COMPACT_BELOW = 1000;
+const MOBILE_COVER = 0.85;
 
 /*
  * Faixa de marcas no espírito da faixa de imprensa do Vacation: anda sozinha em loop,
@@ -33,22 +38,19 @@ export default function Clients({ t }: { t: Dict }) {
      * Quando ela passa pelo meio da tela, as marcas em destaque (Planeta Atlântida e JBL)
      * ficam exatamente no centro. Rolando para baixo, os logos correm para a esquerda.
      */
-    const grid = window.matchMedia(`(max-width: ${GRID_BELOW - 1}px)`);
+    const compact = window.matchMedia(`(max-width: ${COMPACT_BELOW - 1}px)`);
     const place = () => {
       raf = 0;
       /* a largura da faixa define o tamanho de cada célula: 12 marcas cabem numa fila */
       vp.style.setProperty("--vpw", `${vp.clientWidth}px`);
-      if (grid.matches) {
-        el.style.transform = "none";
-        return;
-      }
       const half = el.scrollWidth / 2;
       if (!half || !focus.length) return;
       const first = focus[0];
       const last = focus[focus.length - 1];
       const focusCenter = (first.offsetLeft + last.offsetLeft + last.offsetWidth) / 2;
       const r = vp.getBoundingClientRect();
-      const offset = reduce ? 0 : (r.top + r.height / 2 - window.innerHeight / 2) * SCROLL_FACTOR;
+      const factor = compact.matches ? (MOBILE_COVER * half) / (window.innerHeight + r.height) : SCROLL_FACTOR;
+      const offset = reduce ? 0 : (r.top + r.height / 2 - window.innerHeight / 2) * factor;
       let x = vp.clientWidth / 2 - focusCenter + offset;
       x = (((x % half) + half) % half) - half;
       el.style.transform = `translate3d(${x}px, 0, 0)`;
@@ -57,12 +59,12 @@ export default function Clients({ t }: { t: Dict }) {
     place();
     window.addEventListener("scroll", request, { passive: true });
     window.addEventListener("resize", request);
-    grid.addEventListener("change", request);
+    compact.addEventListener("change", request);
     return () => {
       cancelAnimationFrame(raf);
       window.removeEventListener("scroll", request);
       window.removeEventListener("resize", request);
-      grid.removeEventListener("change", request);
+      compact.removeEventListener("change", request);
     };
   }, []);
 

@@ -75,6 +75,13 @@ export const playlist = {
   url: "https://open.spotify.com/playlist/1pgBP7kPflzDkkuXH5YSWu",
 };
 
+// Entradas de login no menu: Parceiro (quem contrata, o cliente) e Artista (freelancer).
+// Endereços ainda não definidos: enquanto forem null, os botões mostram "Em breve".
+export const login = {
+  partner: null as string | null,
+  artist: null as string | null,
+};
+
 export const contact = {
   // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). A definir.
   whatsapp: null as string | null,

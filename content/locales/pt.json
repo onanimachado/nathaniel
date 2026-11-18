@@ -11,7 +11,13 @@
     "services": "O que a gente faz",
     "works": "Trabalhos",
     "cta": "Fazer orçamento",
-    "language": "Idioma"
+    "language": "Idioma",
+    "login": "Entrar",
+    "partner": "Parceiro",
+    "artist": "Artista",
+    "partnerLabel": "Entrar como parceiro (cliente)",
+    "artistLabel": "Entrar como artista (freelancer)",
+    "soon": "Em breve"
   },
   "ticker": [
     {

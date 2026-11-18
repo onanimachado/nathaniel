@@ -11,7 +11,13 @@
     "services": "Lo que hacemos",
     "works": "Trabajos",
     "cta": "Pedir presupuesto",
-    "language": "Idioma"
+    "language": "Idioma",
+    "login": "Ingresar",
+    "partner": "Socio",
+    "artist": "Artista",
+    "partnerLabel": "Ingresar como socio (cliente)",
+    "artistLabel": "Ingresar como artista (freelancer)",
+    "soon": "Próximamente"
   },
   "ticker": [
     {

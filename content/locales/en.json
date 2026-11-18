@@ -11,7 +11,13 @@
     "services": "What we do",
     "works": "Work",
     "cta": "Get a quote",
-    "language": "Language"
+    "language": "Language",
+    "login": "Log in",
+    "partner": "Partner",
+    "artist": "Artist",
+    "partnerLabel": "Log in as a partner (client)",
+    "artistLabel": "Log in as an artist (freelancer)",
+    "soon": "Coming soon"
   },
   "ticker": [
     {

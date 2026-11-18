@@ -1,4 +1,4 @@
-.ticker { background: var(--yellow); color: var(--black); border-bottom: 1.5px solid var(--black); overflow: hidden; white-space: nowrap; }
+.ticker { background: var(--blue); color: var(--black); border-bottom: 1.5px solid var(--black); overflow: hidden; white-space: nowrap; }
 .track { display: inline-flex; align-items: center; padding-block: 5px 3px; animation: tick 60s linear infinite; }
 .track span { font-family: var(--f-title); font-weight: 400; font-size: 21px; line-height: 1.2; letter-spacing: 0.01em; text-transform: uppercase; padding-right: 1.6em; }
 @keyframes tick { to { transform: translateX(-50%); } }

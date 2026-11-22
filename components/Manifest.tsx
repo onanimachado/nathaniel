@@ -2,7 +2,7 @@ import type { Dict } from "@/lib/i18n";
 import s from "./Manifest.module.css";
 
 /*
- * Seção que antes trazia o manifesto: agora só "O seu paraíso audio & visual.", em duas linhas,
+ * Seção que antes trazia o manifesto: agora só "O Seu Paraíso Estético.", em duas linhas,
  * na fonte dos títulos, Rocky (pedido do Nani; o "Welcome To the Groovy Beach." que ficava aqui
  * foi para o título da seção de serviços). O texto completo do manifesto continua guardado em
  * manifest.stanzas nos arquivos de idioma, caso volte a ser usado.

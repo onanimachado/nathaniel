@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Muito Bala · Tu Paraíso Estético",
+    "title": "Muito Bala · Tu paraíso estético",
     "description": "Productora audiovisual de Porto Alegre, Brasil. Cine, foto, música y diseño con cara de verano en Miami de los 90. Bienvenidos a nuestro clima.",
     "ogDescription": "Cine, foto, música y diseño. Bienvenidos a nuestro clima."
   },
@@ -21,7 +21,7 @@
   },
   "ticker": [
     "Welcome to the Groovy Beach.",
-    "Tu Paraíso Estético.",
+    "Tu paraíso estético.",
     "Muito Bala™"
   ],
   "hero": {
@@ -57,8 +57,8 @@
     "welcome": "Bienvenidos a nuestro mundo.",
     "sign": "Muito Bala.",
     "beach": [
-      "Tu Paraíso",
-      "Estético."
+      "Tu paraíso",
+      "estético."
     ]
   },
   "services": {
@@ -93,7 +93,7 @@
     "before": "No Entregamos Audiencia. Entregamos",
     "script": "la audiencia correcta",
     "after": "Prefiltrada Por El Propio Contenido.",
-    "sign": "Muito Bala. Tu Paraíso Estético."
+    "sign": "Muito Bala. Tu paraíso estético."
   },
   "figs": {
     "title": "Manual de instrucciones del clima",
@@ -197,7 +197,7 @@
     },
     "toDefine": "correo por definir",
     "address": "Muito Bala LTDA. · Porto Alegre, RS, Brasil",
-    "sign": "Muito Bala. Tu Paraíso Estético."
+    "sign": "Muito Bala. Tu paraíso estético."
   },
   "playlist": {
     "kicker": "Lado A",

@@ -7,11 +7,11 @@ import type { Dict } from "@/lib/i18n";
 import s from "./Clients.module.css";
 
 /* Computador: quantos px a faixa anda para cada px que ela sobe ou desce na tela. Sutil, porque
-   as 12 marcas já cabem juntas na fila. */
+   as 13 marcas já cabem juntas na fila. */
 const SCROLL_FACTOR = 0.1;
-/* Abaixo de COMPACT_BELOW px as marcas ficam maiores que 1/12 da tela e não cabem juntas: a fila
+/* Abaixo de COMPACT_BELOW px as marcas ficam maiores que 1/13 da tela e não cabem juntas: a fila
    anda mais rápido, o bastante para que, enquanto a faixa atravessa a tela, passe MOBILE_COVER
-   da fila (0.85 = cerca de 10 das 12 marcas), sempre com as marcas em destaque no centro quando
+   da fila (0.85 = cerca de 11 das 13 marcas), sempre com as marcas em destaque no centro quando
    a faixa está no meio da tela. */
 const COMPACT_BELOW = 1000;
 const MOBILE_COVER = 0.85;
@@ -35,13 +35,13 @@ export default function Clients({ t }: { t: Dict }) {
 
     /*
      * A faixa anda só com a rolagem: a posição é função direta de onde a faixa está na tela.
-     * Quando ela passa pelo meio da tela, as marcas em destaque (Planeta Atlântida e JBL)
+     * Quando ela passa pelo meio da tela, as marcas em destaque (Planeta Atlântida, Globo e JBL)
      * ficam exatamente no centro. Rolando para baixo, os logos correm para a esquerda.
      */
     const compact = window.matchMedia(`(max-width: ${COMPACT_BELOW - 1}px)`);
     const place = () => {
       raf = 0;
-      /* a largura da faixa define o tamanho de cada célula: 12 marcas cabem numa fila */
+      /* a largura da faixa define o tamanho de cada célula: 13 marcas cabem numa fila */
       vp.style.setProperty("--vpw", `${vp.clientWidth}px`);
       const half = el.scrollWidth / 2;
       if (!half || !focus.length) return;

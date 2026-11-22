@@ -61,6 +61,7 @@ export const clients: Client[] = [
   { name: "STU", logo: { src: "/clientes/stu.svg", ratio: 2848 / 1304, height: 58 } },
   { name: "Gauchão", logo: { src: "/clientes/gauchao.svg", ratio: 2751 / 1383, height: 56 } },
   { name: "Planeta Atlântida", logo: { src: "/clientes/planeta-atlantida.svg", ratio: 2351 / 2179, height: 78 }, focus: true },
+  { name: "Globo", logo: { src: "/clientes/globo.svg", ratio: 1, height: 62 }, focus: true },
   { name: "JBL", logo: { src: "/clientes/jbl.svg", ratio: 1960 / 1133, height: 62 }, focus: true },
   { name: "Grupo RBS", logo: { src: "/clientes/grupo-rbs.svg", ratio: 1975 / 537, height: 42 } },
   { name: "Unimed", logo: { src: "/clientes/unimed.svg", ratio: 2765 / 551, height: 38 } },

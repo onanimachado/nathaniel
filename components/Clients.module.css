@@ -1,12 +1,12 @@
 /*
- * Faixa de marcas: as 12 numa fila só (cada célula = 1/12 da largura), logos reduzidos na
+ * Faixa de marcas: as 13 numa fila só (cada célula = 1/13 da largura), logos reduzidos na
  * mesma proporção. Abaixo de 1000px a fila continua, com marcas maiores e andando mais rápido.
  */
 .clients { background: var(--beige); padding-block: clamp(40px, 5.5vw, 80px); }
 .viewport { overflow: hidden; user-select: none; --vpw: 100vw; }
 .track { display: flex; width: max-content; will-change: transform; }
 .list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
-.slide { flex: 0 0 auto; width: calc(var(--vpw) / 12); padding-inline: 10px; display: flex; justify-content: center; align-items: center; height: 84px; }
+.slide { flex: 0 0 auto; width: calc(var(--vpw) / 13); padding-inline: 10px; display: flex; justify-content: center; align-items: center; height: 84px; }
 .logo { display: block; width: auto; max-width: 100%; height: calc(var(--h) * 0.66); object-fit: contain; pointer-events: none; }
 .name { font-family: var(--f-title); font-size: 22px; line-height: 1; white-space: nowrap; }
 /* Tablet e celular: a mesma fila, com marcas maiores; ela anda mais rápido com a rolagem (Clients.tsx). */

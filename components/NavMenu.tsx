@@ -75,7 +75,7 @@ export default function NavMenu({ label, close, links, top, homeHref, homeLabel,
             </ul>
           </nav>
         </div>
-        <MenuBar t={bar} />
+        <MenuBar t={bar} open={open} />
       </div>,
       document.body)}
     </>

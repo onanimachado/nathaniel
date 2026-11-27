@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { dials, type DialId } from "@/content/site";
 import { formatTime, togglePlayer, usePlayer } from "@/lib/player";
 import s from "./MenuBar.module.css";
@@ -10,6 +10,7 @@ import s from "./MenuBar.module.css";
  * à esquerda o que está tocando, no meio quatro dials de edição de foto (Clarify, Saturation,
  * Contrast, Grain) e à direita o play/pausa da trilha. Os dials mexem na página de verdade:
  * os valores iniciais são o tratamento atual do site e arrastar aplica a diferença.
+ * Ao fechar o menu, tudo volta sempre à configuração padrão (pedido do Nani): a mexida é só uma brincadeira.
  */
 type Labels = { nowPlaying: string; paused: string; track: string; trackBy: string; play: string; pause: string; grade: string };
 
@@ -29,9 +30,15 @@ function apply(v: Record<DialId, number>) {
   document.documentElement.style.setProperty("--grain", grain.toFixed(3));
 }
 
-export default function MenuBar({ t }: { t: Labels }) {
+export default function MenuBar({ t, open }: { t: Labels; open: boolean }) {
   const { playing, position, duration } = usePlayer();
   const [vals, setVals] = useState<Record<DialId, number>>(base);
+  // menu fechou: volta para a configuração padrão do site
+  useEffect(() => {
+    if (open) return;
+    setVals(base);
+    apply(base);
+  }, [open]);
   const set = (id: DialId, n: number) => {
     const next = { ...vals, [id]: n };
     setVals(next);

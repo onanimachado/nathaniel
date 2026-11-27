@@ -5,7 +5,7 @@ import { playlist } from "@/content/site";
 import s from "./NavPlayer.module.css";
 
 /*
- * "Trilha do clima" no menu: só o atalho, sem painel (pedido do Nani). O botão toca e pausa a
+ * "Trilha do clima" no menu: só o botão de play, sem texto nem equalizador (pedido do Nani). O botão toca e pausa a
  * playlist da Muito Bala direto, por um player do Spotify invisível controlado pela API de embed.
  * O player é preparado quando o navegador fica livre (ou quando a pessoa passa o mouse no botão),
  * para o clique tocar na hora. Nada toca sozinho: os navegadores só deixam tocar depois do clique.
@@ -88,13 +88,12 @@ export default function NavPlayer({ label, open: playLabel, close: pauseLabel }:
         className={`${s.btn} ${playing ? s.isPlaying : ""}`}
         aria-pressed={playing}
         aria-label={playing ? pauseLabel : playLabel}
+        title={label}
         onClick={toggle}
         onPointerEnter={prepare}
         onFocus={prepare}
       >
         <span className={s.play} aria-hidden="true">{playing ? "❚❚" : "▶"}</span>
-        <span className={s.label}>{label}</span>
-        <span className={s.eq} aria-hidden="true"><i /><i /><i /><i /></span>
       </button>
       {/* player do Spotify invisível: só o som sai dele */}
       <div className={s.hidden} ref={host} aria-hidden="true" />

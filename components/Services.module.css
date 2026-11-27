@@ -38,7 +38,7 @@
 .pink { --c: var(--pink); }
 .blue { --c: var(--blue); }
 
-.photo { position: relative; aspect-ratio: 4 / 3; border: 1.5px solid var(--black); overflow: hidden; filter: sepia(0.25) saturate(0.8); margin-bottom: 6px; }
+.photo { position: relative; aspect-ratio: 4 / 5; border: 1.5px solid var(--black); overflow: hidden; filter: sepia(0.25) saturate(0.8); margin-bottom: 6px; }
 .photo img { object-fit: cover; }
 .title { font-family: var(--f-title); font-size: clamp(28px, 2.3vw, 36px); line-height: 0.92; letter-spacing: -0.015em; text-wrap: balance; overflow-wrap: anywhere; }
 .line { font-size: 14px; line-height: 1.35; }

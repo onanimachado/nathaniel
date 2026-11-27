@@ -21,19 +21,20 @@ export const hero = {
 export type Service = { id: "design" | "musica" | "video" | "foto"; card: "blue" | "pink" | "yellow" | "white"; image: string };
 
 // Ordem pedida pelo Nani (nov/2026): cinema, foto, música, design.
-// Cada serviço é um cupom: foto, nome do serviço, uma linha e botão (components/Services.tsx). Imagens provisórias do MIV.
+// Cada serviço é um cupom: foto, nome do serviço, uma linha e botão (components/Services.tsx).
+// Imagens [nov/2026]: anúncios impressos vintage escolhidos pelo Nani como referência (câmera, boné, walkman, computador), em public/servicos.
 export const services: Service[] = [
-  { id: "video", card: "yellow", image: "/miv/neon.jpg" },
-  { id: "foto", card: "white", image: "/miv/sol.jpg" },
-  { id: "musica", card: "pink", image: "/miv/disco.jpg" },
-  { id: "design", card: "blue", image: "/miv/jardim.jpg" },
+  { id: "video", card: "yellow", image: "/servicos/cinema.jpg" },
+  { id: "foto", card: "white", image: "/servicos/foto.jpg" },
+  { id: "musica", card: "pink", image: "/servicos/musica.jpg" },
+  { id: "design", card: "blue", image: "/servicos/design.jpg" },
 ];
 
 /* Figuras do "manual de instruções do clima". Textos em figs.items, na mesma ordem. */
 export const figs = [
-  { fig: 5, image: "/miv/sol.jpg" },
-  { fig: 6, image: "/miv/disco.jpg" },
-  { fig: 7, image: "/miv/jardim.jpg" },
+  { fig: 5, image: "/servicos/foto.jpg" },
+  { fig: 6, image: "/servicos/musica.jpg" },
+  { fig: 7, image: "/servicos/design.jpg" },
 ];
 
 /* EXEMPLOS DE LAYOUT: substituir pelos cases reais. Textos em guide.items, na mesma ordem. */

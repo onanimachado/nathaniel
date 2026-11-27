@@ -13,18 +13,23 @@
   background: color-mix(in srgb, var(--blue) 86%, transparent);
   -webkit-backdrop-filter: blur(3px) saturate(0.9); backdrop-filter: blur(3px) saturate(0.9);
   overflow-y: auto; overscroll-behavior: contain;
+  display: flex; flex-direction: column;
   opacity: 0; transition: opacity 0.3s var(--ease);
 }
 .overlay.isOpen { opacity: 1; }
 .overlay[hidden] { display: none; }
-.inner { padding-block: clamp(14px, 2.4vh, 24px) clamp(32px, 6vh, 64px); }
+.inner { flex: 1; width: 100%; box-sizing: border-box; padding-block: clamp(14px, 2.4vh, 24px) clamp(24px, 5vh, 56px); }
+/* "Menu ×" à esquerda e o monograma MB no centro da tela, como o logo do Vacation */
+.head { position: relative; display: flex; align-items: center; min-height: 72px; }
+.logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; }
+.logo img { display: block; width: clamp(44px, 4.4vw, 64px); height: auto; }
 .close {
   display: inline-flex; align-items: center; gap: 0.3em; background: none; border: 0; padding: 0; cursor: pointer;
   font-family: var(--f-title); font-size: clamp(34px, 3.4vw, 54px); line-height: 1; color: var(--black);
 }
 .close span { font-family: var(--f-text); font-size: 0.7em; font-weight: 300; line-height: 1; }
 /* :global(ul) vence a regra ".inner ul" do menu, que deixa as listas em linha */
-.list, .overlay :global(ul).list { display: block; list-style: none; margin: 0.15em 0 0; padding: 0; }
+.list, .overlay :global(ul).list { display: block; list-style: none; margin: 0; padding: 0; }
 .list li { display: block; }
 .list a {
   display: inline-block; text-decoration: none; color: var(--black);

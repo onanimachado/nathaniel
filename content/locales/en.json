@@ -234,6 +234,15 @@
       "governanca": "How the house is run, with process and transparency. Coming soon.",
       "comunidade": "Crew, freelancers and clients on the same team. Coming soon.",
       "projetos-sociais": "What we do so the scene grows together. Coming soon."
+    },
+    "bar": {
+      "nowPlaying": "Now playing",
+      "paused": "Paused",
+      "track": "Vibe soundtrack",
+      "trackBy": "Muito Bala on Spotify",
+      "play": "Play the vibe soundtrack",
+      "pause": "Pause the vibe soundtrack",
+      "grade": "Grade the page's vibe"
     }
   }
 }

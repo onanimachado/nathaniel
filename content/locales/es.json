@@ -234,6 +234,15 @@
       "governanca": "Cómo se organiza la casa, con proceso y transparencia. Muy pronto aquí.",
       "comunidade": "Equipo, freelancers y clientes en el mismo equipo. Muy pronto aquí.",
       "projetos-sociais": "Lo que hacemos para que la escena crezca junta. Muy pronto aquí."
+    },
+    "bar": {
+      "nowPlaying": "Sonando ahora",
+      "paused": "En pausa",
+      "track": "Banda sonora del clima",
+      "trackBy": "Muito Bala en Spotify",
+      "play": "Reproducir la banda sonora",
+      "pause": "Pausar la banda sonora",
+      "grade": "Ajusta el clima de la página"
     }
   }
 }

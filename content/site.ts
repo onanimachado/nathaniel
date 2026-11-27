@@ -101,6 +101,17 @@ export const menuPages = [
   { slug: "comunidade", kind: "page" },
   { slug: "projetos-sociais", kind: "page" },
 ] as const;
+// Barra de baixo do menu aberto [nov/2026]: dials de edição de foto, como o "Vibe Generator" do Vacation.
+// Os valores iniciais são os pedidos pelo Nani e representam o tratamento atual do site; arrastar muda a página de verdade.
+// Nomes iguais nos três idiomas, como em programa de edição.
+export const dials = [
+  { id: "clarify", name: "Clarify", value: -30 },
+  { id: "saturation", name: "Saturation", value: 12 },
+  { id: "contrast", name: "Contrast", value: -10 },
+  { id: "grain", name: "Grain", value: 12 },
+] as const;
+export type DialId = (typeof dials)[number]["id"];
+
 export type MenuSlug = (typeof menuPages)[number]["slug"];
 export const pageSlugs = menuPages.filter((m) => m.kind === "page").map((m) => m.slug);
 

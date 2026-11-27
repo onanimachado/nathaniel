@@ -2,6 +2,7 @@ import Image from "next/image";
 import { login, menuPages } from "@/content/site";
 import { homeAnchor, localeInfo, locales, pagePath, pathFor, type Dict, type Locale } from "@/lib/i18n";
 import NavMenu from "./NavMenu";
+import Ticker from "./Ticker";
 import NavPlayer from "./NavPlayer";
 import s from "./Nav.module.css";
 
@@ -30,7 +31,7 @@ export default function Nav({ t, locale, slug }: { t: Dict; locale: Locale; slug
           <a href={pathFor(locale)} aria-label={t.nav.homeLabel}>
             <Image src="/brand/monograma-sombra-rosa.svg" alt="" width={38} height={43} priority />
           </a>
-          <NavMenu label={t.menu.menu} close={t.menu.close} links={menuLinks} />
+          <NavMenu label={t.menu.menu} close={t.menu.close} links={menuLinks} top={<Ticker t={t} />} homeHref={pathFor(locale)} homeLabel={t.nav.homeLabel} bar={t.menu.bar} />
         </div>
         <div className={s.mid}>
           <span>{t.nav.brand}</span>

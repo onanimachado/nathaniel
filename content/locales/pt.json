@@ -234,6 +234,15 @@
       "governanca": "Como a casa se organiza, com processo e transparência. Em breve aqui.",
       "comunidade": "Equipe, freelancers e clientes no mesmo time. Em breve aqui.",
       "projetos-sociais": "O que a gente faz para a cena crescer junto. Em breve aqui."
+    },
+    "bar": {
+      "nowPlaying": "Tocando agora",
+      "paused": "Pausado",
+      "track": "Trilha do clima",
+      "trackBy": "Muito Bala no Spotify",
+      "play": "Tocar a trilha do clima",
+      "pause": "Pausar a trilha do clima",
+      "grade": "Ajuste o clima da página"
     }
   }
 }

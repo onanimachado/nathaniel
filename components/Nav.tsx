@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { login } from "@/content/site";
-import { localeInfo, locales, pathFor, type Dict, type Locale } from "@/lib/i18n";
+import { login, menuPages } from "@/content/site";
+import { homeAnchor, localeInfo, locales, pagePath, pathFor, type Dict, type Locale } from "@/lib/i18n";
+import NavMenu from "./NavMenu";
 import NavPlayer from "./NavPlayer";
 import s from "./Nav.module.css";
 
@@ -10,8 +11,14 @@ function Enter({ href, label, title, soon, className }: { href: string | null; l
   return <button type="button" className={className} aria-label={`${title}. ${soon}`} aria-disabled="true" data-soon={soon}>{label}</button>;
 }
 
-export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
+export default function Nav({ t, locale, slug }: { t: Dict; locale: Locale; slug?: string }) {
   const n = t.nav;
+  const menuLinks = menuPages.map((m) => ({
+    key: m.slug,
+    label: t.menu.items[m.slug],
+    href: m.kind === "page" ? pagePath(locale, m.slug) : homeAnchor(locale, m.slug),
+    current: m.slug === slug,
+  }));
   const entries = [
     { key: "partner", href: login.partner, label: n.partner, title: n.partnerLabel },
     { key: "artist", href: login.artist, label: n.artist, title: n.artistLabel },
@@ -19,9 +26,12 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
   return (
     <header className={s.nav}>
       <div className={`wrap ${s.inner}`}>
-        <a href="#topo" aria-label={t.nav.homeLabel}>
-          <Image src="/brand/monograma-sombra-rosa.svg" alt="" width={38} height={43} priority />
-        </a>
+        <div className={s.left}>
+          <a href={pathFor(locale)} aria-label={t.nav.homeLabel}>
+            <Image src="/brand/monograma-sombra-rosa.svg" alt="" width={38} height={43} priority />
+          </a>
+          <NavMenu label={t.menu.menu} close={t.menu.close} links={menuLinks} />
+        </div>
         <div className={s.mid}>
           <span>{t.nav.brand}</span>
           <i />
@@ -36,7 +46,7 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
               {locales.map((l) => (
                 <a
                   key={l}
-                  href={pathFor(l)}
+                  href={pagePath(l, slug)}
                   hrefLang={localeInfo[l].htmlLang}
                   lang={localeInfo[l].htmlLang}
                   aria-label={localeInfo[l].name}

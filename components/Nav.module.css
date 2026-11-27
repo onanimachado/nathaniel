@@ -1,7 +1,8 @@
 .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--yellow); border-bottom: 1.5px solid var(--black); }
 .inner { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: var(--gap); padding-block: 10px; }
 .inner img { display: block; }
-.inner > a:first-child { flex-shrink: 0; min-width: 38px; }
+.left { display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); }
+.left > a { flex-shrink: 0; min-width: 38px; }
 .mid { display: flex; align-items: center; gap: 14px; white-space: nowrap; font-size: var(--t-label); letter-spacing: 0.05em; text-transform: uppercase; }
 .mid i { height: 1px; width: 80px; background: var(--black); }
 .inner ul { list-style: none; margin: 0; padding: 0; display: flex; gap: clamp(12px, 2vw, 30px); align-items: center; }
@@ -35,4 +36,4 @@
 .menu { position: absolute; top: calc(100% + 8px); right: 0; display: grid; gap: 6px; padding: 8px; background: var(--yellow); border: 1.5px solid var(--black); border-radius: 18px; }
 .menu [data-soon]::after { top: 50%; left: auto; right: calc(100% + 8px); translate: 4px -50%; }
 .menu [data-soon]:hover::after, .menu [data-soon]:focus::after { translate: 0 -50%; }
-@media (max-width: 379px) { .enter { display: none; } .enterMenu { display: block; } }
+@media (max-width: 599px) { .enter { display: none; } .enterMenu { display: block; } }

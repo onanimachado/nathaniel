@@ -213,5 +213,27 @@
     "kicker": "Em breve,",
     "line": "o seu paraíso audiovisual.",
     "metaTitle": "Em breve"
+  },
+  "menu": {
+    "menu": "Menu",
+    "close": "Fechar",
+    "home": "Início",
+    "soon": "Em breve",
+    "back": "Voltar para o início",
+    "items": {
+      "loja": "Loja",
+      "historia": "História",
+      "governanca": "Governança",
+      "portfolio": "Portfólio",
+      "comunidade": "Comunidade",
+      "projetos-sociais": "Projetos Sociais"
+    },
+    "intros": {
+      "loja": "Boné, camiseta e o que mais couber no clima. A loja abre em breve.",
+      "historia": "De onde a gente veio e para onde vai. Essa página está sendo escrita.",
+      "governanca": "Como a casa se organiza, com processo e transparência. Em breve aqui.",
+      "comunidade": "Equipe, freelancers e clientes no mesmo time. Em breve aqui.",
+      "projetos-sociais": "O que a gente faz para a cena crescer junto. Em breve aqui."
+    }
   }
 }

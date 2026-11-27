@@ -213,5 +213,27 @@
     "kicker": "Muy pronto,",
     "line": "tu paraíso audiovisual.",
     "metaTitle": "Muy pronto"
+  },
+  "menu": {
+    "menu": "Menú",
+    "close": "Cerrar",
+    "home": "Inicio",
+    "soon": "Muy pronto",
+    "back": "Volver al inicio",
+    "items": {
+      "loja": "Tienda",
+      "historia": "Historia",
+      "governanca": "Gobernanza",
+      "portfolio": "Portafolio",
+      "comunidade": "Comunidad",
+      "projetos-sociais": "Proyectos Sociales"
+    },
+    "intros": {
+      "loja": "Gorras, camisetas y todo lo que quepa en el clima. La tienda abre muy pronto.",
+      "historia": "De dónde venimos y hacia dónde vamos. Esta página se está escribiendo.",
+      "governanca": "Cómo se organiza la casa, con proceso y transparencia. Muy pronto aquí.",
+      "comunidade": "Equipo, freelancers y clientes en el mismo equipo. Muy pronto aquí.",
+      "projetos-sociais": "Lo que hacemos para que la escena crezca junta. Muy pronto aquí."
+    }
   }
 }

@@ -1,0 +1,5 @@
+/* Página interna provisória: título grande na fonte dos títulos, uma linha e o botão de volta. */
+.page { min-height: calc(100svh - 104px); display: flex; align-items: center; padding-block: clamp(64px, 10vh, 140px); background: var(--beige); }
+.kicker { font-family: var(--f-vhs); font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 12px; }
+.title { font-size: clamp(64px, 11vw, 180px); margin: 0 0 clamp(18px, 3vh, 32px); }
+.intro { font-size: clamp(17px, 1.4vw, 21px); line-height: 1.5; max-width: 44ch; margin: 0 0 28px; }

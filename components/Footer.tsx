@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { contact, playlist, services } from "@/content/site";
-import type { Dict } from "@/lib/i18n";
+import { contact, playlist, quoteHref, services } from "@/content/site";
+import { homeAnchor, type Dict, type Locale } from "@/lib/i18n";
 import NewsletterForm from "./NewsletterForm";
 import s from "./Footer.module.css";
 
 /* Rodapé no formato do rodapé do Vacation: grade com bordas, newsletter, letra miúda e links com quadradinhos. */
-export default function Footer({ t }: { t: Dict }) {
+export default function Footer({ t, locale }: { t: Dict; locale: Locale }) {
   const f = t.footer;
   const email = contact.email ?? f.toDefine;
   const fill = (text: string) => {
@@ -40,14 +40,14 @@ export default function Footer({ t }: { t: Dict }) {
             <div className={s.col}>
               <p className={`${s.cell} ${s.head}`}>{f.services}</p>
               <ul className={`${s.cell} ${s.links}`}>
-                {services.map((sv) => <li key={sv.id}><a href="#servicos">{t.services.items[sv.id].title.replace(/\.$/, "")}</a></li>)}
+                {services.map((sv) => <li key={sv.id}><a href={homeAnchor(locale, "servicos")}>{t.services.items[sv.id].title.replace(/\.$/, "")}</a></li>)}
               </ul>
             </div>
             <div className={s.col}>
               <p className={`${s.cell} ${s.head}`}>{f.company}</p>
               <ul className={`${s.cell} ${s.links}`}>
-                <li><a href="#playlist">{f.links.playlist}</a></li>
-                <li><a href="#contato">{f.links.quote}</a></li>
+                <li><a href={homeAnchor(locale, "playlist")}>{f.links.playlist}</a></li>
+                <li><a href={quoteHref(f.links.quote)}>{f.links.quote}</a></li>
               </ul>
             </div>
           </div>

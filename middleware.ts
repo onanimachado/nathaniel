@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { pageSlugs } from "./content/site";
 
 /*
  * Português mora na raiz: "/" é servido pela rota /pt sem mudar o endereço,
@@ -16,7 +17,13 @@ export function middleware(req: NextRequest) {
     url.pathname = "/pt";
     return NextResponse.rewrite(url);
   }
+  /* páginas do menu em português também moram na raiz: /loja é servido por /pt/loja */
+  if ((pageSlugs as readonly string[]).includes(pathname.slice(1))) {
+    const url = req.nextUrl.clone();
+    url.pathname = `/pt${pathname}`;
+    return NextResponse.rewrite(url);
+  }
   return NextResponse.next();
 }
 
-export const config = { matcher: ["/", "/pt", "/pt/:path*"] };
+export const config = { matcher: ["/", "/pt", "/pt/:path*", "/loja", "/historia", "/governanca", "/comunidade", "/projetos-sociais"] };

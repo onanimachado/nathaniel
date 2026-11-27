@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { services, type Service } from "@/content/site";
+import { quoteHref, services, type Service } from "@/content/site";
 import type { Dict } from "@/lib/i18n";
 import s from "./Services.module.css";
 
@@ -32,7 +32,7 @@ export default function Services({ t }: { t: Dict }) {
                   </div>
                   <h3 id={`ad-${sv.id}`} className={s.title}>{it[sv.id].title}</h3>
                   <p className={s.line}>{it[sv.id].line}</p>
-                  <a className={`pill ${pillFor[sv.card]} ${s.cta}`} href="#contato">{it[sv.id].cta}</a>
+                  <a className={`pill ${pillFor[sv.card]} ${s.cta}`} href={quoteHref(`${it[sv.id].cta}: ${it[sv.id].title.replace(/\.$/, "")}`)}>{it[sv.id].cta}</a>
                 </article>
               </li>
             ))}

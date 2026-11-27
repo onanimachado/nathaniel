@@ -29,3 +29,14 @@ export function getDict(locale: Locale): Dict {
 export function pathFor(locale: Locale): string {
   return locale === "pt" ? "/" : `/${locale}`;
 }
+
+/* Endereço de uma página interna: português sem prefixo, os outros idiomas com /en ou /es. */
+export function pagePath(locale: Locale, slug?: string): string {
+  if (!slug) return pathFor(locale);
+  return locale === "pt" ? `/${slug}` : `/${locale}/${slug}`;
+}
+
+/* Link para uma parte da home (âncora), funcionando também de dentro das páginas internas. */
+export function homeAnchor(locale: Locale, id: string): string {
+  return `${pathFor(locale)}#${id}`;
+}

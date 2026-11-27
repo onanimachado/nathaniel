@@ -91,6 +91,19 @@ export const login = {
 // inteiro, para revisão. Para lançar o site, trocar para false e publicar.
 export const comingSoon = true;
 
+// Menu de tela cheia [nov/2026], no estilo do Vacation. Ordem pedida pelo Nani.
+// "page": página própria (muitobala.com/<slug>, hoje com aviso de "em breve"); "section": parte da home.
+export const menuPages = [
+  { slug: "loja", kind: "page" },
+  { slug: "historia", kind: "page" },
+  { slug: "governanca", kind: "page" },
+  { slug: "portfolio", kind: "section" },
+  { slug: "comunidade", kind: "page" },
+  { slug: "projetos-sociais", kind: "page" },
+] as const;
+export type MenuSlug = (typeof menuPages)[number]["slug"];
+export const pageSlugs = menuPages.filter((m) => m.kind === "page").map((m) => m.slug);
+
 export const contact = {
   // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). A definir.
   whatsapp: null as string | null,
@@ -98,3 +111,10 @@ export const contact = {
   instagram: null as string | null, // a definir
   city: "Porto Alegre, RS",
 };
+
+/* Link de orçamento [nov/2026]: o formulário de contato saiu do site. Com WhatsApp definido,
+   o pedido vai para o WhatsApp (ação principal da marca); enquanto isso, abre um e-mail. */
+export function quoteHref(subject: string): string {
+  if (contact.whatsapp) return `https://wa.me/${contact.whatsapp}?text=${encodeURIComponent(subject)}`;
+  return `mailto:${contact.email}?subject=${encodeURIComponent(subject)}`;
+}

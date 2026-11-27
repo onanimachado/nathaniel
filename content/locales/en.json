@@ -213,5 +213,27 @@
     "kicker": "Coming soon,",
     "line": "your audiovisual paradise.",
     "metaTitle": "Coming soon"
+  },
+  "menu": {
+    "menu": "Menu",
+    "close": "Close",
+    "home": "Home",
+    "soon": "Coming soon",
+    "back": "Back to home",
+    "items": {
+      "loja": "Shop",
+      "historia": "Story",
+      "governanca": "Governance",
+      "portfolio": "Portfolio",
+      "comunidade": "Community",
+      "projetos-sociais": "Social Projects"
+    },
+    "intros": {
+      "loja": "Caps, tees and whatever else fits the vibe. The shop opens soon.",
+      "historia": "Where we came from and where we're headed. This page is being written.",
+      "governanca": "How the house is run, with process and transparency. Coming soon.",
+      "comunidade": "Crew, freelancers and clients on the same team. Coming soon.",
+      "projetos-sociais": "What we do so the scene grows together. Coming soon."
+    }
   }
 }

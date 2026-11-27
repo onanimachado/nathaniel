@@ -6,7 +6,7 @@ import s from "./Figs.module.css";
 /* Manual de instruções do clima, versão compacta: espaço que vai receber o portfólio. */
 export default function Figs({ t }: { t: Dict }) {
   return (
-    <section className={s.figs} data-bg="white" aria-labelledby="figs-title">
+    <section className={s.figs} data-bg="white" id="portfolio" aria-labelledby="figs-title">
       <div className="wrap">
         <div className="head2">
           <h2 className="serif" id="figs-title">{t.figs.title}</h2>

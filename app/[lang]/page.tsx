@@ -27,10 +27,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <main id="topo">
         <Hero t={t} />
         <Clients t={t} />
+        <Figs t={t} />
         <Manifest t={t} />
         <Services t={t} />
         <Thesis t={t} />
-        <Figs t={t} />
         <Guide t={t} />
         <Playlist t={t} />
       </main>

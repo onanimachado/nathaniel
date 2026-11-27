@@ -1,0 +1,14 @@
+/* Mesmo pôr do sol da abertura do site: rosa em cima, bege embaixo, com o grão do body por cima. */
+.page { min-height: 100svh; display: flex; flex-direction: column; background: var(--beige); }
+.soon {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: clamp(22px, 3.5vh, 40px); padding: clamp(32px, 6vh, 72px) 16px;
+  text-align: center;
+  background: linear-gradient(180deg, var(--pink) 0%, color-mix(in oklch, var(--pink) 55%, var(--beige)) 55%, var(--beige) 100%);
+}
+.logo { width: min(62vw, 360px); height: auto; }
+.title { margin: 0; font-family: var(--f-title); font-weight: 400; line-height: 0.95; letter-spacing: -0.01em; font-size: clamp(42px, 7vw, 104px); }
+.title span { display: block; }
+.contact { margin: 0; font-size: 15px; letter-spacing: 0.04em; text-transform: uppercase; }
+.contact a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-transform: none; letter-spacing: 0; font-size: 16px; }

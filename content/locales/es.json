@@ -205,5 +205,10 @@
     "text": "Lo que suena en el estudio, en el set y en el auto volviendo del festival. Dale play y entra a nuestro clima.",
     "open": "Escuchar en Spotify",
     "previewNote": "En la vista previa el reproductor no carga. En el sitio, la playlist suena aquí."
+  },
+  "comingSoon": {
+    "kicker": "Muy pronto,",
+    "line": "tu paraíso audiovisual.",
+    "contact": "Mientras tanto, escríbenos:"
   }
 }

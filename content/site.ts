@@ -84,6 +84,11 @@ export const login = {
   artist: null as string | null,
 };
 
+// Página de abertura "Em breve" [nov/2026]: com true, o muitobala.com (produção) mostra só a
+// abertura e esconde o site. O link de prévia da Vercel (branch site-base) continua mostrando o site
+// inteiro, para revisão. Para lançar o site, trocar para false e publicar.
+export const comingSoon = true;
+
 export const contact = {
   // Número do WhatsApp com DDI e DDD, só dígitos (ex.: "5551999999999"). A definir.
   whatsapp: null as string | null,

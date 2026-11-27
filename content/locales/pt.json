@@ -205,5 +205,10 @@
     "text": "O que toca no estúdio, no set e no carro voltando do festival. Aperte o play e entre no nosso clima.",
     "open": "Ouvir no Spotify",
     "previewNote": "Na prévia o player não carrega. No site, a playlist toca aqui."
+  },
+  "comingSoon": {
+    "kicker": "Em breve,",
+    "line": "o seu paraíso audiovisual.",
+    "contact": "Enquanto isso, fale com a gente:"
   }
 }

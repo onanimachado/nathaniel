@@ -205,5 +205,10 @@
     "text": "What plays in the studio, on set and in the car on the way back from the festival. Hit play and step into our vibe.",
     "open": "Listen on Spotify",
     "previewNote": "The player does not load in the preview. On the site, the playlist plays right here."
+  },
+  "comingSoon": {
+    "kicker": "Coming soon,",
+    "line": "your audiovisual paradise.",
+    "contact": "Meanwhile, talk to us:"
   }
 }

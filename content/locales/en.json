@@ -126,7 +126,7 @@
     ]
   },
   "guide": {
-    "title": "TV guide",
+    "title": "Weather forecast",
     "intro": "Our work shows up like a TV listing: time slot, title and what we did.",
     "todo": "LAYOUT EXAMPLES",
     "items": [
@@ -226,7 +226,8 @@
       "governanca": "Governance",
       "portfolio": "Portfolio",
       "comunidade": "Community",
-      "projetos-sociais": "Social Projects"
+      "projetos-sociais": "Social Projects",
+      "agenda": "Schedule"
     },
     "intros": {
       "loja": "Caps, tees and whatever else fits the vibe. The shop opens soon.",

@@ -126,7 +126,7 @@
     ]
   },
   "guide": {
-    "title": "Grade de programação",
+    "title": "Previsão do tempo",
     "intro": "Os trabalhos entram como numa grade de TV: horário, título e o que a gente fez.",
     "todo": "EXEMPLOS DE LAYOUT",
     "items": [
@@ -226,7 +226,8 @@
       "governanca": "Governança",
       "portfolio": "Portfólio",
       "comunidade": "Comunidade",
-      "projetos-sociais": "Projetos Sociais"
+      "projetos-sociais": "Projetos Sociais",
+      "agenda": "Agenda"
     },
     "intros": {
       "loja": "Boné, camiseta e o que mais couber no clima. A loja abre em breve.",

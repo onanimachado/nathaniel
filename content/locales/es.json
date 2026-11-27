@@ -126,7 +126,7 @@
     ]
   },
   "guide": {
-    "title": "Programación",
+    "title": "Pronóstico del tiempo",
     "intro": "Los trabajos aparecen como en una grilla de TV: horario, título y lo que hicimos.",
     "todo": "EJEMPLOS DE MAQUETA",
     "items": [
@@ -226,7 +226,8 @@
       "governanca": "Gobernanza",
       "portfolio": "Portafolio",
       "comunidade": "Comunidad",
-      "projetos-sociais": "Proyectos Sociales"
+      "projetos-sociais": "Proyectos Sociales",
+      "agenda": "Agenda"
     },
     "intros": {
       "loja": "Gorras, camisetas y todo lo que quepa en el clima. La tienda abre muy pronto.",

@@ -100,6 +100,7 @@ export const menuPages = [
   { slug: "portfolio", kind: "section" },
   { slug: "comunidade", kind: "page" },
   { slug: "projetos-sociais", kind: "page" },
+  { slug: "agenda", kind: "section" },
 ] as const;
 // Barra de baixo do menu aberto [nov/2026]: dials de edição de foto, como o "Vibe Generator" do Vacation.
 // Os valores iniciais são os pedidos pelo Nani e representam o tratamento atual do site; arrastar muda a página de verdade.

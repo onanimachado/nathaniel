@@ -9,8 +9,9 @@
  * "poster" é a imagem que aparece enquanto o vídeo carrega.
  */
 export const hero = {
-  video: null as string | null,
-  poster: null as string | null,
+  // Vídeo enviado pelo Nani (nov/2026): 11 s em loop, mudo, comprimido para 1600px (~4 MB).
+  video: "/video/abertura.mp4" as string | null,
+  poster: "/video/abertura.jpg" as string | null,
 };
 
 

@@ -1,7 +1,8 @@
 .playlist { background: var(--pink); padding-block: clamp(56px, 6vw, 110px); }
 .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 90px); align-items: center; }
 .text { display: grid; gap: 18px; justify-items: start; max-width: 44ch; }
-.text h2 { font-size: clamp(40px, 5vw, 84px); }
+/* Título na fonte de subtítulos (substituta da Avant Garde), em caixa alta e apertado, a pedido do Nani */
+.text h2 { font-family: var(--f-sub); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.92; font-size: clamp(38px, 4.6vw, 76px); }
 .kicker { font-family: var(--f-vhs); font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; }
 /* moldura de toca-fitas em volta do player */
 .deck { background: var(--black); border-radius: 22px; padding: 14px; box-shadow: 8px 8px 0 color-mix(in srgb, var(--black) 35%, transparent); }

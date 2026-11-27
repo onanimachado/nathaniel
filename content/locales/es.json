@@ -127,28 +127,20 @@
   },
   "guide": {
     "title": "Pronóstico del tiempo",
-    "intro": "Los trabajos aparecen como en una grilla de TV: horario, título y lo que hicimos.",
-    "todo": "EJEMPLOS DE MAQUETA",
+    "intro": "Lo que viene en Muito Bala.",
     "items": [
       {
-        "title": "Nombre del proyecto",
-        "meta": "Cliente · película de campaña · 2026",
-        "service": "Producción Cinematográfica"
-      },
-      {
-        "title": "Nombre del proyecto",
-        "meta": "Cliente · sesión de fotos · 2026",
-        "service": "Fotografía"
-      },
-      {
-        "title": "Nombre del proyecto",
-        "meta": "Cliente · banda sonora original · 2026",
+        "kicker": "Lagunitas presenta",
+        "title": "Muito Bala Sessions con Miguel Veleda",
         "service": "Producción Musical"
       },
       {
-        "title": "Nombre del proyecto",
-        "meta": "Cliente · identidad visual · 2026",
-        "service": "Diseño"
+        "title": "Making of Planeta Atlântida 2027",
+        "service": "Producción Cinematográfica"
+      },
+      {
+        "title": "Workshop con Lucas Stegmann",
+        "service": "Workshop"
       }
     ]
   },

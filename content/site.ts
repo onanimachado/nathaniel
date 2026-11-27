@@ -39,12 +39,12 @@ export const figs = [
   { fig: 7, image: "/miv/jardim.jpg" },
 ];
 
-/* EXEMPLOS DE LAYOUT: substituir pelos cases reais. Textos em guide.items, na mesma ordem. */
+// Agenda da "Previsão do tempo" [nov/2026], na ordem pedida pelo Nani. Horários de grade de TV (ilustrativos,
+// sem data marcada); textos em guide.items, na mesma ordem.
 export const works = [
-  { time: "20:00", pill: "yellow" },
-  { time: "20:30", pill: "white" },
-  { time: "21:00", pill: "blue" },
-  { time: "21:30", pill: "blue" },
+  { time: "20:00", pill: "blue" },   // Lagunitas apresenta: Muito Bala Sessions com Miguel Veleda
+  { time: "20:30", pill: "yellow" }, // Making of Planeta Atlântida 2027
+  { time: "21:00", pill: "white" },  // Workshop com Lucas Stegmann
 ] as const;
 
 /*

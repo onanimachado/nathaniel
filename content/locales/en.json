@@ -127,28 +127,20 @@
   },
   "guide": {
     "title": "Weather forecast",
-    "intro": "Our work shows up like a TV listing: time slot, title and what we did.",
-    "todo": "LAYOUT EXAMPLES",
+    "intro": "What's coming up at Muito Bala.",
     "items": [
       {
-        "title": "Project name",
-        "meta": "Client · campaign film · 2026",
-        "service": "Film Production"
-      },
-      {
-        "title": "Project name",
-        "meta": "Client · photo shoot · 2026",
-        "service": "Photography"
-      },
-      {
-        "title": "Project name",
-        "meta": "Client · original score · 2026",
+        "kicker": "Lagunitas presents",
+        "title": "Muito Bala Sessions with Miguel Veleda",
         "service": "Music Production"
       },
       {
-        "title": "Project name",
-        "meta": "Client · visual identity · 2026",
-        "service": "Design"
+        "title": "Planeta Atlântida 2027 Making Of",
+        "service": "Film Production"
+      },
+      {
+        "title": "Workshop with Lucas Stegmann",
+        "service": "Workshop"
       }
     ]
   },

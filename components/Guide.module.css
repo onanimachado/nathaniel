@@ -5,3 +5,6 @@
 .row h3 { font-family: var(--f-title); font-size: clamp(28px, 2.6vw, 42px); line-height: 1; }
 .row p { font-size: 15px; }
 @media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 6px; } .row .pill { justify-self: start; } }
+
+/* "Lagunitas apresenta:" em cima do título, pequeno, como chamada de programa */
+.kicker { font-family: var(--f-vhs); font-size: 18px; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 4px; }

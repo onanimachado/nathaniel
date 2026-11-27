@@ -8,8 +8,6 @@ import Manifest from "@/components/Manifest";
 import Services from "@/components/Services";
 import Playlist from "@/components/Playlist";
 import Thesis from "@/components/Thesis";
-import Figs from "@/components/Figs";
-import Guide from "@/components/Guide";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Motion from "@/components/Motion";
@@ -31,8 +29,6 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Manifest t={t} />
         <Services t={t} />
         <Thesis t={t} />
-        <Figs t={t} />
-        <Guide t={t} />
         <Contact t={t} />
         <Playlist t={t} />
       </main>

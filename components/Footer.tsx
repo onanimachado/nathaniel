@@ -46,7 +46,6 @@ export default function Footer({ t }: { t: Dict }) {
             <div className={s.col}>
               <p className={`${s.cell} ${s.head}`}>{f.company}</p>
               <ul className={`${s.cell} ${s.links}`}>
-                <li><a href="#programacao">{f.links.works}</a></li>
                 <li><a href="#playlist">{f.links.playlist}</a></li>
                 <li><a href="#contato">{f.links.quote}</a></li>
               </ul>

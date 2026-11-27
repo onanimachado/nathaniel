@@ -28,6 +28,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 - **Abertura sem borda:** o fundo, o vídeo e o banho de cor da abertura somem em transparência na parte de baixo (máscara), revelando o degradê da página por trás. Não usar véu de cor fixa: a cor de baixo muda com a rolagem.
 - **Faixa de marcas:** as 13 marcas aparecem juntas (pedido do Nani). No computador (a partir de 1000px), uma fila só com cada marca em 1/13 da largura e logos reduzidos na mesma proporção; Planeta Atlântida, Globo e JBL (marcados com `focus`) ficam no centro, nas posições 6, 7 e 8, com a Globo no meio exato da fila (logo acrescentado em nov/2026, vetorizado a partir de imagem enviada pelo Nani). A fila acompanha a rolagem só de leve (`SCROLL_FACTOR` em `components/Clients.tsx`), sem andar sozinha. Abaixo de 1000px (tablet e celular) continua uma fila só, como no computador, com marcas maiores (5 por tela no tablet, cerca de 3 no celular) e andando mais rápido com a rolagem (`MOBILE_COVER`: cerca de 11 das 13 marcas passam enquanto a faixa atravessa a tela), com as marcas em destaque no centro quando a faixa está no meio da tela (pedido do Nani; antes era uma grade parada).
 - **Título da seção de serviços (hoje "Welcome To the Groovy Beach.", antes "Tudo isso, uma vibe só."):** título à esquerda na fonte dos títulos e o texto curto (`services.intro`) à direita. Uma versão centralizada entre aspas, em Avant Garde retrô, com botão amarelo, foi testada e **revertida a pedido do Nani**.
+- **Seções retiradas [nov/2026, pedido do Nani]:** o "Manual de instruções do clima" (`components/Figs.tsx`), a "Grade de programação" (`components/Guide.tsx`, com os trabalhos de exemplo) e a composição "Don't TALK To Us UNLESS You ARE 'Muito Bala'" no topo do contato saíram do site. Os componentes e os textos continuam no repositório, sem uso, caso voltem; o link "Trabalhos" do rodapé também saiu. Ordem atual da home: abertura com vídeo, marcas, "O seu paraíso audiovisual.", serviços, propósito, contato (formulário), trilha do clima, rodapé.
 - **Rodapé [nov/2026]:** no formato do rodapé do Vacation (`components/Footer.tsx`): grade com bordas finas; primeira célula "MUITO BALA ——— LTDA." (igual ao menu) com o monograma; texto de contato com humor; colunas "O que a gente faz" e "Empresa"; linha de newsletter (ainda sem envio, `NewsletterForm.tsx`); letra miúda; links com quadradinhos (Instagram, YouTube, Spotify, WhatsApp, Trabalhe conosco); logo pequeno e assinatura embaixo. Tem degradê próprio como o do Vacation: emenda transparente em cima, brilho claro, e escurece até um azul profundo no pé. Textos em `footer` nos arquivos de idioma.
 - `public/brand/` logos em SVG extraídos do MIV. `public/miv/` imagens de mockup do MIV, provisórias.
 - Abertura: só o logo no centro, com vídeo atrás (`hero` em `content/site.ts`; arquivo MP4 em `public/video/`). **[nov/2026]** Vídeo do Nani (`abertura.mp4`, 11 s de shows, bastidor, estrada e plateia, em loop e mudo), comprimido para 1600px sem áudio, com `abertura.jpg` como capa enquanto carrega. Para trocar: mandar o arquivo original, comprimir com ffmpeg (H.264, CRF ~26, `-an`, `+faststart`) e manter abaixo de ~5 MB.
@@ -56,7 +57,7 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 ## Tom de voz
 
 - Português do Brasil, texto corrido, linguagem madura. Nada de bio em tópicos ou emoji em lista.
-- Inglês e espanhol seguem o mesmo tom (confiante, curto, humor seco, nunca vendedor) e a mesma regra de não usar travessão. Espanhol neutro, tratando por "tú". Slogans em inglês: "welcome to our vibe" e "our vibe is the product". Nomes próprios e "muito bala" não se traduzem. O "Don't TALK To Us UNLESS You ARE 'Muito Bala'" fica igual nos três idiomas.
+- Inglês e espanhol seguem o mesmo tom (confiante, curto, humor seco, nunca vendedor) e a mesma regra de não usar travessão. Espanhol neutro, tratando por "tú". Slogans em inglês: "welcome to our vibe" e "our vibe is the product". Nomes próprios e "muito bala" não se traduzem. O "Don't TALK To Us UNLESS You ARE 'Muito Bala'" fica igual nos três idiomas (hoje fora do site).
 - Pop, bem-humorado, leve e confiante. Nunca acadêmico.
 - **Não usar travessão (em-dash) em textos da marca.**
 - Preservar literalmente frases que o Nani especificar.
@@ -70,6 +71,6 @@ npm run build   # build de produção (roda lint e checagem de tipos)
 ## Pendências
 
 - @ do Instagram e número do WhatsApp (`content/site.ts`, campo `contact`). E-mail de contato: nani@muitobala.com. O formulário e a newsletter ainda não enviam.
-- Cases reais para a grade de programação (`works` em `content/site.ts`).
+- Cases reais (`works` em `content/site.ts`); a grade de programação saiu do site e pode voltar quando eles existirem.
 - Licenças web das fontes originais.
 - Fotos próprias para substituir os mockups em `public/miv/`.

@@ -32,10 +32,11 @@ export const services: Service[] = [
 ];
 
 /* Figuras do "manual de instruções do clima". Textos em figs.items, na mesma ordem. */
+// [nov/2026] Vai receber o portfólio da empresa: trocar estas imagens provisórias do MIV pelos trabalhos.
 export const figs = [
-  { fig: 5, image: "/servicos/foto.jpg" },
-  { fig: 6, image: "/servicos/musica.jpg" },
-  { fig: 7, image: "/servicos/design.jpg" },
+  { fig: 5, image: "/miv/sol.jpg" },
+  { fig: 6, image: "/miv/disco.jpg" },
+  { fig: 7, image: "/miv/jardim.jpg" },
 ];
 
 /* EXEMPLOS DE LAYOUT: substituir pelos cases reais. Textos em guide.items, na mesma ordem. */

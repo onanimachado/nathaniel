@@ -39,13 +39,13 @@ export const figs = [
   { fig: 7, image: "/miv/jardim.jpg" },
 ];
 
-// Agenda da "Previsão do tempo" [nov/2026], na ordem pedida pelo Nani. Horários de grade de TV (ilustrativos,
-// sem data marcada); textos em guide.items, na mesma ordem.
+// Agenda da "Previsão do tempo" [nov/2026], na ordem pedida pelo Nani. Datas fictícias de 2027 (texto da data em
+// guide.items.<n>.date). "href": link para assistir ou comprar ingresso; enquanto for null, o botão mostra "Em breve".
 export const works = [
-  { time: "20:00", pill: "blue" },   // Lagunitas apresenta: Muito Bala Sessions com Miguel Veleda
-  { time: "20:30", pill: "yellow" }, // Making of Planeta Atlântida 2027
-  { time: "21:00", pill: "white" },  // Workshop com Lucas Stegmann
-] as const;
+  { date: "2027-01-23", pill: "blue", href: null as string | null },   // Lagunitas apresenta: Muito Bala Sessions com Miguel Veleda (assistir)
+  { date: "2027-02-13", pill: "yellow", href: null as string | null }, // Making of Planeta Atlântida 2027 (assistir)
+  { date: "2027-03-06", pill: "white", href: null as string | null },  // Workshop com Lucas Stegmann (ingresso)
+];
 
 /*
  * Faixa de marcas com quem a Muito Bala já trabalhou.

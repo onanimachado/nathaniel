@@ -132,17 +132,24 @@
       {
         "kicker": "Lagunitas apresenta",
         "title": "Muito Bala Sessions com Miguel Veleda",
-        "service": "Produção Musical"
+        "date": "23 JAN 27",
+        "cta": "Assistir",
+        "meta": "Produção Musical"
       },
       {
         "title": "Making of Planeta Atlântida 2027",
-        "service": "Produção Cinematográfica"
+        "date": "13 FEV 27",
+        "cta": "Assistir",
+        "meta": "Produção Cinematográfica"
       },
       {
         "title": "Workshop com Lucas Stegmann",
-        "service": "Workshop"
+        "date": "06 MAR 27",
+        "cta": "Comprar ingresso",
+        "meta": "Workshop"
       }
-    ]
+    ],
+    "soon": "Em breve"
   },
   "contact": {
     "title": "Vamos fazer algo muito bala?",

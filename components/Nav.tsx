@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { login } from "@/content/site";
 import { localeInfo, locales, pathFor, type Dict, type Locale } from "@/lib/i18n";
+import NavPlayer from "./NavPlayer";
 import s from "./Nav.module.css";
 
 /* Entrada de login: link quando o endereço existir; enquanto não, botão que avisa "Em breve". */
@@ -27,6 +28,9 @@ export default function Nav({ t, locale }: { t: Dict; locale: Locale }) {
           <span>{t.nav.tagline}</span>
         </div>
         <ul>
+          <li>
+            <NavPlayer label={n.player} open={n.playerOpen} close={n.playerClose} />
+          </li>
           <li>
             <nav className={s.langs} aria-label={t.nav.language}>
               {locales.map((l) => (

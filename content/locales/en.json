@@ -17,7 +17,10 @@
     "artist": "Artist",
     "partnerLabel": "Log in as a partner (client)",
     "artistLabel": "Log in as an artist (freelancer)",
-    "soon": "Coming soon"
+    "soon": "Coming soon",
+    "player": "Vibe soundtrack",
+    "playerOpen": "Open the vibe soundtrack",
+    "playerClose": "Close the player"
   },
   "ticker": [
     "Welcome to the Groovy Beach.",

@@ -17,7 +17,10 @@
     "artist": "Artista",
     "partnerLabel": "Ingresar como socio (cliente)",
     "artistLabel": "Ingresar como artista (freelancer)",
-    "soon": "Próximamente"
+    "soon": "Próximamente",
+    "player": "Banda sonora",
+    "playerOpen": "Abrir la banda sonora del clima",
+    "playerClose": "Cerrar el reproductor"
   },
   "ticker": [
     "Welcome to the Groovy Beach.",

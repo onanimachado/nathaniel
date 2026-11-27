@@ -6,28 +6,31 @@
 }
 .toggle:hover { text-decoration-thickness: 2px; }
 
-/* Tela cheia azul com os links grandes, como no Vacation */
+/* Como no Vacation: um véu azul translúcido sobre a página (dá para ver o site por trás),
+   com a lista no canto superior esquerdo, em letras médias e bem juntas. */
 .overlay {
-  position: fixed; inset: 0; z-index: 200; background: var(--blue); color: var(--black);
+  position: fixed; inset: 0; z-index: 200; color: var(--black);
+  background: color-mix(in srgb, var(--blue) 86%, transparent);
+  -webkit-backdrop-filter: blur(3px) saturate(0.9); backdrop-filter: blur(3px) saturate(0.9);
   overflow-y: auto; overscroll-behavior: contain;
-  opacity: 0; transition: opacity 0.25s var(--ease);
+  opacity: 0; transition: opacity 0.3s var(--ease);
 }
 .overlay.isOpen { opacity: 1; }
 .overlay[hidden] { display: none; }
-.inner { padding-block: clamp(20px, 4vh, 40px) clamp(32px, 6vh, 64px); }
+.inner { padding-block: clamp(14px, 2.4vh, 24px) clamp(32px, 6vh, 64px); }
 .close {
-  display: inline-flex; align-items: baseline; gap: 0.25em; background: none; border: 0; padding: 0; cursor: pointer;
-  font-family: var(--f-title); font-size: clamp(48px, 7vw, 96px); line-height: 1; color: var(--black);
+  display: inline-flex; align-items: center; gap: 0.3em; background: none; border: 0; padding: 0; cursor: pointer;
+  font-family: var(--f-title); font-size: clamp(34px, 3.4vw, 54px); line-height: 1; color: var(--black);
 }
-.close span { font-family: var(--f-text); font-size: 0.6em; font-weight: 300; }
+.close span { font-family: var(--f-text); font-size: 0.7em; font-weight: 300; line-height: 1; }
 /* :global(ul) vence a regra ".inner ul" do menu, que deixa as listas em linha */
-.list, .overlay :global(ul).list { display: block; list-style: none; margin: clamp(8px, 2vh, 20px) 0 0; padding: 0; }
+.list, .overlay :global(ul).list { display: block; list-style: none; margin: 0.15em 0 0; padding: 0; }
 .list li { display: block; }
 .list a {
   display: inline-block; text-decoration: none; color: var(--black);
-  font-family: var(--f-title); font-size: clamp(48px, 7vw, 96px); line-height: 1.02; letter-spacing: -0.01em;
-  transition: opacity 0.18s var(--ease), transform 0.25s var(--ease);
+  font-family: var(--f-title); font-size: clamp(34px, 3.4vw, 54px); line-height: 1.04; letter-spacing: -0.01em;
+  transition: opacity 0.18s var(--ease);
 }
-.list a:hover, .list a:focus-visible { opacity: 0.55; transform: translateX(6px); }
-.list a[aria-current="page"] { opacity: 0.55; }
+.list a:hover, .list a:focus-visible { opacity: 0.5; }
+.list a[aria-current="page"] { opacity: 0.5; }
 @media (prefers-reduced-motion: reduce) { .overlay, .list a { transition: none; } }

@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import s from "./NavMenu.module.css";
 
 /*
- * Menu de tela cheia, no estilo do Vacation: o botão "Menu" abre uma tela azul com os links
- * grandes na fonte dos títulos. Fecha no "×", no Esc ou ao escolher um link.
+ * Menu no estilo do Vacation: o botão "Menu" abre um véu azul translúcido sobre a página, com os links
+ * no canto superior esquerdo, na fonte dos títulos. Fecha no "×", no Esc ou ao escolher um link.
  */
 export type MenuLink = { key: string; label: string; href: string; current?: boolean };
 
 export default function NavMenu({ label, close, links }: { label: string; close: string; links: MenuLink[] }) {
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const btn = useRef<HTMLButtonElement>(null);
   const first = useRef<HTMLAnchorElement>(null);
 
@@ -33,6 +36,8 @@ export default function NavMenu({ label, close, links }: { label: string; close:
       <button ref={btn} type="button" className={s.toggle} aria-expanded={open} aria-controls="site-menu" onClick={() => setOpen(true)}>
         {label}
       </button>
+      {/* a tela do menu vai direto no <body>, fora do cabeçalho, para não herdar os estilos dele */}
+      {mounted && createPortal(
       <div id="site-menu" className={`${s.overlay} ${open ? s.isOpen : ""}`} role="dialog" aria-modal="true" aria-label={label} hidden={!open} data-lenis-prevent>
         <div className={`wrap ${s.inner}`}>
           <button type="button" className={s.close} onClick={() => setOpen(false)} aria-label={close}>
@@ -55,7 +60,8 @@ export default function NavMenu({ label, close, links }: { label: string; close:
             </ul>
           </nav>
         </div>
-      </div>
+      </div>,
+      document.body)}
     </>
   );
 }

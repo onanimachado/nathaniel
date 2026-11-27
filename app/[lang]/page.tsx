@@ -30,11 +30,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Clients t={t} />
         <Manifest t={t} />
         <Services t={t} />
-        <Playlist t={t} />
         <Thesis t={t} />
         <Figs t={t} />
         <Guide t={t} />
         <Contact t={t} />
+        <Playlist t={t} />
       </main>
       <Footer t={t} />
       <Motion />

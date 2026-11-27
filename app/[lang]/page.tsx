@@ -14,10 +14,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Motion from "@/components/Motion";
 import ComingSoon from "@/components/ComingSoon";
-import { comingSoon } from "@/content/site";
-
-/* No ar (produção da Vercel) mostra só a abertura "Em breve"; a prévia e o computador local mostram o site. */
-const showSoon = comingSoon && (process.env.VERCEL_ENV === "production" || process.env.FORCE_COMING_SOON === "1");
+import { showSoon } from "@/lib/soon";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;

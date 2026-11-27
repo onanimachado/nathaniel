@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { fontVariables } from "../fonts";
 import { getDict, isLocale, localeInfo, locales, pathFor } from "@/lib/i18n";
+import { showSoon } from "@/lib/soon";
 import "../globals.css";
 
 export const dynamicParams = false;
@@ -14,6 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const t = getDict(lang);
+  // Abertura "Em breve": aba e link compartilhado sem nome, imagem ou descrição da marca.
+  if (showSoon) return { title: t.comingSoon.metaTitle, robots: { index: false, follow: false } };
   return {
     metadataBase: new URL("https://muitobala.com"),
     title: t.meta.title,
@@ -32,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   };
 }
 
-export const viewport: Viewport = { themeColor: "#D67BBF" };
+export const viewport: Viewport = { themeColor: showSoon ? "#ffffff" : "#D67BBF" };
 
 export default async function RootLayout({
   children,

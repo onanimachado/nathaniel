@@ -19,8 +19,8 @@
     "artistLabel": "Entrar como artista (freelancer)",
     "soon": "Em breve",
     "player": "Trilha do clima",
-    "playerOpen": "Abrir a trilha do clima",
-    "playerClose": "Fechar o player"
+    "playerOpen": "Tocar a trilha do clima",
+    "playerClose": "Pausar a trilha do clima"
   },
   "ticker": [
     "Welcome to the Groovy Beach.",

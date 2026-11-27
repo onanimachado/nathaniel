@@ -19,8 +19,8 @@
     "artistLabel": "Log in as an artist (freelancer)",
     "soon": "Coming soon",
     "player": "Vibe soundtrack",
-    "playerOpen": "Open the vibe soundtrack",
-    "playerClose": "Close the player"
+    "playerOpen": "Play the vibe soundtrack",
+    "playerClose": "Pause the vibe soundtrack"
   },
   "ticker": [
     "Welcome to the Groovy Beach.",

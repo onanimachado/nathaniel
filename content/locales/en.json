@@ -69,22 +69,22 @@
     "items": {
       "design": {
         "title": "Design.",
-        "line": "Identity and art direction.",
-        "cta": "See work"
+        "line": "Branding, campaign key visuals and design production.",
+        "cta": "Get a quote"
       },
       "musica": {
         "title": "Music Production.",
-        "line": "Recording and original scores.",
-        "cta": "Listen"
+        "line": "Tracks, albums and EPs. Original scores and jingles.",
+        "cta": "Get a quote"
       },
       "video": {
         "title": "Film Production.",
-        "line": "From the set to the edit suite.",
-        "cta": "Watch"
+        "line": "Live coverage of major events, commercials and content for the web.",
+        "cta": "Get a quote"
       },
       "foto": {
         "title": "Photography.",
-        "line": "Brand shoots and product stills.",
+        "line": "Live coverage of major events, brand shoots and product stills.",
         "cta": "Get a quote"
       }
     }

@@ -69,22 +69,22 @@
     "items": {
       "design": {
         "title": "Design.",
-        "line": "Identidade e direção de arte.",
-        "cta": "Ver trabalhos"
+        "line": "Branding, key visual de campanhas e produção de peças.",
+        "cta": "Pedir orçamento"
       },
       "musica": {
         "title": "Produção Musical.",
-        "line": "Gravação e trilha original.",
-        "cta": "Ouvir"
+        "line": "Faixas, álbuns e EPs. Trilha sonora autoral e jingles.",
+        "cta": "Pedir orçamento"
       },
       "video": {
         "title": "Produção Cinematográfica.",
-        "line": "Do set à sala de edição.",
-        "cta": "Assistir"
+        "line": "Cobertura de grandes eventos em tempo real, filmes publicitários e conteúdo para a web.",
+        "cta": "Pedir orçamento"
       },
       "foto": {
         "title": "Fotografia.",
-        "line": "Ensaio de marca e still de produto.",
+        "line": "Cobertura de grandes eventos em tempo real, ensaios de marca e still de produto.",
         "cta": "Pedir orçamento"
       }
     }
